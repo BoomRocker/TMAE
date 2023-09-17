@@ -267,7 +267,7 @@
 		}
 		
 		#backer-terra .total-resource-value{
-			border: 1px solid orange;
+			border: 2px solid orange;
 		}
 		
 		#backer-terra{
@@ -276,7 +276,7 @@
 		}
 		
 		#backer-megacredits .total-resource-value{
-			border: 1px solid rgba(246, 235, 97, 1); /* #F6EB61 with 25% opacity */
+			border: 2px solid rgba(246, 235, 97, 1); /* #F6EB61 with 25% opacity */
 		}
 		
 		#backer-megacredits{
@@ -285,7 +285,7 @@
 		}
 		
 		#backer-heat .total-resource-value{
-			border: 1px solid #FF7276; /* #F6EB61 with 25% opacity */
+			border: 2px solid #FF7276; /* #F6EB61 with 25% opacity */
 		}
 		
 		#backer-heat{
@@ -295,7 +295,7 @@
 		}
 		
 		#backer-cards .total-resource-value{
-			border: 1px solid #6368ad; /* #F6EB61 with 25% opacity */
+			border: 2px solid #959BF0; /* #F6EB61 with 25% opacity */
 		}
 		
 		#backer-cards{
@@ -304,7 +304,7 @@
 		}
 						
 		#backer-plants .total-resource-value{
-			border: 1px solid rgba(0, 255, 0, 1); /* #F6EB61 with 25% opacity */
+			border: 2px solid rgba(0, 255, 0, 1); /* #F6EB61 with 25% opacity */
 		}
 		
 		#backer-plants{
@@ -314,7 +314,7 @@
 		
 								
 		#backer-steel .total-resource-value{
-			border: 1px solid rgba(193, 154, 107, 1); /* #F6EB61 with 25% opacity */
+			border: 2px solid rgba(193, 154, 107, 1); /* #F6EB61 with 25% opacity */
 		}
 		
 		#backer-steel{
@@ -324,7 +324,7 @@
 				
 								
 		#backer-titanium .total-resource-value{
-			border: 1px solid rgba(128, 128, 128, 1); /* #F6EB61 with 25% opacity */
+			border: 2px solid rgba(128, 128, 128, 1); /* #F6EB61 with 25% opacity */
 		}
 		
 		#backer-titanium{
@@ -394,14 +394,15 @@
 		}
 		
 		#action-info-key{
-			width:auto;
+			width:100%;
 			margin-top: 5px;
-			padding: 0px 0 20px 0;
+			text-align:left;
+			padding: 0px 0 20px 5px;
 			border-top: 4px solid #000;
 			border-bottom: 4px solid #000;
 			font-weight:bold;
 			align: left;
-			height:auto;
+			height:100px;
 			background-image: url('https://www.fryxgames.se/wp-content/uploads/2018/10/FRYXGAMES_WEBb.jpg');
     
 		}
