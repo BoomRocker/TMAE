@@ -3,7 +3,6 @@
 			/*background-color: rgba(51, 51, 51, 0.7); /* Adjust the alpha value (0.7 in this case) for transparency */
 			background-color:#222;
 			text-align: center;
-			color: white;
 			margin: 0;
 			padding: 0;
 			/*font-family: 'Space Mono', Arial, sans-serif;*/
@@ -18,21 +17,33 @@
 			/*opacity: 0.65;*/
 			text-align:center;
 		}
-
-        h1 {
-            text-align: left;
-			font-size:15px;
-			font-weight: bold;
-			line-height:120%;
-			margin:10px 0 0px 0px;
-			width: 100%;
-			text-align:left;
-			padding: 0 25px 0 5px;
-			color: lime;
-			font-family: 'Orbitron', sans-serif;
-			text-transform:uppercase;
-        }
 		
+		#header-text{
+			background-image: url('https://www.fryxgames.se/wp-content/uploads/2018/10/FRYXGAMES_WEBb.jpg');
+			vertical-align: middle;
+			width:100%;
+			height:60px;
+			display:block;
+			border-top: 4px solid #000;
+			border-bottom: 4px solid #000;
+		}
+		
+		h1 {
+			text-align: left;
+			font-size: 18px;
+			font-weight: bold;
+			line-height: 120%;
+			margin: 0 0 0 0;
+			width: 100%;
+			text-align: left;
+			padding: 10px 0 0 5px;
+			color: white;
+			font-family: 'Orbitron', sans-serif;
+			text-transform: uppercase;
+			vertical-align: middle;
+			text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Horizontal offset, vertical offset, blur radius, color */
+		}
+
         .container {
             display: flex;
             flex-direction: column;
@@ -64,6 +75,7 @@
         .button-container {
            display: flex;
 		   float: left;
+		   padding: 3px 3px 6px 3px;
         }
         button {
             font-size: 18px;
@@ -84,11 +96,29 @@
 			margin:0;
 			text-align:center;
 			margin:0 2px 0 3px;
-			width: auto;
+			width: 100%;
+			min-width:25px;
+			max-width:40px;
 			height:40px;
         }
 		
-		.iconer{
+		.button-minus {
+			color: gray;
+			font-size:24px;
+			padding:0 2px 0 2px;
+			margin:0;
+			text-align:center;
+			margin:0 2px 0 3px;
+			width: 100%;
+			min-width:25px;
+			max-width:40px;
+			height:40px;
+			font-weight:bold;
+			background-color: rgba(0, 0, 0, 0.25); /* #FF7276 with 25% opacity */
+
+        }
+		
+		.iconer1{
             width: auto;
 			padding:0 2px 0 2px;
 			vertical-align: middle;
@@ -114,6 +144,7 @@
 			padding: 0;
 			font-weight:bold;
 			height:20px;
+			padding: 1px 1px;
 		}	
 		
 		p.resource-name {
@@ -209,77 +240,125 @@
 			color:black;
 		}
 		
+		.resource-value {
+            font-size: 32px;
+            font-weight: bold;
+            text-align: center;
+			display: block;
+			float:left;
+			padding: 0px 0 0 0;
+			border: 0px solid #fff;
+			margin: 0;
+			vertical-align: middle;
+			height: 40px;
+			width: 44px;
+        }
+		
 		.total-resource-value{
 			display: block;
 			background: black;
-			margin: 0 10px 0 10px;
+			margin: 0;
 			border-radius: 5px;
+			border: 1px solid #fff;
+			height: 38px;
+			width: 100%;
+			min-width:25px;
+			max-width:40px;
+		}
+		
+		#backer-terra .total-resource-value{
+			border: 1px solid orange;
 		}
 		
 		#backer-terra{
 			width:100%;
-			padding: 5px 0px 2px 3px;
 			background-color: rgba(255, 165, 0, 0.25); /* Orange with 50% opacity */
+		}
+		
+		#backer-megacredits .total-resource-value{
+			border: 1px solid rgba(246, 235, 97, 1); /* #F6EB61 with 25% opacity */
 		}
 		
 		#backer-megacredits{
 			width:100%;
-			padding: 5px 0px 2px 3px;
 			background-color: rgba(246, 235, 97, 0.25); /* #F6EB61 with 25% opacity */
+		}
+		
+		#backer-heat .total-resource-value{
+			border: 1px solid #FF7276; /* #F6EB61 with 25% opacity */
 		}
 		
 		#backer-heat{
 			width:100%;
-			padding: 5px 0px 2px 3px;
 			background-color: rgba(255, 114, 118, 0.25); /* #FF7276 with 25% opacity */
+
+		}
+		
+		#backer-cards .total-resource-value{
+			border: 1px solid #6368ad; /* #F6EB61 with 25% opacity */
 		}
 		
 		#backer-cards{
 			width:100%;
-			padding: 5px 0px 2px 3px;
-			background-color: rgba(99, 104, 173, 0.25); /* #6368ad with 25% opacity */
+			background-color: rgba(99, 104, 173, 0.5); /* #6368ad with 25% opacity */
+		}
+						
+		#backer-plants .total-resource-value{
+			border: 1px solid rgba(0, 255, 0, 1); /* #F6EB61 with 25% opacity */
 		}
 		
 		#backer-plants{
 			width:100%;
-			padding: 5px 0px 2px 3px;
 			background-color: rgba(0, 255, 0, 0.125); /* #00FF00 (pure green) with 25% opacity */
+		}
+		
+								
+		#backer-steel .total-resource-value{
+			border: 1px solid rgba(193, 154, 107, 1); /* #F6EB61 with 25% opacity */
 		}
 		
 		#backer-steel{
 			width:100%;
-			padding: 5px 0px 2px 3px;
 			background-color: rgba(193, 154, 107, 0.25); /* #c19a6b with 25% opacity */
-
+		}
+				
+								
+		#backer-titanium .total-resource-value{
+			border: 1px solid rgba(128, 128, 128, 1); /* #F6EB61 with 25% opacity */
 		}
 		
 		#backer-titanium{
 			width:100%;
-			padding: 5px 0px 2px 3px;
 			background-color: rgba(128, 128, 128, 0.25); /* Orange with 50% opacity */
 		}
+		
+		/*#backer-titanium .button-plus{
+			border: 2px solid gray;
+		}*/
 		
         #productionButton {
             background-color: #222;
             border: 1px soild black;
             border-radius: 5px;
             padding: 0 5px 5px 5px;
-			margin: 2px 0 0 10px ;
+			margin: 2px 5px 0 10px ;
             font-size: 12px;
 			line-height:5px;
             cursor: pointer;
-			color:orange;
+			color:white;
 			float: right;
 			font-weight:bold;
-			width:100px;
+			width:150px;
 			vertical-align: middle;
 			height:38px;
 			text-transform:uppercase;
 		}
+		
         #productionButton .material-icons {
 			font-size:18px;
 			margin:0 0 5px 0;
 			padding:0;
+			color:orange;
         }
 		
 		#resetButton {
@@ -316,11 +395,15 @@
 		
 		#action-info-key{
 			width:auto;
-			margin-top: 10px;
-			padding: 0px 0 0 0;
-			border-top: 2px solid #fff;
+			margin-top: 5px;
+			padding: 0px 0 20px 0;
+			border-top: 4px solid #000;
+			border-bottom: 4px solid #000;
 			font-weight:bold;
 			align: left;
+			height:auto;
+			background-image: url('https://www.fryxgames.se/wp-content/uploads/2018/10/FRYXGAMES_WEBb.jpg');
+    
 		}
 		
 		.action-key{
@@ -354,20 +437,6 @@
 		
 		.arrow-forward{
 		}
-		
-		.resource-value {
-            font-size: 32px;
-            font-weight: bold;
-            text-align: center;
-			display: block;
-			float:left;
-			padding: 2px 0 0 0;
-			border: 0px solid #fff;
-			margin: 0;
-			vertical-align: middle;
-			height: 40px;
-			width: 44px;
-        }
 		
 		p.text-me{
 			margin: 0 0 0 0;
