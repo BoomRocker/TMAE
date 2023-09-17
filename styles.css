@@ -394,14 +394,12 @@
 			width:100%;
 			margin-top: 5px;
 			text-align:left;
-			padding: 0px 0 20px 5px;
+			padding: 10px 0 20px 5px;
 			border-top: 4px solid #000;
 			border-bottom: 4px solid #000;
 			font-weight:bold;
 			align: left;
 			text-align:center;
-			height:100px;
-			padding:0px;
 			background-image: url('https://www.fryxgames.se/wp-content/uploads/2018/10/FRYXGAMES_WEBb.jpg');
     	}
 		
