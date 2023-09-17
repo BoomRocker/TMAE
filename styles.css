@@ -91,24 +91,24 @@
 		
         .button-plus {
 			color: #fff;
-			font-size:24px;
+			font-size:20px;
 			padding:0 2px 0 2px;
 			margin:0;
 			text-align:center;
-			margin:0 2px 0 3px;
+			margin:9px 2px 0 3px;
 			width:40px;
-			height:40px;
+			height:25px;
         }
 		
 		.button-minus {
 			color: gray;
-			font-size:24px;
+			font-size:20px;
 			padding:0 2px 0 2px;
 			margin:0;
 			text-align:center;
-			margin:0 2px 0 3px;
+			margin:9px 2px 0 3px;
 			width:40px;
-			height:40px;
+			height:25px;
 			font-weight:bold;
 			background-color: rgba(0, 0, 0, 0.25); /* #FF7276 with 25% opacity */
 
@@ -358,7 +358,7 @@
 		#resetButton {
             border: 1px soild black;
             border-radius: 5px;
-			margin: 2px 0 0 5px ;
+			margin: 10px 0 0 5px ;
             font-size: 12px;
 			line-height:5px;
             cursor: pointer;
@@ -366,10 +366,14 @@
 			float: right;
 			font-weight:bold;
 			vertical-align: middle;
-			height:38px;
+			height:25px;
 			text-transform:uppercase;
-			font-size:20px;
 			padding:0;
+			width:50px;
+		}
+		
+		#resetButton  .material-icons {
+			font-size:18px;	
 		}
 		
         .resource-total {
@@ -395,30 +399,36 @@
 			border-bottom: 4px solid #000;
 			font-weight:bold;
 			align: left;
+			text-align:center;
 			height:100px;
+			padding:0px;
 			background-image: url('https://www.fryxgames.se/wp-content/uploads/2018/10/FRYXGAMES_WEBb.jpg');
-    
+    	}
+		
+		#action-info-key .material-icons{
+			font-size:16px;
+			margin: 0 2px 1px 2px;
 		}
 		
 		.action-key{
 			font-weight: bold;
-			font-family: Space Mono; arial; sans-serif;
 			border-radius:10px;
-			width:150px;
-			height:35px;
+			width:140px;
+			height:30px;
 			background-color:#222;
-			padding: 0px 10px 0px 10px;
+			padding: 0px;
 			margin: 3px 0 0 0;
 			position: relative;
 			cursor: pointer;
-			background-color:#000;
+			background-color: rgba(0, 0, 0, 0.65); /* Black background with 50% opacity */
+		}
+
 		}
 		
 		.action-key span{
 			font-size:16px;
 			font-weight: bold;
-			font-family: Space Mono; arial; sans-serif;
-			padding:0;
+			margin:0;
 			vertical-align: middle;
 		}
 		
