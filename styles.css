@@ -262,8 +262,8 @@
 			border: 1px solid #fff;
 			height: 38px;
 			width: 100%;
-			min-width:25px;
-			max-width:40px;
+			min-width:40px;
+			max-width:60px;
 		}
 		
 		#backer-terra .total-resource-value{
