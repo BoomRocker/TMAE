@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+    <title>Terraforming Mars: Ares Expedition Counter</title>
+	
+<!-- Add your favicon in the link tag -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Space Mono">
+
+<!-- Link to the Roboto font from Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet">
+<!-- CSS-->
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="container">
+       <!-- <h1><i class="material-icons" style="display:flex; margin:0px 0 0px 0; padding:0px 0 0 0; float:left; width:auto; height:20px; font-size:35px;">language</i>Terraforming Mars: <br>Ares Expedition Counter</h1>-->
+<!-- Production Button -->
+		<div class="section">
+			<!-- Terraforming Rating -->
+			<div class="resource-container color-terraformingRating">
+				<div class="resource-name-container bg-terra"><i class="material-icons smaller">public</i><p class="resource-name">Terra Rating</p></div>
+				<div class="button-container">
+					<button class="button-plus hide" id="minusTerraforming5">-5</button> <!-- New -5 button -->
+					<button class="button-plus" id="minusTerraforming">-1<!--<i class="material-icons color-terraformingRating">square</i>--></button>
+					<span id="terraformingRating" class="resource-value">0<!--<i class="material-icons color-terraformingRating">square</i>--></span>
+					<button class="button-plus" id="plusTerraforming">+1<!--<i class="material-icons color-terraformingRating">square</i>--></button>
+					<button class="button-plus" id="plusTerraforming5">+5<!--<i class="material-icons color-terraformingRating">square</i>--></button> <!-- New +5 button -->
+					<!--<p class="text-me">=</p>--> &nbsp;
+					<span id="terraformingRating-total" class="resource-value total-resource-value">0</span>&nbsp;
+					<button id="resetButton"><i class="material-icons">sync</i></button>
+					<button id="productionButton"><i class="material-icons">factory</i>&nbsp;<i class="material-icons">precision_manufacturing</i>&nbsp;<i class="material-icons">front_loader</i>Production</button>
+
+				
+				</div>
+			</div>
+		</div>
+
+		<div class="section">
+			<!-- Megacredits -->
+			<div class="resource-container color-megacredits">
+				<div class="resource-name-container bg-megacredits"><i class="material-icons">toll</i><p class="resource-name">Mega Credits</p></div>
+				<div class="button-container">
+					<button class="button-plus hide" id="minusMegacredits5">-5</button> <!-- New -5 button -->
+					<button class="button-plus" id="minusMegacredits">-1<!--<i class="material-icons color-megacredits">square</i>--></button>
+					<span id="megacredits" class="resource-value">0</span>
+					<button class="button-plus" id="plusMegacredits">+1<!--<i class="material-icons color-megacredits">square</i>--></button>
+					<button class="button-plus" id="plusMegacredits5">+5<!--<i class="material-icons color-megacredits">square</i>--></button> <!-- New +5 button -->
+					<!--<p class="text-me">=</p>-->&nbsp;
+					<span id="megacredits-total" class="resource-value total-resource-value">0</span>&nbsp;
+					<button class="button-plus iconer" id="subtractMegacredits">-1<!--<i class="material-icons color-megacredits">toll</i>--></button> <!-- -1 button -->
+					<button class="button-plus iconer" id="subtractMegacredits5">-5<!--<i class="material-icons color-megacredits">toll</i>--></button> <!-- -5 button -->
+					<button class="button-plus iconer" id="addMegacredits">+1<!--<i class="material-icons color-megacredits">toll</i>--></button> <!-- +1 button -->
+					<button class="button-plus iconer" id="addMegacredits5">+5<!--<i class="material-icons color-megacredits">toll</i>--></button> <!-- +5 button -->
+					
+				</div>
+			</div>
+		</div>
+		
+		 <!-- Cards -->
+		<div class="section">
+			<div class="resource-container color-cards">
+				<div class="resource-name-container bg-cards"><i class="material-icons">style</i><p class="resource-name">Cards</p></div>
+				<div class="button-container">
+					<button class="button-plus hide" id="minusCards5">-5<!--<i class="material-icons color-megacredits">square</i>--></button> <!-- New -5 button -->
+					<button class="button-plus" id="minusCards">-1<!--<i class="material-icons color-cards">square</i>--></button>
+					<span id="cards" class="resource-value">0</span>
+					<button class="button-plus" id="plusCards">+1<!--<i class="material-icons color-cards">square</i>--></button>
+					<button class="button-plus" id="plusCards5">+5<!--<i class="material-icons color-cards">square</i>--></button> <!-- New +5 button -->
+					<!--<p class="text-me">=</p>--> &nbsp;
+					<span id="cards-total" class="resource-value total-resource-value">0</span>
+				</div>
+			</div>
+		</div>
+
+		<!-- Heat -->
+		<div class="section">
+			<div class="resource-container color-heat">
+				<div class="resource-name-container bg-heat"><i class="material-icons">whatshot</i><p class="resource-name">Heat</p></div>
+				<div class="button-container">
+					<button class="button-plus hide" id="minusHeat5">-5<!--<i class="material-icons color-heat">square</i>--></button> <!-- New -5 button -->
+					<button class="button-plus" id="minusHeat">-1<!--<i class="material-icons color-heat">square</i>--></button>
+					<span id="heat" class="resource-value">0</span>
+					<button class="button-plus" id="plusHeat">+1<!--<i class="material-icons color-heat">square</i>--></button>
+					<button class="button-plus" id="plusHeat5">+5<!--<i class="material-icons color-heat">square</i>--></button> <!-- New +5 button -->
+					<!--<p class="text-me">=</p>-->&nbsp;
+					<span id="heat-total" class="resource-value total-resource-value">0</span>&nbsp;
+					<button class="button-plus iconer" id="subtractHeat">-1<!--<i class="material-icons color-heat">whatshot</i>--></button> <!-- -1 button -->
+					<button class="button-plus iconer" id="subtractHeat5">-5<!--<i class="material-icons color-heat">whatshot</i>--></button> <!-- -5 button -->
+					<button class="button-plus iconer" id="addHeat">+1<!--<i class="material-icons color-heat">whatshot</i></button> <!-- +1 button -->
+					<button class="button-plus iconer" id="addHeat5">+5<!--<i class="material-icons color-heat">whatshot</i>--></button> <!-- +5 button -->
+					
+				</div>
+			</div>
+		</div>
+
+		<!-- Plants -->
+		<div class="section">
+			<div class="resource-container color-plants">
+				<div class="resource-name-container bg-plants"><i class="material-icons ">eco</i><p class="resource-name">Plants</p></div>
+				<div class="button-container">
+					<button class="button-plus hide" id="minusPlants5">-5<!--<i class="material-icons color-plants">square</i>--></button> <!-- New -5 button -->
+					<button class="button-plus" id="minusPlants">-1<!--<i class="material-icons color-plants">square</i>--></button>
+					<span id="plants" class="resource-value">0</span>
+					<button class="button-plus" id="plusPlants">+1<!--<i class="material-icons color-plants">square</i>--></button>
+					<button class="button-plus" id="plusPlants5">+5<!--<i class="material-icons color-plants">square</i>--></button> <!-- New +5 button -->
+					<!--<p class="text-me">=</p>-->&nbsp;
+					<span id="plants-total" class="resource-value total-resource-value">0</span>&nbsp;
+					<button class="button-plus iconer" id="subtractPlants">-1<!--<i class="material-icons color-plants">eco</i>--></button> <!-- -1 button -->
+					<button class="button-plus iconer" id="subtractPlants5">-5<!--<i class="material-icons color-plants">eco</i>--></button> <!-- -5 button -->
+					<button class="button-plus iconer" id="addPlants">+1<!--<i class="material-icons color-plants">eco</i>--></button> <!-- +1 button -->
+					<button class="button-plus iconer" id="addPlants5">+5<!--<i class="material-icons color-plants">eco</i>--></button> <!-- +5 button -->
+				</div>
+			</div>
+		</div>
+
+		 <!-- Steel -->
+		<div class="section">
+			<div class="resource-container color-steel">
+				<div class="resource-name-container bg-steel"><i class="material-icons ">build</i><p class="resource-name">Steel</p></div>
+				<div class="button-container">
+					<button class="button-plus hide" id="minusSteel5">-5<!--<i class="material-icons color-steel">square</i>--></button> <!-- New -5 button -->
+					<button class="button-plus" id="minusSteel">-1<!--<i class="material-icons color-steel">square</i>--></button>
+					<span id="steel" class="resource-value">0</span>
+					<button class="button-plus" id="plusSteel">+1<!--<i class="material-icons color-steel">square</i>--></button>
+					<button class="button-plus" id="plusSteel5">+5<!--<i class="material-icons color-steel">square</i>--></button> <!-- New +5 button -->
+					<!--<p class="text-me">=</p>-->&nbsp;
+					<span id="steel-total" class="resource-value total-resource-value">0</span>
+				</div>
+			</div>
+		</div>
+
+		<!-- Titanium -->
+		<div class="section">
+			<div class="resource-container color-titanium">
+				<div class="resource-name-container bg-titanium"><i class="material-icons ">settings</i><p class="resource-name">Titanium</p></div>
+				<div class="button-container">
+					<button class="button-plus hide" id="minusTitanium5">-5<!--<i class="material-icons color-titanium">square</i>--></button> <!-- New -5 button -->
+					<button class="button-plus" id="minusTitanium">-1<!--<i class="material-icons color-titanium">square</i>--></button>
+					<span id="titanium" class="resource-value">0</span>
+					<button class="button-plus" id="plusTitanium">+1<!--<i class="material-icons color-titanium">square</i>--></button>
+					<button class="button-plus" id="plusTitanium5">+5<!--<i class="material-icons color-titanium">square</i>--></button> <!-- New +5 button -->
+					<!--<p class="text-me">=</p>-->&nbsp;
+					<span id="titanium-total" class="resource-value total-resource-value">0</span>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- KEY -->		
+		 <div id="action-info-key">
+           <!-- <i class="material-icons">key</i>
+            <p class="resource-name">Actions</p>-->
+				<button id="action-spend-mc-oxygen" class="action-key">
+					<span class="color-megacredits">20</span>
+					<i class="material-icons color-megacredits">toll</i>
+					<i class="material-icons arrow-forward">arrow_forward</i>
+					<span class="color-sky">1</span>
+					<i class="material-icons color-sky" >cloud</i>
+				</button>
+				<button id="action-spend-mc-heat" class="action-key">
+					<span class="color-megacredits">14</span>
+					<i class="material-icons color-megacredits">toll</i>
+					<i class="material-icons arrow-forward">arrow_forward</i>
+					<span class="color-heat">1</span>
+					<i class="material-icons color-heat" >thermostat</i>
+				</button>
+				<button id="action-spend-plant-oxygen" class="action-key">
+					<span class="color-plants">8</span>
+					<i class="material-icons color-plants">eco</i>
+					<i class="material-icons arrow-forward">arrow_forward</i>
+					<span class="color-sky">1</span>
+					<i class="material-icons color-sky" >cloud</i>
+				</button>
+				<button id="action-spend-heat-heat" class="action-key">
+					<span class="color-heat">8</span>
+					<i class="material-icons color-heat">whatshot</i>
+					<i class="material-icons arrow-forward">arrow_forward</i>
+					<span class="color-heat">1</span>
+					<i class="material-icons color-heat">thermostat</i>
+				</button>
+				<button id="action-spend-mc-ocean" class="action-key">
+					<span class="color-megacredits">15</span>
+					<i class="material-icons color-megacredits">toll</i>
+					<i class="material-icons arrow-forward">arrow_forward</i>
+					<span class="color-ocean">1</span>
+					<i class="material-icons color-ocean" >public</i>
+				</button>
+        </div>
+			
+    </div>
+    <script>
+	
+	    let megacredits = 0;
+        let terraformingRating = 0;
+        let cards = 0;
+        let heat = 0;
+        let plants = 0;
+        let steel = 0;
+        let titanium = 0;
+		let totalResources = 0;
+		let MCnewTotal = 0;
+		let PLNTSnewTotal = 0;
+		let HTnewTotal = 0;
+		let plantME = 0;
+		//let plants-total = 0;
+		
+        // Function to update the display of resources
+        function updateDisplay() {
+            document.getElementById('megacredits').textContent = megacredits;
+            document.getElementById('terraformingRating').textContent = terraformingRating;
+            document.getElementById('cards').textContent = cards;
+            document.getElementById('heat').textContent = heat;
+            document.getElementById('plants').textContent = plants;
+            document.getElementById('steel').textContent = steel;
+            document.getElementById('titanium').textContent = titanium;
+        }
+
+        // Function to update the total number for a resource
+        function updateResourceTotal(resourceId, resourceValue) {
+            const totalSpan = document.querySelector(`#${resourceId} + .resource-total`);
+            totalSpan.textContent = `(${resourceValue})`;
+        }
+
+        // Event listeners for "+" and "-" buttons for each resource
+        document.getElementById('plusMegacredits').addEventListener('click', () => {
+            megacredits += 1;
+            updateDisplay();
+            updateResourceTotal('megacredits', megacredits);
+        });
+
+        document.getElementById('minusMegacredits').addEventListener('click', () => {
+		  if (megacredits > 0) {
+			megacredits -= 1;
+			updateDisplay();
+			updateResourceTotal('megacredits', megacredits);
+		  }
+        });
+		
+		document.getElementById('plusMegacredits5').addEventListener('click', () => {
+            megacredits += 5;
+            updateDisplay();
+            updateResourceTotal('megacredits', megacredits);
+        });
+
+		document.getElementById('minusMegacredits5').addEventListener('click', () => {
+			if (megacredits > 5) {
+				megacredits -= 5;
+			} else {
+				megacredits = 0;
+			}
+			updateDisplay();
+			updateResourceTotal('megacredits', megacredits);
+		});
+
+        document.getElementById('plusTerraforming').addEventListener('click', () => {
+            terraformingRating += 1;
+            updateDisplay();
+            updateResourceTotal('terraformingRating', terraformingRating);
+        });
+
+        document.getElementById('minusTerraforming').addEventListener('click', () => {
+		  if (terraformingRating > 0) {
+			terraformingRating -= 1;
+			updateDisplay();
+			updateResourceTotal('terraformingRating', terraformingRating);
+		  }
+        });
+		
+		document.getElementById('plusTerraforming5').addEventListener('click', () => {
+            terraformingRating += 5;
+            updateDisplay();
+            updateResourceTotal('terraformingRating', terraformingRating);
+        });
+
+		document.getElementById('minusTerraforming5').addEventListener('click', () => {
+			if (terraformingRating > 5) {
+				terraformingRating -= 5;
+			} else {
+				terraformingRating = 0;
+			}
+			updateDisplay();
+			updateResourceTotal('terraformingRating', terraformingRating);
+		});
+
+        document.getElementById('plusCards').addEventListener('click', () => {
+            cards += 1;
+            updateDisplay();
+            updateResourceTotal('cards', cards);
+        });
+
+        document.getElementById('minusCards').addEventListener('click', () => {
+		  if (cards > 0) {
+			cards -= 1;
+			updateDisplay();
+			updateResourceTotal('cards', cards);
+		  }
+        });
+		
+		document.getElementById('plusCards5').addEventListener('click', () => {
+				cards += 5;
+				updateDisplay();
+    			updateResourceTotal('cards', cards);
+        });
+
+		document.getElementById('minusCards5').addEventListener('click', () => {
+			if (cards > 5) {
+				cards -= 5;
+			} else {
+				cards = 0;
+			}
+			updateDisplay();
+			updateResourceTotal('cards', cards);
+		});
+
+        document.getElementById('plusHeat').addEventListener('click', () => {
+            heat += 1;
+            updateDisplay();
+            updateResourceTotal('heat', heat);
+        });
+
+        document.getElementById('minusHeat').addEventListener('click', () => {
+		  if (heat > 0) {
+			heat -= 1;
+			updateDisplay();
+			updateResourceTotal('heat', heat);
+		  }
+        });
+		
+		
+		
+		document.getElementById('plusHeat5').addEventListener('click', () => {
+				heat += 5;
+				updateDisplay();
+    			updateResourceTotal('heat', heat);
+        });
+
+		document.getElementById('minusHeat5').addEventListener('click', () => {
+			if (heat > 5) {
+				heat -= 5;
+			} else {
+				heat = 0;
+			}
+			updateDisplay();
+			updateResourceTotal('heat', heat);
+		});
+
+        document.getElementById('plusPlants').addEventListener('click', () => {
+            plants += 1;
+            updateDisplay();
+            updateResourceTotal('plants', plants);
+        });
+
+        document.getElementById('minusPlants').addEventListener('click', () => {
+		  if (plants > 0) {
+			plants -= 1;
+			updateDisplay();
+			updateResourceTotal('plants', plants);
+		  }
+        });
+	// MEGACREDITS
+			document.getElementById('addMegacredits').addEventListener('click', () => {
+				const MC = parseInt(document.getElementById('megacredits-total').textContent); // Parse the heat total as an integer
+				const MCnewTotal = MC + 1; // Update the heat total
+				document.getElementById('megacredits-total').textContent = MCnewTotal; // Update heat total
+				updateResourceTotal('megacredits-total', MCnewTotal);
+			});
+
+			document.getElementById('addMegacredits5').addEventListener('click', () => {
+				const MC = parseInt(document.getElementById('megacredits-total').textContent); // Parse the heat total as an integer
+				const MCnewTotal = MC + 5; // Update the heat total
+				document.getElementById('megacredits-total').textContent = MCnewTotal; // Update heat total
+				updateResourceTotal('megacredits-total', MCnewTotal);
+			});
+
+			document.getElementById('subtractMegacredits').addEventListener('click', () => {
+				const MC = parseInt(document.getElementById('megacredits-total').textContent); // Parse the heat total as an integer
+				if (MC > 0) {
+					const MC = parseInt(document.getElementById('megacredits-total').textContent); // Parse the heat total as an integer
+					const MCnewTotal = MC - 1; // Update the heat total
+					document.getElementById('megacredits-total').textContent = MCnewTotal; // Update heat total
+					updateResourceTotal('megacredits-total', MCnewTotal);
+				} else {
+					document.getElementById('megacredits-total').textContent = 0; // Update heat total
+					updateResourceTotal('megacredits-total', 0);
+				}
+			});
+
+			document.getElementById('subtractMegacredits5').addEventListener('click', () => {
+				const MC = parseInt(document.getElementById('megacredits-total').textContent); // Parse the heat total as an integer
+				if (MC > 0) {
+					const MC = parseInt(document.getElementById('megacredits-total').textContent); // Parse the heat total as an integer
+					const MCnewTotal = MC - 5; // Update the heat total
+					document.getElementById('megacredits-total').textContent = MCnewTotal; // Update heat total
+					updateResourceTotal('megacredits-total', MCnewTotal);
+				} else {
+					document.getElementById('megacredits-total').textContent = 0; // Update heat total
+					updateResourceTotal('megacredits-total', 0);
+				}
+			});
+	//// END PLAMNTS
+		
+	// PLANTS ADD SUBTRACT	
+			document.getElementById('addPlants').addEventListener('click', () => {
+				const PLNTS = parseInt(document.getElementById('plants-total').textContent); // Parse the plants total as an integer
+				const PLNTSnewTotal = PLNTS + 1; // Update the plants total
+				document.getElementById('plants-total').textContent = PLNTSnewTotal; // Update plants total
+				updateResourceTotal('plants-total', PLNTSnewTotal);
+			});
+
+			document.getElementById('addPlants5').addEventListener('click', () => {
+				const PLNTS = parseInt(document.getElementById('plants-total').textContent); // Parse the plants total as an integer
+				const PLNTSnewTotal = PLNTS + 5; // Update the plants total
+				document.getElementById('plants-total').textContent = PLNTSnewTotal; // Update plants total
+				updateResourceTotal('plants-total', PLNTSnewTotal);
+			});
+
+			document.getElementById('subtractPlants').addEventListener('click', () => {
+				const PLNTS = parseInt(document.getElementById('plants-total').textContent); // Parse the plants total as an integer
+				if (PLNTS > 0) {
+					const PLNTS = parseInt(document.getElementById('plants-total').textContent); // Parse the plants total as an integer
+					const PLNTSnewTotal = PLNTS - 1; // Update the plants total
+					document.getElementById('plants-total').textContent = PLNTSnewTotal; // Update plants total
+					updateResourceTotal('plants-total', PLNTSnewTotal);
+				} else {
+					document.getElementById('plants-total').textContent = 0; // Update plants total
+					updateResourceTotal('plants-total', 0);
+				}
+			});
+
+			document.getElementById('subtractPlants5').addEventListener('click', () => {
+				const PLNTS = parseInt(document.getElementById('plants-total').textContent); // Parse the plants total as an integer
+				if (PLNTS > 0) {
+					const PLNTS = parseInt(document.getElementById('plants-total').textContent); // Parse the plants total as an integer
+					const PLNTSnewTotal = PLNTS - 5; // Update the plants total
+					document.getElementById('plants-total').textContent = PLNTSnewTotal; // Update plants total
+					updateResourceTotal('plants-total', PLNTSnewTotal);
+				} else {
+					document.getElementById('plants-total').textContent = 0; // Update plants total
+					updateResourceTotal('plants-total', 0);
+				}
+			});
+	//// END PLAMNTS
+	
+	// HEAT ADD SUBTRACT	
+			document.getElementById('addHeat').addEventListener('click', () => {
+				const HT = parseInt(document.getElementById('heat-total').textContent); // Parse the heat total as an integer
+				const HTnewTotal = HT + 1; // Update the heat total
+				document.getElementById('heat-total').textContent = HTnewTotal; // Update heat total
+				updateResourceTotal('heat-total', HTnewTotal);
+			});
+
+			document.getElementById('addHeat5').addEventListener('click', () => {
+				const HT = parseInt(document.getElementById('heat-total').textContent); // Parse the heat total as an integer
+				const HTnewTotal = HT + 5; // Update the heat total
+				document.getElementById('heat-total').textContent = HTnewTotal; // Update heat total
+				updateResourceTotal('heat-total', HTnewTotal);
+			});
+
+			document.getElementById('subtractHeat').addEventListener('click', () => {
+				const HT = parseInt(document.getElementById('heat-total').textContent); // Parse the heat total as an integer
+				if (HT > 0) {
+					const HT = parseInt(document.getElementById('heat-total').textContent); // Parse the heat total as an integer
+					const HTnewTotal = HT - 1; // Update the heat total
+					document.getElementById('heat-total').textContent = HTnewTotal; // Update heat total
+					updateResourceTotal('heat-total', HTnewTotal);
+				} else {
+					document.getElementById('heat-total').textContent = 0; // Update heat total
+					updateResourceTotal('heat-total', 0);
+				}
+			});
+
+			document.getElementById('subtractHeat5').addEventListener('click', () => {
+				const HT = parseInt(document.getElementById('heat-total').textContent); // Parse the heat total as an integer
+				if (HT > 0) {
+					const HT = parseInt(document.getElementById('heat-total').textContent); // Parse the heat total as an integer
+					const HTnewTotal = HT - 5; // Update the heat total
+					document.getElementById('heat-total').textContent = HTnewTotal; // Update heat total
+					updateResourceTotal('heat-total', HTnewTotal);
+				} else {
+					document.getElementById('heat-total').textContent = 0; // Update heat total
+					updateResourceTotal('heat-total', 0);
+				}
+			});
+	//// END PLAMNTS
+		
+		document.getElementById('plusPlants5').addEventListener('click', () => {
+				plants += 5;
+				updateDisplay();
+    			updateResourceTotal('plants', plants);
+        });
+
+		document.getElementById('minusPlants5').addEventListener('click', () => {
+			if (plants > 5) {
+				plants -= 5;
+			} else {
+				plants = 0;
+			}
+			updateDisplay();
+			updateResourceTotal('plants', plants);
+		});
+
+        document.getElementById('plusSteel').addEventListener('click', () => {
+            steel += 1;
+            updateDisplay();
+            updateResourceTotal('steel', steel);
+        });
+
+        document.getElementById('minusSteel').addEventListener('click', () => {
+		  if (steel > 0) {
+			steel -= 1;
+			updateDisplay();
+			updateResourceTotal('steel', steel);
+		  }
+        });
+		
+		document.getElementById('plusSteel5').addEventListener('click', () => {
+            steel += 5;
+            updateDisplay();
+            updateResourceTotal('steel', steel);
+        });
+
+        document.getElementById('minusSteel5').addEventListener('click', () => {
+			if (steel > 5) {
+				steel -= 5;
+			} else {
+				steel = 0;
+			}
+			updateDisplay();
+			updateResourceTotal('steel', steel);
+		});
+
+        document.getElementById('plusTitanium').addEventListener('click', () => {
+            titanium += 1;
+            updateDisplay();
+            updateResourceTotal('titanium', titanium);
+        });
+
+        document.getElementById('minusTitanium').addEventListener('click', () => {
+		  if (titanium > 0) {
+			titanium -= 1;
+			updateDisplay();
+			updateResourceTotal('titanium', titanium);
+		  }
+        });
+		
+		document.getElementById('plusTitanium5').addEventListener('click', () => {
+            titanium += 5;
+            updateDisplay();
+            updateResourceTotal('titanium', titanium);
+        });
+
+        document.getElementById('minusTitanium5').addEventListener('click', () => {
+			if (titanium > 5) {
+				titanium -= 5;
+			} else {
+				titanium = 0;
+			}
+			updateDisplay();
+			updateResourceTotal('titanium', titanium);
+		});
+		
+	// ACTIONS: OCEAN TILES
+		document.getElementById('action-spend-mc-ocean').addEventListener('click', () => {		
+		// Check if you have enough megacredits to perform the action
+			const MC = parseInt(document.getElementById('megacredits-total').textContent);
+			if (MC >= 15) {
+				// Subtract the cost from the total megacredits
+				const MCnewTotal = MC - 15;	
+
+			// Display an alert indicating the action
+				window.alert("CONGRATULATIONS! \n  )`'-.,_)`'-.,_)`'-.,_)`'-.,_)`'-.,_)`'-.,_)`'-.,_)`'-.,_ \n\n You spent 15 Megacredits to gain ONE OCEAN TILE.");
+
+			// Update the display for "megacredits-total"
+			document.getElementById('megacredits-total').textContent = MCnewTotal;		
+			updateResourceTotal('megacredits-total', MCnewTotal);
+			updateDisplay();
+            updateResourceTotal('megacredits', megacredits);
+			} else {
+				// Display an alert if you don't have enough megacredits
+				window.alert('SORRY\nX - - - -X- - - - - - - -X- - - - - - - -X- - - - X \n\n You do not have 15 Megacredits to perform this action.');
+			}
+        });
+		
+	// ACTIONS: OXYGEN
+		document.getElementById('action-spend-mc-oxygen').addEventListener('click', () => {		
+		// Check if you have enough megacredits to perform the action
+			const MC = parseInt(document.getElementById('megacredits-total').textContent);
+			if (MC >= 20) {
+				// Subtract the cost from the total megacredits
+				const MCnewTotal = MC - 20;	
+
+			// Display an alert indicating the action
+				window.alert("CONGRATULATIONS! \n -.,_,.-''-.,_,.=''-.,_,.-'``'-.,_,.='-.,_,.-''-.,_,.=''-.,_,.-'``'-.,_,.='\n\n You spent 20 Megacredits to gain ONE OXYGEN.");
+
+			// Update the display for "megacredits-total"
+			document.getElementById('megacredits-total').textContent = MCnewTotal;		
+			updateResourceTotal('megacredits-total', MCnewTotal);
+			updateDisplay();
+            updateResourceTotal('megacredits', megacredits);
+			} else {
+				// Display an alert if you don't have enough megacredits
+				window.alert('SORRY\nX - - - -X- - - - - - - -X- - - - - - - -X- - - - X \n\n You do not have 20 Megacredits to perform this action.');
+			}
+        });
+		
+		
+	// ACTIONS: HEAT
+		document.getElementById('action-spend-mc-heat').addEventListener('click', () => {		
+		// Check if you have enough megacredits to perform the action
+			const MC = parseInt(document.getElementById('megacredits-total').textContent);
+			if (MC >= 14) {
+				// Subtract the cost from the total megacredits
+				const MCnewTotal = MC - 14;	
+
+			// Display an alert indicating the action
+				window.alert("CONGRATULATIONS! \n  ,(  ,( ,( ,(  ,( ,(  ,(  ,( ,(  ,( ,( ,(  ,( ,(  ,( \n \nYou spent 14 Megacredits to gain ONE HEAT.");
+
+			// Update the display for "megacredits-total"
+			document.getElementById('megacredits-total').textContent = MCnewTotal;		
+			updateResourceTotal('megacredits-total', MCnewTotal);
+			updateDisplay();
+            updateResourceTotal('megacredits', megacredits);
+			} else {
+				// Display an alert if you don't have enough megacredits
+				window.alert('SORRY\nX - - - -X- - - - - - - -X- - - - - - - -X- - - - X \n\n You do not have 14 Megacredits to perform this action.');
+			}
+        });
+		
+		
+	// ACTIONS: PLANT --> OXYGEN
+		document.getElementById('action-spend-plant-oxygen').addEventListener('click', () => {		
+		// Check if you have enough plants to perform the action
+			const PLNTS = parseInt(document.getElementById('plants-total').textContent);
+			if (PLNTS >= 8) {
+				// Subtract the cost from the total plants
+				const PLNTSnewTotal = PLNTS - 8;	
+
+			// Display an alert indicating the action
+				window.alert("CONGRATULATIONS! \n  WWWWWWWWW \n \nYou spent 8 Plants to gain ONE OXYGEN.");
+
+			// Update the display for "plants-total"
+			document.getElementById('plants-total').textContent = PLNTSnewTotal;		
+			updateResourceTotal('plants-total', PLNTSnewTotal);
+			updateDisplay();
+            updateResourceTotal('plants', plants);
+			} else {
+				// Display an alert if you don't have enough plants
+				window.alert('SORRY\nX - - - -X- - - - - - - -X- - - - - - - -X- - - - X \n\n You do not have 8 plants to perform this action.');
+			}
+        });
+		
+		
+		
+		
+	// ACTIONS: HEAT --> HEAT
+		document.getElementById('action-spend-heat-heat').addEventListener('click', () => {		
+		// Check if you have enough plants to perform the action
+			const HT = parseInt(document.getElementById('heat-total').textContent);
+			if (HT >= 8) {
+				// Subtract the cost from the total plants
+				const HTnewTotal = HT - 8;	
+
+			// Display an alert indicating the action
+				window.alert("CONGRATULATIONS! \n  __( '-._( '-._( '-._( '-._( '-._( '-.____( '-._( '-._( '-._( '-._( '-._( '-.__ \n \nYou spent 8 Heat to gain ONE TEMPERATURE.");
+
+			// Update the display for "plants-total"
+			document.getElementById('heat-total').textContent = HTnewTotal;		
+			updateResourceTotal('heat-total', HTnewTotal);
+			updateDisplay();
+            updateResourceTotal('heat', heat);
+			} else {
+				// Display an alert if you don't have enough heat
+				window.alert('SORRY\nX - - - -X- - - - - - - -X- - - - - - - -X- - - - X \n\n You do not have 8 heat to perform this action.');
+			}
+        });
+		
+
+		// Event listener for the Production button
+		document.getElementById('productionButton').addEventListener('click', () => {
+			// Get the current value of megacredits-total
+			const MC = parseInt(document.getElementById('megacredits-total').textContent);
+			const TR = terraformingRating;
+			const CRDS = parseInt(document.getElementById('cards-total').textContent);
+			const HT = parseInt(document.getElementById('heat-total').textContent); // Parse the heat total as an integer
+			const PLNTS = parseInt(document.getElementById('plants-total').textContent); // Parse the plants total as an integer
+			const STL = parseInt(document.getElementById('steel-total').textContent); // Parse the steel total as an integer
+			const TTN = parseInt(document.getElementById('titanium-total').textContent); // Parse the titanium total as an integer
+
+			// Calculate the new total values for each resource
+			const MCnewTotal = MC + megacredits + terraformingRating;
+			const CRDSnewTotal = cards;
+			const HTnewTotal = HT + heat; // Update the heat total as well
+			const PLNTSnewTotal = PLNTS + plants; // Update the plants total
+			const STLnewTotal = steel; // Update the steel total
+			const TTNnewTotal = titanium; // Update the titanium total
+
+			// Update the display of the total in the respective elements
+			document.getElementById('megacredits-total').textContent = MCnewTotal;
+			document.getElementById('terraformingRating-total').textContent = TR;
+			document.getElementById('cards-total').textContent = CRDSnewTotal; // Update cards total
+			document.getElementById('heat-total').textContent = HTnewTotal; // Update heat total
+			document.getElementById('plants-total').textContent = PLNTSnewTotal; // Update plants total
+			document.getElementById('steel-total').textContent = STLnewTotal; // Update steel total
+			document.getElementById('titanium-total').textContent = TTNnewTotal; // Update titanium total
+
+			// Update the resource-total for 'megacredits-total'
+			updateResourceTotal('megacredits-total', MCnewTotal);
+			updateResourceTotal('cards-total', CRDSnewTotal);
+			updateResourceTotal('heat-total', HTnewTotal);
+			updateResourceTotal('plants-total', PLNTSnewTotal);
+			updateResourceTotal('steel-total', STLnewTotal);
+			updateResourceTotal('titanium-total', TTNnewTotal);
+
+			// Add the 'button-clicked' class to trigger the animation
+			document.getElementById('productionButton').classList.add('button-clicked');
+
+			// Remove the 'button-clicked' class after a short delay to reset the button
+			setTimeout(() => {
+				document.getElementById('productionButton').classList.remove('button-clicked');
+			}, 200); // Adjust the delay to match the transition duration
+		});
+		
+        // JavaScript to show a confirmation dialog before reloading the webpage
+        document.getElementById('resetButton').addEventListener('click', function() {
+            // Ask for confirmation
+            const confirmed = window.confirm('Are you sure you want to RESET Terraforming Mars: Ares Expedition Counter?');
+            
+            // If the user confirms, reload the page
+            if (confirmed) {
+                location.reload(); // Reload the current page
+            }
+        });
+
+
+</script>
+</body>
+</html>
