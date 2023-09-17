@@ -411,11 +411,11 @@
 			font-weight: bold;
 			font-family: Space Mono; arial; sans-serif;
 			border-radius:10px;
-			width:auto;
-			height:40px;
+			width:150px;
+			height:35px;
 			background-color:#222;
 			padding: 0px 10px 0px 10px;
-			margin: 10px 0 0 0;
+			margin: 3px 0 0 0;
 			position: relative;
 			cursor: pointer;
 			background-color:#000;
