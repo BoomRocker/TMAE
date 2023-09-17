@@ -1,6 +1,7 @@
 
 		body {
-			background-color: rgba(51, 51, 51, 0.7); /* Adjust the alpha value (0.7 in this case) for transparency */
+			/*background-color: rgba(51, 51, 51, 0.7); /* Adjust the alpha value (0.7 in this case) for transparency */
+			background-color:#222;
 			text-align: center;
 			color: white;
 			margin: 0;
@@ -9,12 +10,12 @@
 			font-family: 'Roboto', sans-serif;
             font-weight: 300; /* Use the light variant */
 			overflow: hidden;
-			background-image: url('https://www.sciencenews.org/wp-content/uploads/2016/05/052316_cc_mars-mission-main_free.jpg');
+			/*background-image: url('https://www.sciencenews.org/wp-content/uploads/2016/05/052316_cc_mars-mission-main_free.jpg');*/
 			background-repeat: no-repeat;
 			background-size: cover;
 			background-repeat: no-repeat;
 			background-attachment: fixed;
-			<!--opacity: 0.65;-->
+			/*opacity: 0.65;*/
 			text-align:center;
 		}
 
@@ -82,8 +83,9 @@
 			padding:0 2px 0 2px;
 			margin:0;
 			text-align:center;
-			margin:0 5px 0 0;
+			margin:0 2px 0 3px;
 			width: auto;
+			height:40px;
         }
 		
 		.iconer{
@@ -108,7 +110,7 @@
 			width: 100%;
 			float: left;
 			background:black;
-			margin:5px 0 5px 0;
+			margin:5px 0 0 0;
 			padding: 0;
 			font-weight:bold;
 			height:20px;
@@ -214,6 +216,49 @@
 			border-radius: 5px;
 		}
 		
+		#backer-terra{
+			width:100%;
+			padding: 5px 0px 2px 3px;
+			background-color: rgba(255, 165, 0, 0.25); /* Orange with 50% opacity */
+		}
+		
+		#backer-megacredits{
+			width:100%;
+			padding: 5px 0px 2px 3px;
+			background-color: rgba(246, 235, 97, 0.25); /* #F6EB61 with 25% opacity */
+		}
+		
+		#backer-heat{
+			width:100%;
+			padding: 5px 0px 2px 3px;
+			background-color: rgba(255, 114, 118, 0.25); /* #FF7276 with 25% opacity */
+		}
+		
+		#backer-cards{
+			width:100%;
+			padding: 5px 0px 2px 3px;
+			background-color: rgba(99, 104, 173, 0.25); /* #6368ad with 25% opacity */
+		}
+		
+		#backer-plants{
+			width:100%;
+			padding: 5px 0px 2px 3px;
+			background-color: rgba(0, 255, 0, 0.125); /* #00FF00 (pure green) with 25% opacity */
+		}
+		
+		#backer-steel{
+			width:100%;
+			padding: 5px 0px 2px 3px;
+			background-color: rgba(193, 154, 107, 0.25); /* #c19a6b with 25% opacity */
+
+		}
+		
+		#backer-titanium{
+			width:100%;
+			padding: 5px 0px 2px 3px;
+			background-color: rgba(128, 128, 128, 0.25); /* Orange with 50% opacity */
+		}
+		
         #productionButton {
             background-color: #222;
             border: 1px soild black;
@@ -228,7 +273,7 @@
 			font-weight:bold;
 			width:100px;
 			vertical-align: middle;
-			height:40px;
+			height:38px;
 			text-transform:uppercase;
 		}
         #productionButton .material-icons {
@@ -249,9 +294,10 @@
 			font-weight:bold;
 			width:75x;
 			vertical-align: middle;
-			height:40px;
+			height:38px;
 			text-transform:uppercase;
 			font-size:20px;
+			padding:0;
 		}
 		
         .resource-total {
@@ -288,6 +334,7 @@
 			margin: 10px 0 0 0;
 			position: relative;
 			cursor: pointer;
+			background-color:#000;
 		}
 		
 		.action-key span{
@@ -314,12 +361,12 @@
             text-align: center;
 			display: block;
 			float:left;
-			padding: 0;
+			padding: 2px 0 0 0;
 			border: 0px solid #fff;
 			margin: 0;
 			vertical-align: middle;
-			height: 44px;
-			width: 50px;
+			height: 40px;
+			width: 44px;
         }
 		
 		p.text-me{
