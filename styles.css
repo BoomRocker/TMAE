@@ -91,7 +91,7 @@
         }
 		
         .button-plus {
-			color: #fff;
+			color: #8FCB95;
 			font-size:20px;
 			padding:0 2px 0 2px;
 			margin:0;
@@ -100,10 +100,11 @@
 			width:38px;
 			height:25px;
 			border: 0px solid #333;
+			background-color: rgba(0, 0, 0, 0.75); /* #FF7276 with 25% opacity */
         }
 		
 		.button-minus {
-			color: gray;
+			color: #CB8F8F;
 			font-size:20px;
 			padding:0 2px 0 2px;
 			margin:0;
