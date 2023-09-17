@@ -241,6 +241,12 @@
 			color:black;
 		}
 		
+		.bumper{
+			display:block;
+			background:none;
+			width:200px;
+		}
+		
 		.resource-value {
             font-size: 32px;
             font-weight: bold;
@@ -264,6 +270,8 @@
 			height: 38px;
 			width: 45px;
 		}
+		
+		
 		
 		#backer-terra .total-resource-value{
 			border: 2px solid orange;
