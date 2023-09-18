@@ -72,11 +72,16 @@
 			padding: 0;
 			border-radius: 5px;
 		}
+		
+		.nobr{
+		font-size:1px;	
+		}
 
         .button-container {
            display: flex;
 		   float: left;
-		   padding: 3px 3px 6px 3px;
+		   border:1px solid red;
+		   padding: 3px 0 6px 2px;
         }
         button {
             font-size: 18px;
