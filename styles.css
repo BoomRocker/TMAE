@@ -244,8 +244,8 @@
 		.bumper{
 			display:block;
 			background:none;
-			width:175px;
-			border:1px solid red;
+			width:172px;
+			border:0px solid red;
 		}
 		
 		.resource-value {
