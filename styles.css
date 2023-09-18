@@ -29,7 +29,7 @@
 		}
 		
 		#action-spend-mc-oxygen{
-			margin-top:8px;
+			margin-top:2px;
 		}
 		
 		h1 {
@@ -515,10 +515,10 @@
 			font-weight: bold;
 			border-radius:10px;
 			width:140px;
-			height:30px;
+			height:29.5px;
 			background-color:#222;
 			padding: 0px;
-			margin: 3px 0 0 0;
+			margin: 6px 0 0 0;
 			position: relative;
 			cursor: pointer;
 			background-color: rgba(0, 0, 0, 0.85); /* Black background with 50% opacity */
