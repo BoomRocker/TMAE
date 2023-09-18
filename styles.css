@@ -9,7 +9,7 @@
 			font-family: 'Roboto', sans-serif;
             font-weight: 300; /* Use the light variant */
 			overflow: hidden;
-			background-image: url('https://photojournal.jpl.nasa.gov/jpegMod/PIA14004_modest.jpg');
+			background-image: url('backPlanet.gif');
 			background-repeat: no-repeat;
 			background-size: cover;
 			background-repeat: no-repeat;
@@ -19,7 +19,7 @@
 		}
 		
 		#header-text{
-			background-image: url('https://www.fryxgames.se/wp-content/uploads/2018/10/FRYXGAMES_WEBb.jpg');
+			background-image: url('backMars.gif');
 			vertical-align: middle;
 			width:100%;
 			height:60px;
@@ -244,7 +244,7 @@
 		.bumper{
 			display:block;
 			background:none;
-			width:150px;
+			width:175px;
 			border:1px solid red;
 		}
 		
@@ -415,7 +415,7 @@
 			font-weight:bold;
 			align: left;
 			text-align:center;
-			background-image: url('https://www.fryxgames.se/wp-content/uploads/2018/10/FRYXGAMES_WEBb.jpg');
+			background-image: url('backMars.gif');
     	}
 		
 		#action-info-key .material-icons{
