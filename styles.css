@@ -360,7 +360,7 @@
             border: 1px soild black;
             border-radius: 5px;
             padding: 0 5px 5px 5px;
-			margin: 2px 5px 0 10px ;
+			margin: 5px 5px 0 10px ;
             font-size: 12px;
 			line-height:5px;
             cursor: pointer;
@@ -373,7 +373,9 @@
 			text-transform:uppercase;
 			border: 0px solid #333;
 			background-image: url('backPlanet.gif');
-		}
+			/* Add a text drop shadow */
+			text-shadow: 2px 2px 2px rgba(0, 0, 0, 1); /* Horizontal offset, vertical offset, blur radius, color with opacity */
+			}
 		
         #productionButton .material-icons {
 			font-size:18px;
