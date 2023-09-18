@@ -301,6 +301,7 @@
 			height: 38px;
 			width: 45px;
 			padding: 0 0 0 0;
+			font-weight:bold;
 		}
 		
 		.short-row{
@@ -409,7 +410,7 @@
             border: 1px solid orange;
             border-radius: 5px;
             padding:3px 5px 5px 5px;
-			margin: 5px 5% 0 5% ;
+			margin: 20px 25% 0 25% ;
             font-size: 18px;
 			line-height:5px;
             cursor: pointer;
@@ -418,9 +419,9 @@
 			float: left;
 			font-weight:bold;
 			font-family:'Orbitron', sans-serif;
-			width:90%;
+			width:50%;
 			vertical-align: middle;
-			height:30px;
+			height:75px;
 			text-transform:uppercase;
 			background-image: url('backMars.gif');
 			/* Add a text drop shadow */
@@ -428,14 +429,15 @@
 			}
 		
         #productionButton .material-icons {
-			font-size:18px;
-			margin:0 5px 5px 5px;
+			font-size:25px;
+			margin:0 10px 15px 5px;
 			padding:0px 0 0 0;
 			color:white;
         }
 		
 		.productionText{
 			padding: 0 10px 0 10px;
+			font-size:25px;
 		}
 
 		
