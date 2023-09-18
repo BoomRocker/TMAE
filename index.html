@@ -176,15 +176,20 @@
 					<span class="color-heat">1</span>
 					<i class="material-icons color-heat" >thermostat</i>
 				</button>
-				<br>
 				<button id="action-spend-mc-ocean" class="action-key">
 					<span class="color-megacredits">15</span>
 					<i class="material-icons color-megacredits">toll</i>
 					<i class="material-icons arrow-forward">arrow_forward</i>
 					<span class="color-ocean">1</span>
-					<i class="material-icons color-ocean" >public</i>
+					<i class="material-icons color-ocean" style="font-weight:bold;" >public</i>
 				</button>
-				<br>
+				<button id="action-spend-card-mc" class="action-key">
+					<span class="color-cards">1</span>
+					<i class="material-icons color-cards">speaker</i>
+					<i class="material-icons arrow-forward">arrow_forward</i>
+					<span class="color-megacredits">3</span>
+					<i class="material-icons color-megacredits" style="font-weight:bold;" >toll</i>
+				</button>
 				<button id="action-spend-plant-oxygen" class="action-key">
 					<span class="color-plants">8</span>
 					<i class="material-icons color-plants">eco</i>
@@ -574,119 +579,154 @@
 		});
 		
 	// ACTIONS: OCEAN TILES
-		document.getElementById('action-spend-mc-ocean').addEventListener('click', () => {		
-		// Check if you have enough megacredits to perform the action
+		document.getElementById('action-spend-mc-ocean').addEventListener('click', () => {
+			// Check if you have enough megacredits to perform the action
 			const MC = parseInt(document.getElementById('megacredits-total').textContent);
 			if (MC >= 15) {
 				// Subtract the cost from the total megacredits
-				const MCnewTotal = MC - 15;	
+				const MCnewTotal = MC - 15;
 
-			// Display an alert indicating the action
-				window.alert("CONGRATULATIONS! \n  )`'-.,_)`'-.,_)`'-.,_)`'-.,_)`'-.,_)`'-.,_)`'-.,_)`'-.,_ \n\n You spent 15 Megacredits to gain ONE OCEAN TILE.");
+				// Display a confirmation dialog
+				const confirmed = window.confirm("Do you want to spend 15 Megacredits to gain ONE OCEAN TILE?");
 
-			// Update the display for "megacredits-total"
-			document.getElementById('megacredits-total').textContent = MCnewTotal;		
-			updateResourceTotal('megacredits-total', MCnewTotal);
-			updateDisplay();
-            updateResourceTotal('megacredits', megacredits);
+				if (confirmed) {
+					// Update the display for "megacredits-total"
+					document.getElementById('megacredits-total').textContent = MCnewTotal;
+					updateResourceTotal('megacredits-total', MCnewTotal);
+					updateDisplay();
+					updateResourceTotal('megacredits', megacredits);
+				}
 			} else {
 				// Display an alert if you don't have enough megacredits
 				window.alert('SORRY\nX - - - -X- - - - - - - -X- - - - - - - -X- - - - X \n\n You do not have 15 Megacredits to perform this action.');
 			}
-        });
+		});
+
 		
 	// ACTIONS: OXYGEN
 		document.getElementById('action-spend-mc-oxygen').addEventListener('click', () => {		
-		// Check if you have enough megacredits to perform the action
+			// Check if you have enough megacredits to perform the action
 			const MC = parseInt(document.getElementById('megacredits-total').textContent);
 			if (MC >= 20) {
-				// Subtract the cost from the total megacredits
-				const MCnewTotal = MC - 20;	
+				// Display a confirmation dialog
+				const confirmed = window.confirm("Do you want to spend 20 MEGCREDITS to gain ONE OXYGEN?");
 
-			// Display an alert indicating the action
-				window.alert("CONGRATULATIONS! \n -.,_,.-''-.,_,.=''-.,_,.-'``'-.,_,.='-.,_,.-''-.,_,.=''-.,_,.-'``'-.,_,.='\n\n You spent 20 Megacredits to gain ONE OXYGEN.");
+				if (confirmed) {
+					// Subtract the cost from the total megacredits
+					const MCnewTotal = MC - 20;	
 
-			// Update the display for "megacredits-total"
-			document.getElementById('megacredits-total').textContent = MCnewTotal;		
-			updateResourceTotal('megacredits-total', MCnewTotal);
-			updateDisplay();
-            updateResourceTotal('megacredits', megacredits);
+					// Update the display for "megacredits-total"
+					document.getElementById('megacredits-total').textContent = MCnewTotal;		
+					updateResourceTotal('megacredits-total', MCnewTotal);
+					updateDisplay();
+					updateResourceTotal('megacredits', megacredits);
+				}
 			} else {
 				// Display an alert if you don't have enough megacredits
-				window.alert('SORRY\nX - - - -X- - - - - - - -X- - - - - - - -X- - - - X \n\n You do not have 20 Megacredits to perform this action.');
+				window.alert('SORRY\nX - - - -X- - - - - - - -X- - - - - - - -X- - - - X \n\n You do not have 20 MEGACREDITS to perform this action.');
+			}
+		});
+
+	// ACTIONS: OCEAN TILES
+		document.getElementById('action-spend-card-mc').addEventListener('click', () => {		
+		// Check if you have enough megacredits to perform the action
+			const MC = parseInt(document.getElementById('megacredits-total').textContent);
+			if (MC >= 0) {
+				// Add to total megacredits
+				const MCnewTotal = MC + 3;	
+				const confirmedCard = window.confirm('Do you want to spend 1 CARD to gain THREE MEGACREDITS?');
+            // If the user confirms, reload the page
+					if (confirmedCard) {
+						// Update the display for "megacredits-total"
+						document.getElementById('megacredits-total').textContent = MCnewTotal;		
+						updateResourceTotal('megacredits-total', MCnewTotal);
+						updateDisplay();
+						updateResourceTotal('megacredits', megacredits);
+					}
+			} else {
+				// Display an alert if you don't have enough megacredits
+				window.alert('SORRY\nX - - - -X- - - - - - - -X- - - - - - - -X- - - - X \n\n You do not have 1 CARD to perform this action.');
 			}
         });
-		
 		
 	// ACTIONS: HEAT
 		document.getElementById('action-spend-mc-heat').addEventListener('click', () => {		
-		// Check if you have enough megacredits to perform the action
+			// Check if you have enough megacredits to perform the action
 			const MC = parseInt(document.getElementById('megacredits-total').textContent);
 			if (MC >= 14) {
-				// Subtract the cost from the total megacredits
-				const MCnewTotal = MC - 14;	
+				// Display a confirmation dialog
+				const confirmed = window.confirm("Do you want to spend 14 MEGACREDITS to gain ONE TEMPERATURE?");
 
-			// Display an alert indicating the action
-				window.alert("CONGRATULATIONS! \n  ,(  ,( ,( ,(  ,( ,(  ,(  ,( ,(  ,( ,( ,(  ,( ,(  ,( \n \nYou spent 14 Megacredits to gain ONE HEAT.");
+				if (confirmed) {
+					// Subtract the cost from the total megacredits
+					const MCnewTotal = MC - 14;	
 
-			// Update the display for "megacredits-total"
-			document.getElementById('megacredits-total').textContent = MCnewTotal;		
-			updateResourceTotal('megacredits-total', MCnewTotal);
-			updateDisplay();
-            updateResourceTotal('megacredits', megacredits);
+					// Update the display for "megacredits-total"
+					document.getElementById('megacredits-total').textContent = MCnewTotal;		
+					updateResourceTotal('megacredits-total', MCnewTotal);
+					updateDisplay();
+					updateResourceTotal('megacredits', megacredits);
+				}
 			} else {
 				// Display an alert if you don't have enough megacredits
-				window.alert('SORRY\nX - - - -X- - - - - - - -X- - - - - - - -X- - - - X \n\n You do not have 14 Megacredits to perform this action.');
+				window.alert('SORRY\nX - - - -X- - - - - - - -X- - - - - - - -X- - - - X \n\n You do not have 14 MEGACREDITS to perform this action.');
 			}
-        });
+		});
+
 		
 		
 	// ACTIONS: PLANT --> OXYGEN
 		document.getElementById('action-spend-plant-oxygen').addEventListener('click', () => {		
-		// Check if you have enough plants to perform the action
+			// Check if you have enough plants to perform the action
 			const PLNTS = parseInt(document.getElementById('plants-total').textContent);
 			if (PLNTS >= 8) {
-				// Subtract the cost from the total plants
-				const PLNTSnewTotal = PLNTS - 8;	
+				// Display a confirmation dialog
+				const confirmed = window.confirm("Do you want to spend 8 PLANTS to gain ONE OXYGEN?");
 
-			// Display an alert indicating the action
-				window.alert("CONGRATULATIONS! \n  WWWWWWWWW \n \nYou spent 8 Plants to gain ONE OXYGEN.");
+				if (confirmed) {
+					// Subtract the cost from the total plants
+					const PLNTSnewTotal = PLNTS - 8;	
 
-			// Update the display for "plants-total"
-			document.getElementById('plants-total').textContent = PLNTSnewTotal;		
-			updateResourceTotal('plants-total', PLNTSnewTotal);
-			updateDisplay();
-            updateResourceTotal('plants', plants);
+					// Update the display for "plants-total"
+					document.getElementById('plants-total').textContent = PLNTSnewTotal;		
+					updateResourceTotal('plants-total', PLNTSnewTotal);
+					updateDisplay();
+					updateResourceTotal('plants', plants);
+				}
 			} else {
 				// Display an alert if you don't have enough plants
-				window.alert('SORRY\nX - - - -X- - - - - - - -X- - - - - - - -X- - - - X \n\n You do not have 8 plants to perform this action.');
+				window.alert('SORRY\nX - - - -X- - - - - - - -X- - - - - - - -X- - - - X \n\n You do not have 8 PLANTS to perform this action.');
 			}
-        });
-		
+		});
+
+
 		
 		
 		
 	// ACTIONS: HEAT --> HEAT
 		document.getElementById('action-spend-heat-heat').addEventListener('click', () => {		
-		// Check if you have enough plants to perform the action
+			// Check if you have enough heat to perform the action
 			const HT = parseInt(document.getElementById('heat-total').textContent);
 			if (HT >= 8) {
-				// Subtract the cost from the total plants
-				const HTnewTotal = HT - 8;	
+				// Display a confirmation dialog
+				const confirmed = window.confirm("Do you want to spend 8 HEAT to gain ONE TEMPERATURE?");
 
-			// Display an alert indicating the action
-				window.alert("CONGRATULATIONS! \n  __( '-._( '-._( '-._( '-._( '-._( '-.____( '-._( '-._( '-._( '-._( '-._( '-.__ \n \nYou spent 8 Heat to gain ONE TEMPERATURE.");
+				if (confirmed) {
+					// Subtract the cost from the total heat
+					const HTnewTotal = HT - 8;	
 
-			// Update the display for "plants-total"
-			document.getElementById('heat-total').textContent = HTnewTotal;		
-			updateResourceTotal('heat-total', HTnewTotal);
-			updateDisplay();
-            updateResourceTotal('heat', heat);
+					// Update the display for "heat-total"
+					document.getElementById('heat-total').textContent = HTnewTotal;		
+					updateResourceTotal('heat-total', HTnewTotal);
+					updateDisplay();
+					updateResourceTotal('heat', heat);
+				}
 			} else {
 				// Display an alert if you don't have enough heat
-				window.alert('SORRY\nX - - - -X- - - - - - - -X- - - - - - - -X- - - - X \n\n You do not have 8 heat to perform this action.');
+				window.alert('SORRY\nX - - - -X- - - - - - - -X- - - - - - - -X- - - - X \n\n You do not have 8 HEAT to perform this action.');
 			}
-        });
+		});
+
 		
 
 		// Event listener for the Production button
@@ -744,6 +784,7 @@
                 location.reload(); // Reload the current page
             }
         });
+	
 
 
 </script>

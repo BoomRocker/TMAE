@@ -61,8 +61,8 @@
 			width: 100%; /* Adjust the width as needed */
 			margin: 0px; 
 			padding:0;
-			background-image: url('https://photojournal.jpl.nasa.gov/jpegMod/PIA14004_modest.jpg');
-		}
+			/*background-image: url('https://photojournal.jpl.nasa.gov/jpegMod/PIA14004_modest.jpg');
+	*/	}
 
 		.resource-container {
 			display: flex;
@@ -244,7 +244,8 @@
 		.bumper{
 			display:block;
 			background:none;
-			width:200px;
+			width:150px;
+			border:1px solid red;
 		}
 		
 		.resource-value {
@@ -311,7 +312,7 @@
 		}
 						
 		#backer-plants .total-resource-value{
-			border: 2px solid rgba(0, 255, 0, 1); /* #F6EB61 with 25% opacity */
+			border: 2px solid rgba(0, 175, 0, 1); /* #F6EB61 with 25% opacity */
 		}
 		
 		#backer-plants{
