@@ -441,6 +441,7 @@
 			padding: 0 10px 0 10px;
 			font-size:20px;
 		}
+	
 
 		#resetButton {
 			color: #CB8F8F;
@@ -463,7 +464,7 @@
 			display: block;
 			float: left;
 			vertical-align: top;	
-			padding:2px 0 10px 10px;
+			padding:2px 0 10px 5px;
 		}
 		
         .resource-total {
@@ -490,6 +491,7 @@
 			margin: 0;
 		}
 		
+		
 		#actionShop{
 			width:155px;
 			display:block;
@@ -501,6 +503,14 @@
 		
 		#crdstltntShop{
 			width:214px;
+			display:block;
+			float: left;
+			padding: 0;
+			margin: 0;
+		}
+		
+		#TR-spanne1r{
+			width:230px;
 			display:block;
 			float: left;
 			padding: 0;
@@ -529,7 +539,7 @@
 		
 		.action-key{
 			font-weight: bold;
-			border-radius:10px;
+			border-radius:5px;
 			width:140px;
 			height:29px;
 			background-color:#222;
@@ -538,7 +548,7 @@
 			position: relative;
 			cursor: pointer;
 			background-color: rgba(0, 0, 0, 0.85); /* Black background with 50% opacity */
-			border: 0px solid #333;
+			border: 1px solid #CC5500;
 		}
 
 		}
