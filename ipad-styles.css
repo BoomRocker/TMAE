@@ -479,7 +479,10 @@
 		.productionText{
 			padding: 0 10px 0 10px;
 			font-style: italic;   
-			font-weight:bold;			
+			font-weight:bold;	
+			font-family: 'Anton', sans-serif;	
+			letter-spacing:10px;
+			font-size: 50px;
 		}
 	
 
