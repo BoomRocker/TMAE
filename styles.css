@@ -441,23 +441,27 @@
 			font-size:20px;
 		}
 
-		
 		#resetButton {
 			color: #CB8F8F;
 			font-size:20px;
 			padding:5px 2px 0 2px;
 			margin:0;
 			text-align:center;
-			margin:10px 0px 0 2px;
-			width:37px;
+			margin:10px 10px 0 90px;
+			width:145px;
 			height:30px;
 			font-weight:normal;
 			background-color: rgba(0, 0, 0, 0.65); /* #FF7276 with 25% opacity */
 			border: 0px solid #333;
+			float:right;
 		}
 		
 		#resetButton  .material-icons {
-			font-size:18px;	
+			font-size:18px;			
+			display: block;
+			float: left;
+			vertical-align: top;	
+			padding:2px 0 10px 10px;
 		}
 		
         .resource-total {
@@ -466,6 +470,16 @@
             color: white;
             margin-left: 5px;
         }
+		
+		.resetText{
+			font-size:14px;
+			font-weight: bold;
+			margin: 0;
+			padding:3px 10px 10px 0px;
+			display: block;
+			float: left;
+			vertical-align: top;
+		}
 		
 		.text-me{
 			font-size: 30px;
