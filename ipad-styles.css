@@ -569,10 +569,10 @@
 			font-weight: bold;
 			border-radius:5px;
 			width:320px;
-			height:53px;
+			height:55px;
 			background-color:#222;
 			padding: 0px;
-			margin: 5px 0 5px 0;
+			margin: 5px 0 10px 0;
 			position: relative;
 			cursor: pointer;
 			background-color: rgba(0, 0, 0, 0.85); /* Black background with 50% opacity */
