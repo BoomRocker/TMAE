@@ -33,7 +33,7 @@
 		}
 		
 		h1 {
-			text-shadow: 4px 4px 2px rgba(0, 0, 0, 1);
+			text-shadow: 3px 3px 2px rgba(0, 0, 0, 1);
 			text-align: left;
 			font-size: 22px;
 			font-weight: bold;
@@ -77,7 +77,7 @@
 			display: flex;
 			flex-wrap: wrap;
 			align-items: center;
-			width: 100%; /* Adjust the width as needed */
+			width: auto; /* Adjust the width as needed */
 			margin: 0px; 
 			padding:0;
 			/*background-image: url('https://photojournal.jpl.nasa.gov/jpegMod/PIA14004_modest.jpg');
@@ -87,13 +87,13 @@
 			display: flex;
 			align-items: center;
 			flex-wrap: wrap; /* Allow elements to wrap within the container */
-			width: 100%; /* Adjust the width as needed */
+			width: auto; /* Adjust the width as needed */
 			padding: 0;
 			border-radius: 5px;
 		}
 		
 		#middleHolder{
-			width:100%;
+			width:auto;
 			margin: 0 0 0 0;
 			padding: 0 0 0 0;
 		}
@@ -104,7 +104,7 @@
 
         .button-container {
            display: flex;
-		   width: 100%;
+		   width: auto;
 		   float: left;
 		   border:0px solid red;
 		   padding: 3px 0 6px 0px;
@@ -125,11 +125,11 @@
         .button-plus {
 			color: #8FCB95;
 			font-size:40px;
-			padding:0 2px 0 2px;
+			padding:0px 15px 0 15px;
 			margin:0;
 			text-align:center;
 			margin:10px 8px 0 8px;
-			width:80px;
+			width:auto;
 			height:60px;
 			border: 0px solid #333;
 			background-color: rgba(0, 0, 0, 0.85); /* #FF7276 with 25% opacity */
@@ -290,6 +290,7 @@
 			background:none;
 			width:0px;
 			border:0px solid red;
+			display:none;
 		}
 		
 		.resource-value {
@@ -298,7 +299,7 @@
             text-align: center;
 			display: block;
 			float:left;
-			padding: 0px 15px 0 15px;
+			padding: 0px 30px 0 30px;
 			border: 0px solid #fff;
 			margin: 0 0 0 0;
 			vertical-align: top;
@@ -315,7 +316,6 @@
 			border-radius: 5px;
 			height: 50%;
 			width: auto;
-			padding: 0px 15px 0 15px;
 			font-weight:bold;
 		}
 		
@@ -426,8 +426,8 @@
             background-color: #222;
             border: 1px solid orange;
             border-radius: 5px;
-            padding: 10px 0 0 0;
-			margin: 10px 10% 0 10% ;
+            padding: 20px 0 10px 0;
+			margin: 10px 15% 0 17% ;
             font-size: 26px;
 			line-height:5px;
             cursor: pointer;
@@ -436,7 +436,7 @@
 			float: left;
 			font-weight:bold;
 			font-family:'Orbitron', sans-serif;
-			width:80%;
+			width:65%;
 			vertical-align: middle;
 			height:auto;
 			text-transform:uppercase;
@@ -518,11 +518,11 @@
 		}
 		
 		#crdstltntShop{
-			width:375px;
+			width:40%;
 			display:block;
 			float: left;
-			padding: 0;
-			margin: 0;
+			padding: 0 0 0 0;
+			margin: 0 25px 0 0;
 		}
 		
 		#TR-spanne1r{
@@ -536,7 +536,7 @@
 		#action-info-key{
 			width:auto;
 			height: 344px;
- 			margin-top: 5px; 
+ 			margin: 5px 0 0 15px; 
 			text-align:left;
 			padding: 0px 0 20px 0;
 			/* border-top: 4px solid #000;
