@@ -323,14 +323,22 @@
 
         document.getElementById('plusCards').addEventListener('click', () => {
             cards += 1;
-            updateDisplay();
-            updateResourceTotal('cards', cards);
+			const CRDS = parseInt(document.getElementById('cards-total').textContent); // Parse the cards total as an integer
+			const CRDSnewTotal = cards; // Update the cards total
+			document.getElementById('cards-total').textContent = CRDSnewTotal; // Update cards total
+           	updateDisplay();
+			updateResourceTotal('cards-total', CRDSnewTotal);
+			updateResourceTotal('cards', cards);
         });
 
         document.getElementById('minusCards').addEventListener('click', () => {
 		  if (cards > 0) {
-			cards -= 1;
-			updateDisplay();
+            cards -= 1;
+			const CRDS = parseInt(document.getElementById('cards-total').textContent); // Parse the cards total as an integer
+			const CRDSnewTotal = cards; // Update the cards total
+			document.getElementById('cards-total').textContent = CRDSnewTotal; // Update cards total
+           	updateDisplay();
+			updateResourceTotal('cards-total', CRDSnewTotal);
 			updateResourceTotal('cards', cards);
 		  }
         });
@@ -540,14 +548,22 @@
 
         document.getElementById('plusSteel').addEventListener('click', () => {
             steel += 1;
-            updateDisplay();
-            updateResourceTotal('steel', steel);
+			const STL = parseInt(document.getElementById('steel-total').textContent); // Parse the steel total as an integer
+			const STLnewTotal = steel; // Update the steel total
+			document.getElementById('steel-total').textContent = STLnewTotal; // Update steel total
+           	updateDisplay();
+			updateResourceTotal('steel-total', STLnewTotal);
+			updateResourceTotal('steel', steel);
         });
 
         document.getElementById('minusSteel').addEventListener('click', () => {
 		  if (steel > 0) {
-			steel -= 1;
-			updateDisplay();
+            steel -= 1;
+			const STL = parseInt(document.getElementById('steel-total').textContent); // Parse the steel total as an integer
+			const STLnewTotal = steel; // Update the steel total
+			document.getElementById('steel-total').textContent = STLnewTotal; // Update steel total
+           	updateDisplay();
+			updateResourceTotal('steel-total', STLnewTotal);
 			updateResourceTotal('steel', steel);
 		  }
         });
@@ -570,14 +586,22 @@
 
         document.getElementById('plusTitanium').addEventListener('click', () => {
             titanium += 1;
-            updateDisplay();
+			const TTN = parseInt(document.getElementById('titanium-total').textContent); // Parse the titanium total as an integer
+			const TTNnewTotal = titanium; // Update the titanium total
+			document.getElementById('titanium-total').textContent = TTNnewTotal; // Update titanium total
+           	updateDisplay();
+			updateResourceTotal('titanium-total', TTNnewTotal);
 			updateResourceTotal('titanium', titanium);
         });
 
         document.getElementById('minusTitanium').addEventListener('click', () => {
 		  if (titanium > 0) {
-			titanium -= 1;
-			updateDisplay();
+            titanium -= 1;
+			const TTN = parseInt(document.getElementById('titanium-total').textContent); // Parse the titanium total as an integer
+			const TTNnewTotal = titanium; // Update the titanium total
+			document.getElementById('titanium-total').textContent = TTNnewTotal; // Update titanium total
+           	updateDisplay();
+			updateResourceTotal('titanium-total', TTNnewTotal);
 			updateResourceTotal('titanium', titanium);
 		  }
         });
