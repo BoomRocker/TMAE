@@ -695,14 +695,25 @@
 				const MCnewTotal = MC - 15;
 
 				// Display a confirmation dialog
-				const confirmed = window.confirm("Do you want to spend 15 Megacredits to gain ONE OCEAN TILE?");
+				const confirmed = window.confirm("Do you want to spend 15 Megacredits to gain ONE OCEAN TILE and add 1 TERRAFORMING RATING?");
 
 				if (confirmed) {
+					terraformingRating += 1;
+					const TR = parseInt(document.getElementById('terraformingRating-total').textContent); // Parse the minusTerraforming total as an integer
+					const TRnewTotal = terraformingRating; // Update the minusTerraforming total
+					document.getElementById('terraformingRating-total').textContent = TRnewTotal; // Update minusTerraforming total
+
+					
+					// Subtract the cost from the total megacredits
+					const MCnewTotal = MC - 15;	
 					// Update the display for "megacredits-total"
-					document.getElementById('megacredits-total').textContent = MCnewTotal;
+					document.getElementById('megacredits-total').textContent = MCnewTotal;		
 					updateResourceTotal('megacredits-total', MCnewTotal);
+					
 					updateDisplay();
 					updateResourceTotal('megacredits', megacredits);
+					updateResourceTotal('terraformingRating-total', TRnewTotal);
+					updateResourceTotal('terraformingRating', terraformingRating);
 				}
 			} else {
 				// Display an alert if you don't have enough megacredits
@@ -717,17 +728,28 @@
 			const MC = parseInt(document.getElementById('megacredits-total').textContent);
 			if (MC >= 20) {
 				// Display a confirmation dialog
-				const confirmed = window.confirm("Do you want to spend 20 MEGCREDITS to gain ONE OXYGEN?");
+				const confirmed = window.confirm("Do you want to spend 20 MEGCREDITS to gain 1 OXYGEN and add 1 TERRAFORMING RATING?");
 
 				if (confirmed) {
+					terraformingRating += 1;
+					const TR = parseInt(document.getElementById('terraformingRating-total').textContent); // Parse the minusTerraforming total as an integer
+					const TRnewTotal = terraformingRating; // Update the minusTerraforming total
+					document.getElementById('terraformingRating-total').textContent = TRnewTotal; // Update minusTerraforming total
+
+					
 					// Subtract the cost from the total megacredits
 					const MCnewTotal = MC - 20;	
-
 					// Update the display for "megacredits-total"
 					document.getElementById('megacredits-total').textContent = MCnewTotal;		
 					updateResourceTotal('megacredits-total', MCnewTotal);
+					
 					updateDisplay();
 					updateResourceTotal('megacredits', megacredits);
+					updateResourceTotal('terraformingRating', terraformingRating);
+					updateResourceTotal('terraformingRating-total', TRnewTotal);
+
+									
+					
 				}
 			} else {
 				// Display an alert if you don't have enough megacredits
@@ -763,25 +785,26 @@
 			const MC = parseInt(document.getElementById('megacredits-total').textContent);
 			if (MC >= 14) {
 				// Display a confirmation dialog
-				const confirmed = window.confirm("Do you want to spend 14 MEGACREDITS to gain ONE TEMPERATURE and add 1 TERRAFORMING RATING??");
+				const confirmed = window.confirm("Do you want to spend 14 MEGACREDITS to gain ONE TEMPERATURE and add 1 TERRAFORMING RATING?");
 
 				if (confirmed) {
-					// Subtract the cost from the total megacredits
-					const MCnewTotal = MC - 14;	
-					
+
 					terraformingRating += 1;
 					const TR = parseInt(document.getElementById('terraformingRating-total').textContent); // Parse the minusTerraforming total as an integer
 					const TRnewTotal = terraformingRating; // Update the minusTerraforming total
 					document.getElementById('terraformingRating-total').textContent = TRnewTotal; // Update minusTerraforming total
-					updateDisplay();
-					updateResourceTotal('terraformingRating-total', TRnewTotal);
-					updateResourceTotal('terraformingRating', terraformingRating);
+
 					
+					// Subtract the cost from the total megacredits
+					const MCnewTotal = MC - 14;	
 					// Update the display for "megacredits-total"
 					document.getElementById('megacredits-total').textContent = MCnewTotal;		
 					updateResourceTotal('megacredits-total', MCnewTotal);
+					
 					updateDisplay();
 					updateResourceTotal('megacredits', megacredits);
+					updateResourceTotal('terraformingRating-total', TRnewTotal);
+					updateResourceTotal('terraformingRating', terraformingRating);
 				}
 			} else {
 				// Display an alert if you don't have enough megacredits
@@ -800,22 +823,21 @@
 				const confirmed = window.confirm("Do you want to spend 8 PLANTS to gain 1 OXYGEN and add 1 TERRAFORMING RATING?");
 
 				if (confirmed) {
-					// Subtract the cost from the total plants
-					const PLNTSnewTotal = PLNTS - 8;	
-					
+					// Subtract the cost from the total plants			
 					terraformingRating += 1;
 					const TR = parseInt(document.getElementById('terraformingRating-total').textContent); // Parse the minusTerraforming total as an integer
 					const TRnewTotal = terraformingRating; // Update the minusTerraforming total
 					document.getElementById('terraformingRating-total').textContent = TRnewTotal; // Update minusTerraforming total
-					updateDisplay();
-					updateResourceTotal('terraformingRating-total', TRnewTotal);
-					updateResourceTotal('terraformingRating', terraformingRating);
-					
+				
+					const PLNTSnewTotal = PLNTS - 8;	
 					// Update the display for "plants-total"
 					document.getElementById('plants-total').textContent = PLNTSnewTotal;		
 					updateResourceTotal('plants-total', PLNTSnewTotal);
+					
 					updateDisplay();
-					updateResourceTotal('plants', plants);
+					updateResourceTotal('plants', plants);					
+					updateResourceTotal('terraformingRating-total', TRnewTotal);
+					updateResourceTotal('terraformingRating', terraformingRating);
 				}
 			} else {
 				// Display an alert if you don't have enough plants
@@ -843,15 +865,15 @@
 					const TR = parseInt(document.getElementById('terraformingRating-total').textContent); // Parse the minusTerraforming total as an integer
 					const TRnewTotal = terraformingRating; // Update the minusTerraforming total
 					document.getElementById('terraformingRating-total').textContent = TRnewTotal; // Update minusTerraforming total
-					updateDisplay();
-					updateResourceTotal('terraformingRating-total', TRnewTotal);
-					updateResourceTotal('terraformingRating', terraformingRating);
 
 					// Update the display for "heat-total"
 					document.getElementById('heat-total').textContent = HTnewTotal;		
 					updateResourceTotal('heat-total', HTnewTotal);
+					
 					updateDisplay();
-					updateResourceTotal('heat', heat);
+					updateResourceTotal('heat', heat);					
+					updateResourceTotal('terraformingRating-total', TRnewTotal);
+					updateResourceTotal('terraformingRating', terraformingRating);
 				}
 			} else {
 				// Display an alert if you don't have enough heat
