@@ -237,6 +237,9 @@
 		let PLNTSnewTotal = 0;
 		let HTnewTotal = 0;
 		let plantME = 0;
+		//let titanium-total = 0
+		//let steel-total = 0;
+		//let cards-total = 0;
 		//let plants-total = 0;
 		
         // Function to update the display of resources
@@ -248,6 +251,7 @@
             document.getElementById('plants').textContent = plants;
             document.getElementById('steel').textContent = steel;
             document.getElementById('titanium').textContent = titanium;
+			document.getElementById('titanium-total').textContent = titanium-total;
         }
 
         // Function to update the total number for a resource
@@ -567,7 +571,7 @@
         document.getElementById('plusTitanium').addEventListener('click', () => {
             titanium += 1;
             updateDisplay();
-            updateResourceTotal('titanium', titanium);
+			updateResourceTotal('titanium', titanium);
         });
 
         document.getElementById('minusTitanium').addEventListener('click', () => {
