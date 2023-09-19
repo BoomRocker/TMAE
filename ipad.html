@@ -10,6 +10,7 @@
 <!-- Add your favicon in the link tag -->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Space Mono">
 
 <!-- Link to the Roboto font from Google Fonts -->
@@ -143,7 +144,20 @@
 		 <!-- Steel -->
 		<div class="section">
 			<div class="resource-container color-steel">
-				<div class="resource-name-container bg-steel"><i class="material-icons ">build</i><p class="resource-name">Steel</p></div>
+				<div class="resource-name-container bg-steel">
+					<i class="material-symbols-outlined" style="font-weight:bold; font-size:34px; margin:2px 5px 0 0 ;">handyman</i>
+					<p class="resource-name">Steel</p>
+					<!-- START instructions -->
+						<div class="instructions">&nbsp;</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<span class="" style="font-size:27px; font-weight:bold;">1&nbsp;</span>
+						<i class="material-symbols-outlined" style="font-weight:normal; font-size:32px; margin:2px 0px 0 0 ;">handyman</i>&nbsp;
+						<i class="material-symbols-outlined" style="font-weight:normal; font-size:34px; margin:2px 0px 0 0 ;">equal</i>
+						<span class="" style="font-size:27px; font-weight:normal;">&nbsp;-2&nbsp;</span>
+						<i class="material-icons " style="font-weight:normal;">toll</i>
+						<span style="font-weight:bold; font-size:27px;">/</span> &nbsp;&nbsp;
+						<i class="material-icons " style="font-weight:normal; font-size:30px; margin:2px 0px 0 0 ;"> warehouse</i>
+					<!-- END instructions -->
+				</div>
 				<div class="button-container" id="backer-steel">
 	<span class="pushMeBoi">&nbsp;</span>
 					<button class="button-minus hide" id="minusSteel5">-<span class="nobr">&nbsp;</span>5<!--<i class="material-icons color-steel">square</i>--></button> <!-- New -5 button -->
@@ -162,7 +176,20 @@
 		<!-- Titanium -->
 		<div class="section">
 			<div class="resource-container color-titanium">
-				<div class="resource-name-container bg-titanium"><i class="material-icons ">settings</i><p class="resource-name">Titanium</p></div>
+				<div class="resource-name-container bg-titanium"> &nbsp;
+					<i class="material-symbols-outlined" style="font-weight:bold; font-size:30px; margin:2px 15px 0 0 ;">star</i>
+					<p class="resource-name">Titanium</p>
+					<!-- START instructions -->
+						<div class="instructions">&nbsp;</div>
+						<span class="" style="font-size:27px; font-weight:bold;">1&nbsp;</span>
+						<i class="material-symbols-outlined" style="font-weight:normal; font-size:30px; margin:2px 5px 0 0 ;">star</i>&nbsp;
+						<i class="material-symbols-outlined" style="font-weight:normal; font-size:34px; margin:2px 0px 0 0 ;">equal</i>
+						<span class="" style="font-size:27px; font-weight:normal;">&nbsp;-3&nbsp;</span>
+						<i class="material-icons " style="font-weight:normal;">toll</i>
+						<span style="font-weight:bold; font-size:27px;">/</span> &nbsp;&nbsp;
+						<i class="material-icons " style="font-weight:normal; font-size: 30px; margin: 2px 0 0 0;">sunny</i>
+					<!-- END instructions -->
+				</div>
 				<div class="button-container" id="backer-titanium">
 	<span class="pushMeBoi">&nbsp;</span>
 					<button class="button-minus hide" id="minusTitanium5">-<span class="nobr">&nbsp;</span>5<!--<i class="material-icons color-titanium">square</i>--></button> <!-- New -5 button -->
@@ -301,7 +328,7 @@
 			updateResourceTotal('megacredits', megacredits);
 		});
 
-        document.getElementById('plusTerraforming').addEventListener('click', () => {
+        /*document.getElementById('plusTerraforming').addEventListener('click', () => {
             terraformingRating += 1;
             updateDisplay();
             updateResourceTotal('terraformingRating', terraformingRating);
@@ -311,6 +338,29 @@
 		  if (terraformingRating > 0) {
 			terraformingRating -= 1;
 			updateDisplay();
+			updateResourceTotal('terraformingRating', terraformingRating);
+		  }
+        });*/
+		
+		
+		document.getElementById('plusTerraforming').addEventListener('click', () => {
+            terraformingRating += 1;
+			const TR = parseInt(document.getElementById('terraformingRating-total').textContent); // Parse the minusTerraforming total as an integer
+			const TRnewTotal = terraformingRating; // Update the minusTerraforming total
+			document.getElementById('terraformingRating-total').textContent = TRnewTotal; // Update minusTerraforming total
+           	updateDisplay();
+			updateResourceTotal('terraformingRating-total', TRnewTotal);
+			updateResourceTotal('terraformingRating', terraformingRating);
+        });
+
+        document.getElementById('minusTerraforming').addEventListener('click', () => {
+		  if (terraformingRating > 0) {
+            terraformingRating -= 1;
+			const TR = parseInt(document.getElementById('terraformingRating-total').textContent); // Parse the terraformingRating total as an integer
+			const TRnewTotal = terraformingRating; // Update the terraformingRating total
+			document.getElementById('terraformingRating-total').textContent = TRnewTotal; // Update terraformingRating total
+           	updateDisplay();
+			updateResourceTotal('terraformingRating-total', TRnewTotal);
 			updateResourceTotal('terraformingRating', terraformingRating);
 		  }
         });
