@@ -309,12 +309,12 @@
 			display: block;
 			float:left;
 			letter-spacing:50%;
-			padding: 0px ;
+			padding: 0 30px 0 30px;
 			border: 0px solid #fff;
 			margin: 5px 0 0 0;
 			vertical-align: top;
 			height: 70px;
-			width: 100px;
+			width: auto;
 			text-shadow: 0px 2px 8px rgba(0, 0, 0, 1); /* Horizontal offset, vertical offset, blur radius, color */
 			/*border: 1px solid rgba(0, 0, 0, .25);*/
         }
@@ -521,7 +521,7 @@
 		
 		
 		#actionShop{
-			width:475px;
+			width:50%;
 			display:block;
 			float: right;
 			padding: 0;
@@ -530,7 +530,7 @@
 		}
 		
 		#crdstltntShop{
-			width:540px;
+			width:50%;
 			display:block;
 			float: left;
 			padding: 0 0 0 0;
