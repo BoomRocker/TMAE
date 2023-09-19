@@ -316,6 +316,7 @@
 		
 		#backer-terra .total-resource-value{
 			border: 2px solid orange;
+			margin-right:60px;
 		}
 		
 		#backer-terra{
@@ -447,12 +448,13 @@
 			padding:5px 2px 0 2px;
 			margin:0;
 			text-align:center;
-			margin:10px 10px 0 90px;
-			width:145px;
+			margin:10px 10px 0 0px;
+			width:100px;
 			height:30px;
 			font-weight:normal;
 			background-color: rgba(0, 0, 0, 0.65); /* #FF7276 with 25% opacity */
 			border: 0px solid #333;
+			display:block;
 			float:right;
 		}
 		
