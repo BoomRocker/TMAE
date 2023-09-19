@@ -49,11 +49,19 @@
 			vertical-align: middle;
 		}
 		
+		.h1-text{
+			padding-top:0;
+			display:flex; 
+			margin:-10px 0 0px 10px; 
+			padding: 0 0 0 10px;
+
+		}
+		
 		h1 .material-icons{
 			font-size:40px;
 			display:flex; 
-			margin:-10px 0 0px 0; 
-			padding:5px; 
+			margin:-15px 0 0px 0; 
+			padding:0px; 
 			float:left; 
 			width:auto;
 			vertical-align: middle;
