@@ -606,3 +606,11 @@
 		button.hide {
 			display: none;
 		}
+		
+		.pushMeBoi{
+			display: flex;
+			width:20px;
+			height:20px;
+			margin-left:20px;
+			border: 0px solid red;
+		}
