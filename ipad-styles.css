@@ -1,0 +1,581 @@
+
+		body {
+			/*background-color: rgba(51, 51, 51, 0.7); /* Adjust the alpha value (0.7 in this case) for transparency */
+			background-color:#222;
+			text-align: center;
+			margin: 0;
+			padding: 0;
+			/*font-family: 'Space Mono', Arial, sans-serif;*/
+			font-family: 'Roboto', sans-serif;
+            font-weight: 300; /* Use the light variant */
+			overflow: hidden;
+			background-image: url('backPlanet.gif');
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			/*opacity: 0.65;*/
+			text-align:center;
+		}
+		
+		#header-text{
+			background-image: url('backMars.gif');
+			vertical-align: middle;
+			width:100%;
+			height:95px;
+			display:block;
+			border-top: 4px solid #000;
+			border-bottom: 4px solid #000;
+		}
+		
+		#action-spend-mc-oxygen{
+			margin-top:3px;
+		}
+		
+		h1 {
+			text-align: left;
+			font-size: 30px;
+			font-weight: bold;
+			line-height: 120%;
+			margin: 0 0 0 0;
+			width: 100%;
+			text-align: left;
+			padding: 10px 0 0 5px;
+			color: white;
+			font-family: 'Orbitron', sans-serif;
+			text-transform: uppercase;
+			vertical-align: middle;
+			text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Horizontal offset, vertical offset, blur radius, color */
+		}
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin: 0;
+            padding: 0;
+			/*width: 355px /* Adjust the width as needed */
+			width: 100% /* Adjust the width as needed */
+        }
+		
+		.section {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			width: 100%; /* Adjust the width as needed */
+			margin: 0px; 
+			padding:0;
+			/*background-image: url('https://photojournal.jpl.nasa.gov/jpegMod/PIA14004_modest.jpg');
+	*/	}
+
+		.resource-container {
+			display: flex;
+			align-items: center;
+			flex-wrap: wrap; /* Allow elements to wrap within the container */
+			width: 100%; /* Adjust the width as needed */
+			padding: 0;
+			border-radius: 5px;
+		}
+		
+		#middleHolder{
+			width:100%;
+			margin: 0 0 0 0;
+			padding: 0 0 0 0;
+		}
+		
+		.nobr{
+		font-size:2px;	
+		}
+
+        .button-container {
+           display: flex;
+		   width: 100%;
+		   float: left;
+		   border:0px solid red;
+		   padding: 3px 0 6px 0px;
+        }
+		
+        button {
+            font-size: 36px;
+			font-weight:normal;
+            padding: 0;
+			width:80px;
+			height:60px;
+			background-color: #222;
+			color:#fff;
+			padding:0;
+			border-radius:5px;
+        }
+		
+        .button-plus {
+			color: #8FCB95;
+			font-size:40px;
+			padding:0 2px 0 2px;
+			margin:0;
+			text-align:center;
+			margin:10px 1px 0 2px;
+			width:80px;
+			height:60px;
+			border: 0px solid #333;
+			background-color: rgba(0, 0, 0, 0.85); /* #FF7276 with 25% opacity */
+        }
+		
+		.button-minus {
+			color: #CB8F8F;
+			font-size:40px;
+			padding:0 2px 0 2px;
+			margin:0;
+			text-align:center;
+			margin:10px 1px 0 2px;
+			width:80px;
+			height:60px;
+			font-weight:normal;
+			background-color: rgba(0, 0, 0, 0.65); /* #FF7276 with 25% opacity */
+			border: 0px solid #333;
+        }
+		
+		.iconer1{
+            width: auto;
+			padding:0 2px 0 2px;
+			vertical-align: middle;
+			margin:0 3px 0 0;
+        }
+		
+		.iconer i{
+			margin:0;
+			padding: 0;
+        }
+		
+        .material-icons {
+			margin: 0 5px 0 5px;
+			padding: 0;
+        }
+		
+		.resource-name-container{
+			display:flex;
+			width: 100%;
+			float: left;
+			background:black;
+			margin:5px 0 0 0;
+			padding: 0;
+			font-weight:bold;
+			height:40px;
+			padding: 1px 1px;
+		}	
+		
+		p.resource-name {
+			text-transform: uppercase;
+			text-align: left;
+			font-weight: bold;
+			width: auto; /* Set your desired width here */
+			padding: 0;
+			margin:0;
+			display: flex;
+			font-size:32px;
+		}
+		
+		.resource-name-container .material-icons{
+			font-size:40px;
+			margin: 0px 10px 0 0 ;
+		}
+		
+		.smaller{
+			width:10px;
+			height:10px;
+		}
+
+        .title-container {
+            border: 1px solid #fff;
+            display: block;
+            float: left;
+        }
+ 
+        .color-megacredits {
+            color: yellow;
+        }
+        .color-terraformingRating {
+            color: orange;
+        }
+        .color-cards {
+            /*color: #6368ad;*/
+			color:#A6ADE6;
+		}
+			
+        .color-heat {
+            color: #FF7276;
+        }
+        .color-plants {
+            color: rgba(0, 255, 0, .75);
+        }
+        .color-steel {
+            color: #c19a6b;
+        }
+        .color-titanium {
+            color: #B7B7BE;
+        }
+        .color-megacredits {
+            color: #F6EB61;
+        }
+		.color-sky {
+            color: #26F7FD;
+        }
+		.color-ocean {
+            color: teal;
+        }
+		
+		.bg-terra{
+			background:orange;
+			color:black;
+		}
+		
+		.bg-megacredits{
+			background:#F6EB61;
+			color:black;
+		}
+		
+		.bg-plants{
+			background:green;
+			color:black;
+		}
+		
+		.bg-heat{
+			background:#FF7276;
+			color:black;
+		}
+		
+		.bg-cards{
+			background:#6368ad;
+			color:black;
+		}
+		
+		.bg-steel{
+			background:#c19a6b;
+			color:black;
+		}
+		
+		.bg-titanium{
+			background:gray;
+			color:black;
+		}
+		
+		.bg-actionShop{
+			background:rgba(0, 0, 0, .75);
+			color:#CC5500;
+			margin:0;
+			padding: 2px 0 0 0;
+			height:42px;
+		}
+		
+		.hide-me{
+			display:none;
+		}
+		
+		.bumper{
+			display:block;
+			background:none;
+			width:0px;
+			border:0px solid red;
+		}
+		
+		.resource-value {
+            font-size: 64px;
+            font-weight: normal;
+            text-align: center;
+			display: block;
+			float:left;
+			padding: 5px 0 0 0;
+			border: 0px solid #fff;
+			margin: 0 0 0 0;
+			vertical-align: middle;
+			height: 70px;
+			width: 80px;
+			text-shadow: 0px 2px 8px rgba(0, 0, 0, 1); /* Horizontal offset, vertical offset, blur radius, color */
+			/*border: 1px solid rgba(0, 0, 0, .25);*/
+        }
+		
+		.total-resource-value{
+			display: block;
+			background: black;
+			margin: 3px 7px -1px 8px;
+			border-radius: 5px;
+			height: 76px;
+			width: 90px;
+			padding: 0 0 0 0;
+			font-weight:bold;
+		}
+		
+		.short-row{
+			margin: 0 0 0 0;
+			/* width: 50px; */
+		}
+		
+		.resource-arrow{
+			margin: 12px 0px 0 5px ;
+			font-size:48px;
+		}
+		
+		
+		#backer-terra .total-resource-value{
+			border: 2px solid orange;
+			margin-right:60px;
+		}
+		
+		#backer-terra{
+			width:100%;
+			background-color: rgba(255, 165, 0, 0.25); /* Orange with 50% opacity */
+		}
+		
+		#backer-megacredits .total-resource-value{
+			border: 2px solid rgba(246, 235, 97, 1); /* #F6EB61 with 25% opacity */
+		}
+		
+		#backer-megacredits{
+			width:100%;
+			background-color: rgba(246, 235, 97, 0.25); /* #F6EB61 with 25% opacity */
+		}
+		
+		#backer-heat .total-resource-value{
+			border: 2px solid #FF7276; /* #F6EB61 with 25% opacity */
+		}
+		
+		#backer-heat{
+			width:100%;
+			background-color: rgba(255, 114, 118, 0.25); /* #FF7276 with 25% opacity */
+
+		}
+		
+		#backer-cards .total-resource-value{
+			border: 2px solid #8A90EF; /* #F6EB61 with 25% opacity */
+		}
+		
+		#backer-cards{
+			width:100%;
+			background-color: rgba(99, 104, 173, 0.5); /* #6368ad with 25% opacity */
+		}
+						
+		#backer-plants .total-resource-value{
+			border: 2px solid rgba(0, 175, 0, 1); /* #F6EB61 with 25% opacity */
+		}
+		
+		#backer-plants{
+			width:100%;
+			background-color: rgba(0, 255, 0, 0.125); /* #00FF00 (pure green) with 25% opacity */
+		}
+		
+								
+		#backer-steel .total-resource-value{
+			border: 2px solid rgba(193, 154, 107, 1); /* #F6EB61 with 25% opacity */
+		}
+		
+		#backer-steel{
+			width:100%;
+			background-color: rgba(193, 154, 107, 0.25); /* #c19a6b with 25% opacity */
+		}
+				
+								
+		#backer-titanium .total-resource-value{
+			border: 2px solid rgba(128, 128, 128, 1); /* #F6EB61 with 25% opacity */
+		}
+		
+		#backer-titanium{
+			width:100%;
+			background-color: rgba(128, 128, 128, 0.25); /* Orange with 50% opacity */
+		}
+		
+		/*#backer-titanium .button-plus{
+			border: 2px solid gray;
+		        #productionButton {
+            background-color: #222;
+            border: 1px solid orange;
+            border-radius: 5px;
+            padding: 0 5px 5px 5px;
+			margin: 5px 5px 0 10px ;
+            font-size: 12px;
+			line-height:5px;
+            cursor: pointer;
+			color:white;
+			float: right;
+			font-weight:bold;
+			width:110px;
+			vertical-align: middle;
+			height:38px;
+			text-transform:uppercase;
+			background-image: url('backPlanet.gif');
+			/* Add a text drop shadow 
+			text-shadow: 2px 2px 2px rgba(0, 0, 0, 1); Horizontal offset, vertical offset, blur radius, color with opacity 
+			}*/
+		
+		
+		
+        #productionButton {
+            background-color: #222;
+            border: 1px solid orange;
+            border-radius: 5px;
+            padding:3px 5px 5px 5px;
+			margin: 20px 10% 0 10% ;
+            font-size: 36px;
+			line-height:5px;
+            cursor: pointer;
+			text-align:center
+			color:white;
+			float: left;
+			font-weight:bold;
+			font-family:'Orbitron', sans-serif;
+			width:80%;
+			vertical-align: middle;
+			height:85px;
+			text-transform:uppercase;
+			background-image: url('backMars.gif');
+			background-position: -50px -100px;
+			/* Add a text drop shadow */
+			text-shadow: 2px 2px 2px rgba(0, 0, 0, 1); /* Horizontal offset, vertical offset, blur radius, color with opacity */
+			}
+		
+        #productionButton .material-icons {
+			font-size:40px;
+			margin:0 10px 15px 5px;
+			padding:0px 0 0 0;
+			color:white;
+        }
+		
+		.productionText{
+			padding: 0 10px 0 10px;
+			font-size:30px;
+		}
+	
+
+		#resetButton {
+			color: orange;
+			font-size:40px;
+			padding:10px 2px 0 12px;
+			margin:0 ;
+			text-align:center;
+			margin:10px 10px 0 0px;
+			width:200px;
+			height:60px;
+			font-weight:normal;
+			background-color: rgba(0, 0, 0, 0.65); /* #FF7276 with 25% opacity */
+			border: 0px solid #333;
+			display:block;
+			float:right;
+		}
+		
+		#resetButton  .material-icons {
+			font-size:36px;			
+			display: block;
+			float: left;
+			vertical-align: top;	
+			padding:2px 0 10px 5px;
+		}
+		
+        .resource-total {
+            font-size: 28px;
+            font-weight: bold;
+            color: white;
+            margin-left: 5px;
+        }
+		
+		.resetText{
+			font-size:28px;
+			font-weight: bold;
+			margin: 0;
+			padding:3px 10px 10px 0px;
+			display: block;
+			float: left;
+			vertical-align: top;
+		}
+		
+		.text-me{
+			font-size: 60px;
+			color: #fff;
+			padding: 5px 5px 0 10px;
+			margin: 0;
+		}
+		
+		
+		#actionShop{
+			width:380px;
+			display:block;
+			float: right;
+			padding: 0;
+			margin: 0;
+			height:auto;
+		}
+		
+		#crdstltntShop{
+			width:428px;
+			display:block;
+			float: left;
+			padding: 0;
+			margin: 0;
+		}
+		
+		#TR-spanne1r{
+			width:230px;
+			display:block;
+			float: left;
+			padding: 0;
+			margin: 0;
+		}
+		
+		#action-info-key{
+			width:auto;
+			height: 390px;
+ 			margin-top: 5px; 
+			text-align:left;
+			padding: 0px 0 20px 0;
+			/* border-top: 4px solid #000;
+			border-bottom: 4px solid #000; */
+			font-weight:bold;
+			align: left;
+			text-align:center;
+			background-image: url('backMars.gif');
+			background-position: -600px 0px ;
+    	}
+		
+		#action-info-key .material-icons{
+			font-size:32px;
+			margin: 0 2px 1px 2px;
+		}
+		
+		.action-key{
+			font-weight: bold;
+			border-radius:5px;
+			width:280px;
+			height:48px;
+			background-color:#222;
+			padding: 0px;
+			margin: 10px 0 0 0;
+			position: relative;
+			cursor: pointer;
+			background-color: rgba(0, 0, 0, 0.85); /* Black background with 50% opacity */
+			border: 1px solid #CC5500;
+		}
+
+		}
+		
+		.action-key span{
+			font-size:32px;
+			font-weight: bold;
+			margin:0;
+			vertical-align: middle;
+		}
+		
+		
+		.action-key i{
+			vertical-align: middle;
+			margin:0 -5px 0 -5px;
+			padding:0;
+		}
+		
+		.arrow-forward{
+		}
+		
+		p.text-me{
+			margin: 0 0 0 0;
+			padding: 0;
+		}
+		
+		button.hide {
+			display: none;
+		}
