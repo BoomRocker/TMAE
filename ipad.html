@@ -213,46 +213,47 @@
             <p class="resource-name">Actions</p>-->
 				<button id="action-spend-mc-oxygen" class="action-key">
 					<span class="color-megacredits">20</span>
-					<i class="material-icons color-megacredits" style="font-weight:bold;">toll</i>
-					<i class="material-icons arrow-forward">arrow_forward</i>
+					<i class="material-icons color-megacredits" style="font-weight:bold; margin-bottom:5px;">toll</i>
+					<i class="material-icons arrow-forward color-steel">arrow_forward</i>
 					<span class="color-sky">1</span>
-					<i class="material-icons color-sky" >cloud</i>
+					<i class="material-symbols-outlined color-sky" style="font-weight:bold; font-size:33px;margin-bottom:5px;" >spo2</i>
 				</button>
 				<button id="action-spend-mc-heat" class="action-key">
 					<span class="color-megacredits">14</span>
-					<i class="material-icons color-megacredits" style="font-weight:bold;">toll</i>
-					<i class="material-icons arrow-forward">arrow_forward</i>
-					<span class="color-heat">1</span>
-					<i class="material-icons color-heat" >thermostat</i>
+					<i class="material-icons color-megacredits" style="font-weight:bold; margin-bottom:5px;">toll</i>
+					<i class="material-icons arrow-forward color-steel">arrow_forward</i>
+					<span class="color-fire">1</span>
+					<i class="material-icons color-fire" style="font-weight:bold; margin-bottom:5px; margin-left:-10px;">thermostat</i>
 				</button>
 				<button id="action-spend-mc-ocean" class="action-key">
 					<span class="color-megacredits">15</span>
-					<i class="material-icons color-megacredits" style="font-weight:bold;">toll</i>
-					<i class="material-icons arrow-forward">arrow_forward</i>
+					<i class="material-icons color-megacredits" style="font-weight:bold; margin-bottom:5px;">toll</i>
+					<i class="material-icons arrow-forward color-steel">arrow_forward</i>
 					<span class="color-ocean">1</span>
-					<i class="material-symbols-outlined color-ocean" style="font-weight:bold; font-size:33px;" >spo2</i>
-				</button>
-				<button id="action-spend-card-mc" class="action-key">
-					<span class="color-cards">1</span>
-					<i class="material-icons color-cards">speaker</i>
-					<i class="material-icons arrow-forward">arrow_forward</i>
-					<span class="color-megacredits">3</span>
-					<i class="material-icons color-megacredits" style="font-weight:bold;" >toll</i>
-				</button>
-				<button id="action-spend-plant-oxygen" class="action-key">
-					<span class="color-plants">8</span>
-					<i class="material-icons color-plants">eco</i>
-					<i class="material-icons arrow-forward">arrow_forward</i>
-					<span class="color-sky">1</span>
-					<i class="material-icons color-sky" >cloud</i>
+					<i class="material-symbols-outlined color-ocean" style="font-weight:bold; font-size:33px;margin-bottom:5px;" >hexagon</i>
 				</button>
 				<button id="action-spend-heat-heat" class="action-key">
 					<span class="color-heat">8</span>
-					<i class="material-icons color-heat">whatshot</i>
-					<i class="material-icons arrow-forward">arrow_forward</i>
-					<span class="color-heat">1</span>
-					<i class="material-icons color-heat">thermostat</i>
+					<i class="material-icons color-heat" style="margin-bottom:5px;">whatshot</i>
+					<i class="material-icons arrow-forward color-steel">arrow_forward</i>
+					<span class="color-fire">1</span>
+					<i class="material-icons color-fire" style="font-weight:bold; margin-bottom:5px; margin-left:-10px;">thermostat</i>
 				</button>
+				<button id="action-spend-plant-oxygen" class="action-key">
+					<span class="color-plants">8</span>
+					<i class="material-icons color-plants" style="margin-bottom:5px;">eco</i>
+					<i class="material-icons arrow-forward color-steel">arrow_forward</i>
+					<span class="color-sky">1</span>
+					<i class="material-symbols-outlined color-sky" style="font-weight:bold; font-size:33px;margin-bottom:5px;" >spo2</i>
+				</button>
+				<button id="action-spend-card-mc" class="action-key">
+					<span class="color-cards">1</span>
+					<i class="material-icons color-cards" style="margin-bottom:5px;">speaker</i>
+					<i class="material-icons arrow-forward color-steel">arrow_forward</i>
+					<span class="color-megacredits">3</span>
+					<i class="material-icons color-megacredits" style="font-weight:bold; margin-bottom:5px;">toll</i>
+				</button>
+
         </div>
 	<!-- END Middle HOLDER -->
 	</div>	
@@ -759,12 +760,20 @@
 			const MC = parseInt(document.getElementById('megacredits-total').textContent);
 			if (MC >= 14) {
 				// Display a confirmation dialog
-				const confirmed = window.confirm("Do you want to spend 14 MEGACREDITS to gain ONE TEMPERATURE?");
+				const confirmed = window.confirm("Do you want to spend 14 MEGACREDITS to gain ONE TEMPERATURE and add 1 TERRAFORMING RATING??");
 
 				if (confirmed) {
 					// Subtract the cost from the total megacredits
 					const MCnewTotal = MC - 14;	
-
+					
+					terraformingRating += 1;
+					const TR = parseInt(document.getElementById('terraformingRating-total').textContent); // Parse the minusTerraforming total as an integer
+					const TRnewTotal = terraformingRating; // Update the minusTerraforming total
+					document.getElementById('terraformingRating-total').textContent = TRnewTotal; // Update minusTerraforming total
+					updateDisplay();
+					updateResourceTotal('terraformingRating-total', TRnewTotal);
+					updateResourceTotal('terraformingRating', terraformingRating);
+					
 					// Update the display for "megacredits-total"
 					document.getElementById('megacredits-total').textContent = MCnewTotal;		
 					updateResourceTotal('megacredits-total', MCnewTotal);
@@ -785,12 +794,20 @@
 			const PLNTS = parseInt(document.getElementById('plants-total').textContent);
 			if (PLNTS >= 8) {
 				// Display a confirmation dialog
-				const confirmed = window.confirm("Do you want to spend 8 PLANTS to gain ONE OXYGEN?");
+				const confirmed = window.confirm("Do you want to spend 8 PLANTS to gain 1 OXYGEN and add 1 TERRAFORMING RATING?");
 
 				if (confirmed) {
 					// Subtract the cost from the total plants
 					const PLNTSnewTotal = PLNTS - 8;	
-
+					
+					terraformingRating += 1;
+					const TR = parseInt(document.getElementById('terraformingRating-total').textContent); // Parse the minusTerraforming total as an integer
+					const TRnewTotal = terraformingRating; // Update the minusTerraforming total
+					document.getElementById('terraformingRating-total').textContent = TRnewTotal; // Update minusTerraforming total
+					updateDisplay();
+					updateResourceTotal('terraformingRating-total', TRnewTotal);
+					updateResourceTotal('terraformingRating', terraformingRating);
+					
 					// Update the display for "plants-total"
 					document.getElementById('plants-total').textContent = PLNTSnewTotal;		
 					updateResourceTotal('plants-total', PLNTSnewTotal);
@@ -813,11 +830,19 @@
 			const HT = parseInt(document.getElementById('heat-total').textContent);
 			if (HT >= 8) {
 				// Display a confirmation dialog
-				const confirmed = window.confirm("Do you want to spend 8 HEAT to gain ONE TEMPERATURE?");
+				const confirmed = window.confirm("Do you want to spend 8 HEAT to gain 1 TEMPERATURE and add 1 TERRAFORMING RATING?");
 
 				if (confirmed) {
 					// Subtract the cost from the total heat
 					const HTnewTotal = HT - 8;	
+
+					terraformingRating += 1;
+					const TR = parseInt(document.getElementById('terraformingRating-total').textContent); // Parse the minusTerraforming total as an integer
+					const TRnewTotal = terraformingRating; // Update the minusTerraforming total
+					document.getElementById('terraformingRating-total').textContent = TRnewTotal; // Update minusTerraforming total
+					updateDisplay();
+					updateResourceTotal('terraformingRating-total', TRnewTotal);
+					updateResourceTotal('terraformingRating', terraformingRating);
 
 					// Update the display for "heat-total"
 					document.getElementById('heat-total').textContent = HTnewTotal;		
