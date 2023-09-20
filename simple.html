@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.5, maximum-scale=1, user-scalable=no">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<link rel="apple-touch-icon" href="TMAEicon.png">
     <title>TMAE: Counter - Terraforming Mars: Ares Expedition</title>
@@ -39,7 +39,8 @@
 				<button id="cancel-reload">Cancel</button>
 			</div>
 		</div>
-        <!-- Resource: Terraforming Rating -->
+<div class="resource" id="hold"></div>
+		        <!-- Resource: Terraforming Rating -->
         <div class="resource" id="terraforming-rating">
             <div class="resource-header bg-terra">
                 <h2>Terra Rating</h2>
@@ -71,7 +72,22 @@
                 </div>
             </div>
         </div>    
-		
+		<!-- Resource: Cards -->
+        <div class="resource" id="cards">
+            <div class="resource-header bg-cards" >
+                <h2>Cards</h2>
+            </div>
+            <div class="resource-content">
+                <p class="total">0</p>        
+				<!-- Production Button -->
+				<button id="production-button">Production</button>
+                <div class="adjust-button" style="display:none;">
+                    <button class="subtract-resource" data-resource="cards">-</button>
+					<p class="increment-number">Increment: 0</p>
+                    <button class="adjust-resource" data-resource="cards">+</button>
+                </div>
+            </div>
+        </div>
 		<!-- Resource: Heat -->
         <div class="resource" id="heat">
             <div class="resource-header bg-heat">
@@ -101,22 +117,7 @@
                 </div>
             </div>
         </div>
-		<div class="resource" id="hold"></div>
-        <!-- Resource: Cards -->
-        <div class="resource" id="cards">
-            <div class="resource-header bg-cards" >
-                <h2>Cards</h2>
-            </div>
-            <div class="resource-content">
-                <p class="total">0</p>
-                <div class="adjust-button">
-                    <button class="subtract-resource" data-resource="cards">-</button>
-					<p class="increment-number">Increment: 0</p>
-                    <button class="adjust-resource" data-resource="cards">+</button>
-                </div>
-            </div>
-        </div>
-		
+	
         <!-- Resource: Titanium -->
         <div class="resource" id="titanium">
             <div class="resource-header bg-titanium">
@@ -196,9 +197,6 @@
 					<i class="material-icons color-megacredits" style="font-weight:bold;" >toll</i>
 			</button>
         </div>
-
-        <!-- Production Button -->
-        <button id="production-button">Production</button>
     </main>
     <div id="resource-modal" class="modal">
         <!-- Modal content goes here -->
