@@ -39,6 +39,20 @@
 				<button id="cancel-reload">Cancel</button>
 			</div>
 		</div>
+				<!-- Resource: Cards -->
+        <div class="resource" id="cards">
+            <div class="resource-header bg-cards" >
+                <h2>Cards</h2>
+            </div>
+            <div class="resource-content">
+                <p class="total">0</p>
+                <div class="adjust-button" style="display:none;">
+                    <button class="subtract-resource" data-resource="cards">-</button>
+					<p class="increment-number">Increment: 0</p>
+                    <button class="adjust-resource" data-resource="cards">+</button>
+                </div>
+            </div>
+        </div>
 		        <!-- Resource: Terraforming Rating -->
         <div class="resource" id="terraforming-rating">
             <div class="resource-header bg-terra">
@@ -71,20 +85,6 @@
                 </div>
             </div>
         </div>    
-		<!-- Resource: Cards -->
-        <div class="resource" id="cards">
-            <div class="resource-header bg-cards" >
-                <h2>Cards</h2>
-            </div>
-            <div class="resource-content">
-                <p class="total">0</p>
-                <div class="adjust-button" style="display:none;">
-                    <button class="subtract-resource" data-resource="cards">-</button>
-					<p class="increment-number">Increment: 0</p>
-                    <button class="adjust-resource" data-resource="cards">+</button>
-                </div>
-            </div>
-        </div>
 		<!-- Resource: Heat -->
         <div class="resource" id="heat">
             <div class="resource-header bg-heat">
@@ -199,8 +199,12 @@
 					<i class="material-icons color-megacredits" style="font-weight:bold;" >toll</i>
 			</button>
         </div>
+		
+
+					<!-- END instructions -->
 
     </main>
+
     <div id="resource-modal" class="modal">
         <!-- Modal content goes here -->
     </div>
