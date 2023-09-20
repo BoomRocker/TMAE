@@ -19,189 +19,10 @@
 <!-- Link to the Roboto font from Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
     <link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet">
-	
+<!-- CSS-->
+	<link rel="stylesheet" type="text/css" href="simple-styles.css">
     <style>
-        /* CSS styles go here */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f0f0;
-        }
-
-        header {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-			font-size:1em;
-            padding: 1em;
-        }
-		
-        main {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            max-width: 800px;
-            margin: 10px auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-        }
-
-		/* Center-align the resource block */
-		.resource {
-			width: 30%;
-			margin: 0 auto 1em 0;
-			border: 1px solid #ccc;
-			padding: 0 0 1em 0;
-			box-sizing: border-box;
-			text-align: center;
-			position: relative;
-		}
-
-		/* Center-align the resource header */
-		.resource-header {
-			color: #fff;
-			text-align: center;
-			padding: .5em;
-			background-color: #333;
-		}
-
-		.resource-header h2 {
-			margin: 0;
-		}
-
-		.adjust-button {
-			width: auto;
-			text-align: center; 
-		}
-
-		.adjust-button {
-			margin: .5em 0 0 0;
-			display: inline-block; 
-		}
-
-        .total {
-            font-size: 5em;
-			font-weight:bold;
-            text-align: center;
-            margin: 0 0 0 0;
-			padding:0;
-            cursor: pointer; /* Add cursor pointer to indicate it's clickable */
-			display: block;
-        }
-
-        .increment-number {
-            font-size: 2em;
-            text-align: center;
-            margin: 5px 0 0 0;
-			float:left;
-			width: 45px;
-			height: auto;
-			
-        }
-
-        .adjust-resource {
-            background-color: #e0e0e0; /* Button color */
-            color: #000;
-            border: none;
-            padding: 5px;
-            cursor: pointer;
-            width: 45px;
-            height: 45px;
-            font-size: 24px;
-			font-weight:bold;
-			float: left;
-        }
-
-        .subtract-resource {
-            background-color: #e0e0e0; /* Button color */
-            color: #000;
-            border: none;
-            padding: 5px;
-            cursor: pointer;
-            width: 45px;
-            height: 45px;
-            font-size: 24px;
-			font-weight:bold;
-			float: left;
-        }
-
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            justify-content: center;
-            align-items: center;
-            z-index: 999;
-        }
-
-        .modal-content {
-            background-color: #fff;
-            padding: 20px;
-			width:50%;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-        }
-		
-		.modal button{
-			width:auto;
-			height:45px;
-			font-size:30px;
-			background-color: blue;
-			color: #fff;
-			margin: 10px 0 0 0;
-		}
-		
-		.modal #resource-input{
-			height:45px;
-			font-size:30px;
-		}
-		
-        .modal.show {
-            display: flex;
-        }
-
-        .number-pad {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 10px;
-            margin-top: 10px;
-        }
-
-        .number-pad button {
-            background-color: #0074D9; /* Button color */
-            color: #fff;
-            border: none;
-            padding: 10px;
-            cursor: pointer;
-            font-size: 18px;
-        }
-
-        .number-pad button.clear {
-            background-color: #FF4136; /* Clear button color */
-        }
-
-        #error-message {
-            color: red;
-            text-align: center;
-        }
-
-        #production-button {
-            background-color: #2ECC40; /* Production button color */
-            color: #fff;
-            border: none;
-            padding: 10px;
-            cursor: pointer;
-            font-size: 18px;
-            margin-top: 10px;
-            width: 100%;
-        }
-	
-		
+      
     </style>
 </head>
 <body>
@@ -209,9 +30,20 @@
         <h1>TMAE: Counter - Terraforming Mars: Ares Expedition</h1>
     </header>
     <main>
+	     <!-- Reload Page Button -->
+        <button id="reload-button">Reload Page</button>
+		
+		<div id="confirmation-modal" class="modal">
+			<div class="modal-content">
+				<h2>Confirm Reload</h2>
+				<p>Are you sure you want to reload the page?</p>
+				<button id="confirm-reload">Yes, Reload</button>
+				<button id="cancel-reload">Cancel</button>
+			</div>
+		</div>
         <!-- Resource: Terraforming Rating -->
         <div class="resource" id="terraforming-rating">
-            <div class="resource-header" style="background-color: teal;">
+            <div class="resource-header bg-terra">
                 <h2>Terra Rating</h2>
             </div>
             <div class="resource-content">
@@ -226,7 +58,7 @@
 
         <!-- Resource: Megacredits -->
         <div class="resource" id="megacredits">
-            <div class="resource-header" style="background-color: #FFD700;">
+            <div class="resource-header bg-megacredits">
                 <h2>Megacredits</h2>
             </div>
             <div class="resource-content">
@@ -241,7 +73,7 @@
 
         <!-- Resource: Titanium -->
         <div class="resource" id="titanium">
-            <div class="resource-header" style="background-color: gray;">
+            <div class="resource-header bg-titanium">
                 <h2>Titanium</h2>
             </div>
             <div class="resource-content">
@@ -255,7 +87,7 @@
         </div>
 		<!-- Resource: Steel -->
         <div class="resource" id="steel">
-            <div class="resource-header" style="background-color: brown;">
+            <div class="resource-header bg-steel">
                 <h2>Steel</h2>
             </div>
             <div class="resource-content">
@@ -269,7 +101,7 @@
         </div>
         <!-- Resource: Plants -->
         <div class="resource" id="plants">
-            <div class="resource-header" style="background-color: #008000;">
+            <div class="resource-header bg-plants bg-plants">
                 <h2>Plants</h2>
             </div>
             <div class="resource-content">
@@ -284,7 +116,7 @@
 
         <!-- Resource: Cards -->
         <div class="resource" id="cards">
-            <div class="resource-header" style="background-color: #4B0082;">
+            <div class="resource-header bg-cards" >
                 <h2>Cards</h2>
             </div>
             <div class="resource-content">
@@ -299,7 +131,7 @@
 
         <!-- Resource: Heat -->
         <div class="resource" id="heat">
-            <div class="resource-header" style="background-color: #FF4500;">
+            <div class="resource-header bg-heat">
                 <h2>Heat</h2>
             </div>
             <div class="resource-content">
@@ -310,6 +142,55 @@
 					<button class="adjust-resource" data-resource="heat">+</button>
                 </div>
             </div>
+        </div>
+		
+		<!-- Resource: Actions -->
+        <div class="resource" id="actions">
+		    <div class="resource-header" style="background-color: black;">
+                <h2>Actions</h2>
+            </div>
+			<button id="spend-megacredits-oxygen" class="action-key">
+					<span class="color-megacredits">20</span>
+					<i class="material-icons color-megacredits" style="font-weight:bold;">toll</i>
+					<i class="material-icons arrow-forward">arrow_forward</i>
+					<span class="color-sky">1</span>
+					<i class="material-icons color-sky" >cloud</i>
+			</button>
+			<button id="spend-megacredits-temperature" class="action-key">
+					<span class="color-megacredits">14</span>
+					<i class="material-icons color-megacredits" style="font-weight:bold;">toll</i>
+					<i class="material-icons arrow-forward">arrow_forward</i>
+					<span class="color-heat">1</span>
+					<i class="material-icons color-heat" >thermostat</i>
+			</button>
+			<button id="spend-plants-oxygen" class="action-key">
+					<span class="color-plants">8</span>
+					<i class="material-icons color-plants">eco</i>
+					<i class="material-icons arrow-forward">arrow_forward</i>
+					<span class="color-sky">1</span>
+					<i class="material-icons color-sky" >cloud</i>
+			</button>
+			<button id="spend-heat-temperature" class="action-key">
+					<span class="color-heat">8</span>
+					<i class="material-icons color-heat">whatshot</i>
+					<i class="material-icons arrow-forward">arrow_forward</i>
+					<span class="color-heat">1</span>
+					<i class="material-icons color-heat">thermostat</i>
+			</button>
+			<button id="spend-megacredits-ocean" class="action-key">
+					<span class="color-megacredits">15</span>
+					<i class="material-icons color-megacredits" style="font-weight:bold;">toll</i>
+					<i class="material-icons arrow-forward">arrow_forward</i>
+					<span class="color-ocean">1</span>
+					<i class="material-icons color-ocean" style="font-weight:bold;" >public</i>
+			</button>
+			<button id="spend-card-megacredits" class="action-key">
+					<span class="color-cards">1</span>
+					<i class="material-icons color-cards">speaker</i>
+					<i class="material-icons arrow-forward">arrow_forward</i>
+					<span class="color-megacredits">3</span>
+					<i class="material-icons color-megacredits" style="font-weight:bold;" >toll</i>
+			</button>
         </div>
 
         <!-- Production Button -->
@@ -449,23 +330,150 @@
             });
         });
 
-// Event listener for the "PRODUCTION" button
-document.querySelector("#production-button").addEventListener("click", function() {
-    // Add the increment values to their respective totals
-    resources["megacredits"] += increments["terraforming-rating"]; // Increment from Terraforming Rating to Megacredits
-    resources["heat"] += increments["heat"]; // Increment from Heat
-    resources["plants"] += increments["plants"]; // Increment from Plants
+		// Event listener for the "PRODUCTION" button
+		document.querySelector("#production-button").addEventListener("click", function() {
+			// Add the increment values to their respective totals
+			resources["megacredits"] += increments["terraforming-rating"]; // Increment from Terraforming Rating to Megacredits
+			resources["heat"] += increments["heat"]; // Increment from Heat
+			resources["plants"] += increments["plants"]; // Increment from Plants
+			// Update the megacredits total
+			resources["megacredits"] += increments["megacredits"]; // Increment from Megacredits to Megacredits Total
+			// Update the display
+			updateResourceDisplay();
+		});
 
-    // Update the display
-    updateResourceDisplay();
+		// Handle generation button logic here
+		// Add event listeners for adjusting reserve resources
+		// Implement the generation button functionality
+
+		// Initial update
+		updateResourceDisplay();
+		
+		// Event listener for the "Reload Page" button
+		document.querySelector("#reload-button").addEventListener("click", function() {
+			// Show the confirmation modal
+			document.querySelector("#confirmation-modal").classList.add("show");
+		});
+
+		// Event listener for the "Yes, Reload" button
+		document.querySelector("#confirm-reload").addEventListener("click", function() {
+			// Reload the page
+			location.reload();
+		});
+
+		// Event listener for the "Cancel" button
+		document.querySelector("#cancel-reload").addEventListener("click", function() {
+			// Hide the confirmation modal
+			document.querySelector("#confirmation-modal").classList.remove("show");
+		});
+		
+// RESOURCES ADD
+
+// Event listeners for spending Megacredits
+document.querySelector("#spend-megacredits-oxygen").addEventListener("click", function () {
+    const confirmMessage = "Are you sure you want to spend 20 Megacredits for 1 Oxygen?";
+    confirmAndSpendMegacredits(confirmMessage, 20, "oxygen", 1); // Added Terraforming Rating increment of 1
 });
 
-// Handle generation button logic here
-// Add event listeners for adjusting reserve resources
-// Implement the generation button functionality
+document.querySelector("#spend-megacredits-temperature").addEventListener("click", function () {
+    const confirmMessage = "Are you sure you want to spend 14 Megacredits for 1 Temperature?";
+    confirmAndSpendMegacredits(confirmMessage, 14, "temperature", 1); // Added Terraforming Rating increment of 1
+});
 
-// Initial update
-updateResourceDisplay();
+document.querySelector("#spend-plants-oxygen").addEventListener("click", function () {
+    const confirmMessage = "Are you sure you want to spend 8 Plants for 1 Oxygen?";
+    confirmAndSpendPlants(confirmMessage, 8, "oxygen", 1); // Added Terraforming Rating increment of 1
+});
+
+document.querySelector("#spend-heat-temperature").addEventListener("click", function () {
+    const confirmMessage = "Are you sure you want to spend 8 Heat for 1 Temperature?";
+    confirmAndSpendHeat(confirmMessage, 8, "temperature", 1); // Added Terraforming Rating increment of 1
+});
+
+document.querySelector("#spend-megacredits-ocean").addEventListener("click", function () {
+    const confirmMessage = "Are you sure you want to spend 15 Megacredits for 1 Ocean Tile?";
+    confirmAndSpendMegacredits(confirmMessage, 15, "ocean tile", 1); // Added Terraforming Rating increment of 1
+});
+
+document.querySelector("#spend-card-megacredits").addEventListener("click", function () {
+    const confirmMessage = "Are you sure you want to discard 1 card to gain 3 Megacredits?";
+    discardCardToGainMegacredits(confirmMessage, 1, 3); // Updated to discard 1 card to gain 3 Megacredits
+});
+
+
+// Event listeners for gaining resources
+document.querySelector("#gain-temperature").addEventListener("click", function () {
+    const confirmMessage = "Are you sure you want to gain 1 Temperature?";
+    gainResource(confirmMessage, "temperature", 1); // Added Terraforming Rating increment of 1
+});
+
+document.querySelector("#gain-oxygen").addEventListener("click", function () {
+    const confirmMessage = "Are you sure you want to gain 1 Oxygen?";
+    gainResource(confirmMessage, "oxygen", 1); // Added Terraforming Rating increment of 1
+});
+
+document.querySelector("#gain-ocean-tile").addEventListener("click", function () {
+    const confirmMessage = "Are you sure you want to gain 1 Ocean Tile?";
+    gainResource(confirmMessage, "ocean tile", 1); // Added Terraforming Rating increment of 1
+});
+
+// Function to confirm and spend Megacredits
+		function confirmAndSpendMegacredits(confirmMessage, cost, resource, terraformingRatingIncrement) {
+			const confirmed = confirm(confirmMessage);
+			if (confirmed) {
+				if (resources["megacredits"] >= cost) {
+					resources["megacredits"] -= cost;
+					resources["terraforming-rating"] += terraformingRatingIncrement; // Increase Terraforming Rating
+					updateResourceDisplay();
+					alert(`You have spent ${cost} Megacredits for 1 ${resource}.`);
+				} else {
+					alert("Error: Not enough Megacredits to make this purchase.");
+				}
+			}
+		}
+
+		// Function to confirm and spend Plants
+		function confirmAndSpendPlants(confirmMessage, cost, resource, terraformingRatingIncrement) {
+			const confirmed = confirm(confirmMessage);
+			if (confirmed) {
+				if (resources["plants"] >= cost) {
+					resources["plants"] -= cost;
+					resources["terraforming-rating"] += terraformingRatingIncrement; // Increase Terraforming Rating
+					updateResourceDisplay();
+					alert(`You have spent ${cost} Plants for 1 ${resource}.`);
+				} else {
+					alert("Error: Not enough Plants to make this purchase.");
+				}
+			}
+		}
+
+		// Function to confirm and spend Heat
+		function confirmAndSpendHeat(confirmMessage, cost, resource, terraformingRatingIncrement) {
+			const confirmed = confirm(confirmMessage);
+			if (confirmed) {
+				if (resources["heat"] >= cost) {
+					resources["heat"] -= cost;
+					resources["terraforming-rating"] += terraformingRatingIncrement; // Increase Terraforming Rating
+					updateResourceDisplay();
+					alert(`You have spent ${cost} Heat for 1 ${resource}.`);
+				} else {
+					alert("Error: Not enough Heat to make this purchase.");
+				}
+			}
+		}
+
+		// Function to discard a card and gain Megacredits without checking the number of cards
+		function discardCardToGainMegacredits(confirmMessage, cardCost, megacreditsGain) {
+			const confirmed = confirm(confirmMessage);
+			if (confirmed) {
+				resources["megacredits"] += megacreditsGain; // Add megacreditsGain without checking cards
+				updateResourceDisplay();
+				alert(`You have gained ${megacreditsGain} Megacredits.`);
+			}
+		}
+
+
+
 
 		
 		
