@@ -243,12 +243,12 @@
         }
 		
 		.bg-terra {
-			background: rgba(107, 200, 207, .5); /* #6BC8CF */
+			background: rgba(107, 200, 207, .7); /* #6BC8CF */
 			color: rgba(0, 0, 0, 1); /* black */
 		}
 
 		.bg-megacredits {
-			background: rgba(220, 171, 61, .5); /* #DCAB3D */
+			background: rgba(191, 181, 56, .5); /* #DCAB3D */
 			color: rgba(0, 0, 0, 1); /* black */
 		}
 
