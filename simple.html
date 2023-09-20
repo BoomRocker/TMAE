@@ -32,28 +32,9 @@
 </head>
 <body>
     <header>
-        <h1>Terraforming Mars:<br>Ares Expedition Counter</h1>
+        <h1>Terraforming Mars: Ares Expedition Counter</h1>
     </header>
     <main>
-				<!-- Reload Page Button -->
-		<div id="topButtonBar">
-			<button id="reload-button">
-				<i class="material-icons">sync</i>
-				<span class="resetText">&nbsp;Reload</span>
-			</button>
-		<!-- Production Button -->
-			<button id="production-button">
-				<i class="material-icons">factory</i><span class="nobr">&nbsp;</span><i class="material-icons">precision_manufacturing</i><span class="nobr">&nbsp;</span><i class="material-icons">front_loader</i><br><span class="productionText">&nbsp;Production</span>
-			</button>
-		</div>
-		<div id="confirmation-modal" class="modal">
-			<div class="modal-content">
-				<h2>Confirm Reload</h2>
-				<p>Are you sure you want to reload the page?</p>
-				<button id="confirm-reload">Yes, Reload</button>
-				<button id="cancel-reload">Cancel</button>
-			</div>
-		</div>
 				<!-- Resource: Cards -->
         <div class="resource" id="cards">
             <div class="resource-header bg-cards" >
@@ -85,7 +66,7 @@
         </div>
 
         <!-- Resource: Megacredits -->
-        <div class="resource" id="megacredits">
+        <div class="resource" id="megacredits" style="tall">
             <div class="resource-header bg-megacredits">
                 <h2>Megacredits</h2>
             </div>
@@ -99,7 +80,7 @@
             </div>
         </div>    
 		<!-- Resource: Heat -->
-        <div class="resource" id="heat">
+        <div class="resource" id="heat" style="tall">
             <div class="resource-header bg-heat">
                 <h2>Heat</h2>
             </div>
@@ -114,7 +95,7 @@
         </div>
 
 		<!-- Resource: Plants -->
-        <div class="resource" id="plants">
+        <div class="resource" id="plants" style="tall">
             <div class="resource-header bg-plants bg-plants">
                 <h2>Plants</h2>
             </div>
@@ -127,6 +108,26 @@
                 </div>
             </div>
         </div>
+		<!-- Reload Page Button -->
+		<div id="topButtonBar" class="tall">
+			<button id="reload-button">
+				<i class="material-icons">sync</i>
+				<span class="resetText">&nbsp;Reload</span>
+			</button>
+		<!-- Production Button -->
+			<button id="production-button">
+				<i class="material-icons">factory</i><span class="nobr">&nbsp;</span><i class="material-icons">precision_manufacturing</i><span class="nobr">&nbsp;</span><i class="material-icons">front_loader</i><br><span class="productionText">&nbsp;Production</span>
+			</button>
+		</div>
+		<div id="confirmation-modal" class="modal">
+			<div class="modal-content">
+				<h2>Confirm Reload</h2>
+				<p>Are you sure you want to reload the page?</p>
+				<button id="confirm-reload">Yes, Reload</button>
+				<button id="cancel-reload">Cancel</button>
+			</div>
+		</div>
+		
 		<div id="metals-holder">
 			<!-- Resource: Titanium -->
 			<div class="resource" id="titanium">
@@ -159,20 +160,20 @@
 		</div>
 	
 		<!-- Resource: Actions -->
-        <div class="resource" id="actions">
-		    <div class="resource-header bg-actions">
+        <div class="resource1" id="actions" style="tall">
+		   <!-- <div class="resource-header bg-actions">
                 <h2>Actions</h2>
-            </div>
+            </div>-->
 			<div id="action-holder">
 				<button id="spend-megacredits-oxygen" class="action-key">
-						<span class="color-megacredits">20</span>
+						<span class="color-megacredits textAction">20</span>
 						<i class="material-icons color-megacredits" style="font-weight:bold; display:none;">toll</i>
 						<i class="material-icons arrow-forward">arrow_forward</i>
 						<span class="color-heat" style="display:none;">1</span>
 						<i class="material-icons color-sky" >cloud</i>
 				</button>
 				<button id="spend-megacredits-temperature" class="action-key">
-						<span class="color-megacredits">14</span>
+						<span class="color-megacredits textAction">14</span>
 						<i class="material-icons color-megacredits" style="font-weight:bold; display:none;">toll</i>
 						<i class="material-icons arrow-forward">arrow_forward</i>
 						<span class="color-heat" style="display:none;">1</span>
@@ -180,14 +181,14 @@
 				</button>
 				<br>
 				<button id="spend-plants-oxygen" class="action-key">
-						<span class="color-plants">8</span>
+						<span class="color-plants textAction">8</span>
 						<i class="material-icons color-plants">eco</i>
 						<i class="material-icons arrow-forward">arrow_forward</i>
 						<span class="color-heat" style="display:none;">1</span>
 						<i class="material-icons color-sky" >cloud</i>
 				</button>
 				<button id="spend-heat-temperature" class="action-key">
-						<span class="color-heat">8</span>
+						<span class="color-heat textAction">8</span>
 						<i class="material-icons color-heat">whatshot</i>
 						<i class="material-icons arrow-forward">arrow_forward</i>
 						<span class="color-heat" style="display:none;">1</span>
@@ -195,7 +196,7 @@
 				</button>
 				<br>
 				<button id="spend-megacredits-ocean" class="action-key">
-						<span class="color-megacredits">15</span>
+						<span class="color-megacredits textAction">15</span>
 						<i class="material-icons color-megacredits" style="font-weight:bold; display:none;">toll</i>
 						<i class="material-icons arrow-forward">arrow_forward</i>
 						<span class="color-heat" style="display:none;">1</span>
