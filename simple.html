@@ -36,7 +36,16 @@
     </header>
     <main>
 				<!-- Reload Page Button -->
-		<button id="reload-button"><i class="material-icons">sync</i><span class="resetText">&nbsp;Reload</span></button>
+		<div id="topButtonBar">
+			<button id="reload-button">
+				<i class="material-icons">sync</i>
+				<span class="resetText">&nbsp;Reload</span>
+			</button>
+		<!-- Production Button -->
+			<button id="production-button">
+				<i class="material-icons">factory</i><span class="nobr">&nbsp;</span><i class="material-icons">precision_manufacturing</i><span class="nobr">&nbsp;</span><i class="material-icons">front_loader</i><br><span class="productionText">&nbsp;Production</span>
+			</button>
+		</div>
 		<div id="confirmation-modal" class="modal">
 			<div class="modal-content">
 				<h2>Confirm Reload</h2>
@@ -147,12 +156,6 @@
                 </div>
             </div>
         </div>
-		<div class="resource" id="hold">
-	<!-- Production Button -->
-        <button id="production-button">
-			<i class="material-icons">factory</i><span class="nobr">&nbsp;</span><i class="material-icons">precision_manufacturing</i><span class="nobr">&nbsp;</span><i class="material-icons">front_loader</i><br><span class="productionText">Production</span>
-		</button>
-		</div>
 		<!-- Resource: Actions -->
         <div class="resource" id="actions">
 		    <div class="resource-header bg-actions">
