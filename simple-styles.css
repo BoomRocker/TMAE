@@ -64,6 +64,43 @@
 			justify-content: center;
 		}
 
+
+		#spend-resource{
+            background-color: #A10101; /* Button color */
+            color: #fff;
+            border: none;
+			border-radius:5px;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 18px;
+			width:30%;
+			margin:30px 10px 0 0px;
+		}
+		
+		#gain-resource{
+			background-color: green; /* Button color */
+            color: #fff;
+            border: none;
+			border-radius:5px;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 18px;
+			width:29%;
+			margin:30px 10px 0 0px;
+		}
+		
+		#close-modal{
+			background-color: gray; /* Button color */
+            color: #fff;
+            border: none;
+			border-radius:5px;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 18px;
+			width:30%;
+			margin:30px 10px 0 0px;
+		}
+
 		
 		.material-icons{
 			font-size:95%;
@@ -179,6 +216,12 @@
 			width:auto;
 			/*background-color: #333;*/
 		}
+		
+		.totaler{
+			font-size:40px;
+			margin:0;
+			padding:0;
+		}
 
 		.resource-header h2 {
 			margin: 0;
@@ -282,20 +325,30 @@
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 10px;
-            margin-top: 10px;
+            margin-top: 5px;
         }
+		
+		.liner{
+			margin: 15px 0 0 0;
+			padding:0;
+			display: block;
+			border-top:1px solid #555;
+		}
 
         .number-pad button {
-            background-color: #0074D9; /* Button color */
-            color: #fff;
+            background-color: #ccc; /* Button color */
+            color: #333;
             border: none;
             padding: 10px;
             cursor: pointer;
-            font-size: 18px;
+            font-size: 20px;
+			height:45px;
+			font-weight:bold;
         }
 
         .number-pad button.clear {
-            background-color: #FF4136; /* Clear button color */
+            background-color: #555; /* Clear button color */
+			color:#fff;
         }
 
         #error-message {

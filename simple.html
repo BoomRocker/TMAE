@@ -265,9 +265,9 @@
                 const resourceTotal = resources[resourceName];
                 const modalContent = `
                     <div class="modal-content">
-                        <h2>${resourceName}</h2>
-                        <p>Total: ${resourceTotal}</p>
-                        <p>Increment: <span id="increment-display">${increments[resourceName]}</span></p>
+                        <!--<h2>${resourceName}</h2>-->
+                        <h2 class="totaler">Total: ${resourceTotal}</h2>
+                        <!--<p>Increment: <span id="increment-display">${increments[resourceName]}</span></p>-->
                         <input type="number" id="resource-input" value="">
                         <div class="number-pad">
                             <button class="number" data-value="1">1</button>
@@ -282,9 +282,12 @@
                             <button class="number" data-value="0">0</button>
                             <button class="number clear" data-value="clear">Clear</button>
                         </div>
-                        <button id="spend-resource">Spend</button>
-                        <button id="gain-resource">Gain</button>
-                        <button id="close-modal">Close</button>
+						<span class="liner">
+							<button id="close-modal">Close</button>
+							<button id="gain-resource">Gain</button>
+							<button id="spend-resource">Spend</button
+						</span>
+
                         <p id="error-message" style="color: red;"></p>
                     </div>
                 `;
@@ -333,16 +336,18 @@
                 modalElement.classList.add("show");
             });
         });
+		
 
 		// Event listener for the "PRODUCTION" button
 		document.querySelector("#production-button").addEventListener("click", function() {
 			// Add the increment values to their respective totals
-			resources["megacredits"] += increments["terraforming-rating"]; // Increment from Terraforming Rating to Megacredits
+			resources["megacredits"] += resources["terraforming-rating"]; // Increment from Terraforming Rating to Megacredits
 			resources["heat"] += increments["heat"]; // Increment from Heat
 			resources["plants"] += increments["plants"]; // Increment from Plants
+			
+			
 			// Update the megacredits total
 			resources["megacredits"] += increments["megacredits"]; // Increment from Megacredits to Megacredits Total
-			// Update the display
 			updateResourceDisplay();
 		});
 
