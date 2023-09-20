@@ -31,8 +31,10 @@
             max-width: 100%;
             margin: 15% auto 0 auto;
             padding: 5% 5% 5% 5%;
-            background-color: #fff;
+            background-color: #ccc;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+			background: rgba(255, 255, 255, 0.25); /* Use rgba to set background color with opacity */
+			
         }
 		
 		#reload-button {
@@ -207,7 +209,7 @@
 		.resource {
 			width: auto;
 			margin:1%;
-			border: 1px solid #ccc;
+			border: 1px solid #efefef;
 			padding: 0 0 0 0;
 			box-sizing: border-box;
 			text-align: center;
@@ -215,6 +217,8 @@
 			min-width:200px;
 			align-items: center;
 			justify-content: center;
+			background:#fff;
+			box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 		}
 
 		/* Center-align the resource header */
@@ -377,7 +381,8 @@
 			width: 100%;
 			font-weight: bold;
 			height: 200px;
-			
+			background-image: url('backMars.gif');
+			background-position: -0px -50px;
 			/* Add an inner shadow (adjust values as needed) */
 			box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
 		}
