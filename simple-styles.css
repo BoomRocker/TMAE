@@ -7,6 +7,8 @@
 			background-repeat: no-repeat;
 			background-size: cover;			
 			font-family: 'Roboto', sans-serif;
+			justify-content: center;
+			align-items: center;
         }
 
         header {
@@ -27,32 +29,48 @@
         main {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-between;
-            max-width: 100%;
-            margin: 15% auto 0 auto;
-            padding: 5% 5% 5% 5%;
+            max-width: 90%;
+			border-radius:25px;
+            margin: 20px 10% 0 10%;
+            padding: 0 0 0 0;
             background-color: #ccc;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-			background: rgba(255, 255, 255, 0.25); /* Use rgba to set background color with opacity */
+			background: rgba(0, 0, 0, 0.25); /* Use rgba to set background color with opacity */    
+			border: 1px solid #80D1D7;
+			box-shadow:
+				0 0 10px 1px #0ff, /* Outer cyan shadow */
+				inset 0 0 15px rgba(0, 0, 0, 1), /* Inner black shadow */
+				inset 0 0 5px #0ff;
+			justify-content: center;
+			align-items: center;
 			
         }
 		
 		#reload-button {
-			font-weight: normal;
 			border-radius: 0px;
-			width: 70%;
+			width: auto;
 			height: 45px;
 			padding:4%;
 			margin: 5% 15% 10px 15%;
 			cursor: pointer;
-			background: #fff;
-			background-color: #e0e0e0;
-			border: 0px solid #CC5500;
-			font-size: 18px;
+			font-size: 1.5em;
 			text-align: center;
 			display: flex;
 			align-items: center;
 			justify-content: center;
+			font-family: 'Orbitron', sans-serif;
+			letter-spacing:2px;
+			color:#fff;
+			font-weight:bold;
+			float:left;
+			background-image: url('backMars.gif');
+			background-position: -50px -250px;
+			text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);    
+			border: 1px solid #80D1D7;
+			box-shadow:
+				0 0 10px 1px #0ff, /* Outer cyan shadow */
+				inset 0 0 15px rgba(0, 0, 0, 1), /* Inner black shadow */
+				inset 0 0 5px #0ff; /* Inner black shadow */
+
 		}
 		
 		.action-key {
@@ -62,15 +80,12 @@
 			height: 45px;
 			float:left;
 			display: flex;
-			padding: 2px;
-			margin: 3px auto 0px auto;
+			padding: 5px 3px 5px 3px;
+			margin: 0;
 			cursor: pointer;
-			background: #fff;
-			background-color: rgba(0, 0, 0, 1);
-			border: 5px solid #fff;
-			border-left: 10px solid #fff;
-			border-right: 10px solid #fff;
-			font-size: 15px;
+			background-color: rgba(0, 0, 0,0);
+			border: 0px solid #fff;
+			font-size: 20px;
 			align-items: center;
 			justify-content: center;
 		}
@@ -156,46 +171,45 @@
             color: teal;
         }
 		
-		.bg-terra{
-			background:#6BC8CF;
-			color:black;
+		.bg-terra {
+			background: rgba(107, 200, 207, .5); /* #6BC8CF */
+			color: rgba(0, 0, 0, 1); /* black */
 		}
-		
-		.bg-megacredits{
-			/* background:#F6EB61; */
-			background-color:#DCAB3D;
-			color:black;
+
+		.bg-megacredits {
+			background: rgba(220, 171, 61, .5); /* #DCAB3D */
+			color: rgba(0, 0, 0, 1); /* black */
 		}
-		
-		.bg-actions{
-			background:#adadad;
+
+		.bg-actions {
+			background: rgba(173, 173, 173, .5); /* #ADADAD */
 		}
-		
-		
-		.bg-plants{
-			background:green;
-			color:black;
+
+		.bg-plants {
+			background: rgba(0, 128, 0, .5); /* green */
+			color: rgba(0, 0, 0, 1); /* black */
 		}
-		
-		.bg-heat{
-			background-color:#FF7276;
-			color:black;
+
+		.bg-heat {
+			background: rgba(255, 114, 118, .5); /* #FF7276 */
+			color: rgba(0, 0, 0, 1); /* black */
 		}
-		
-		.bg-cards{
-			background:#6368ad;
-			color:black;
+
+		.bg-cards {
+			background: rgba(99, 104, 173, 1); /* #6368AD */
+			color: rgba(0, 0, 0, 1); /* black */
 		}
-		
-		.bg-steel{
-			background:#c19a6b;
-			color:black;
+
+		.bg-steel {
+			background: rgba(193, 154, 107, .5); /* #C19A6B */
+			color: rgba(0, 0, 0, 1); /* black */
 		}
-		
-		.bg-titanium{
-			background:#555;
-			color:black;
+
+		.bg-titanium {
+			background: rgba(85, 85, 85, .5); /* #555 */
+			color: rgba(0, 0, 0, 1); /* black */
 		}
+
 		
 		.bg-actionShop{
 			background:rgba(0, 0, 0, .75);
@@ -209,7 +223,8 @@
 		.resource {
 			width: auto;
 			margin:1%;
-			border: 1px solid #efefef;
+			border: 1px solid #80D1D7;
+			box-shadow: inset 0px 0px 40px 40px #80D1D7;
 			padding: 0 0 0 0;
 			box-sizing: border-box;
 			text-align: center;
@@ -217,8 +232,15 @@
 			min-width:200px;
 			align-items: center;
 			justify-content: center;
-			background:#fff;
-			box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+			background:rgba(0, 0, 0, .75);
+			color:#fff;
+			font-family: 'Orbitron', sans-serif;
+			background-image: url('backPlanet.gif');
+			background-repeat: no-repeat;
+			background-size: cover;		
+			letter-spacing:2px;
+			box-shadow:
+				0 0 3px #E8FDFF, /* Use #80D1D7 as the shadow color */ 0 0 5px #006169, 0 0 10px #00939E, 0 0 15px #A3F9FF;	
 		}
 
 		/* Center-align the resource header */
@@ -227,6 +249,7 @@
 			text-align: center;
 			padding: .5em;
 			width:auto;
+			text-shadow: 2px 2px 4px rgba(0, 0, 0, 1); /* Horizontal offset, vertical offset, blur radius, color */
 			/*background-color: #333;*/
 		}
 		
@@ -254,46 +277,73 @@
             font-size: 5em;
 			font-weight:bold;
             text-align: center;
-            margin: 0 0 0 0;
+            margin: 0;
 			padding:0;
             cursor: pointer; /* Add cursor pointer to indicate it's clickable */
 			display: block;
+			text-shadow:
+				0 0 5px #80D1D7, /* Use #80D1D7 as the shadow color */
+				0 0 10px #006169,
+				0 0 20px #00939E,
+				0 0 30px #006169;
         }
 
         .increment-number {
             font-size: 2em;
             text-align: center;
-            margin: 5px 0 0 0;
 			float:left;
 			width: 45px;
 			height: auto;
-			
+			color:#80D1D7;
+			font-size:60px;
+			margin: -18px 19px 0 12px;
+			font-weight: 100; /* Thin font weight */
+			text-shadow:
+				0 0 5px #A3F9FF, /* Use #80D1D7 as the shadow color */
+				0 0 10px #006169,
+				0 0 20px #00939E,
+				0 0 30px #006169;
         }
 
-        .adjust-resource {
+        .adjust-resource { /*add increments*/
             background-color: #e0e0e0; /* Button color */
-            color: #000;
-            border: none;
-            padding: 5px;
+            color: #fff;
+            border-radius: 3px;
+            padding: 5px 5px 5px 5px;
             cursor: pointer;
             width: 45px;
             height: 45px;
-            font-size: 24px;
+            font-size: 30px;
 			font-weight:bold;
 			float: left;
+			background-image: url('backMars.gif');
+			background-position: -0px -50px;
+			box-shadow: inset 0 0 15px rgba(0, 0, 0,1);
+			text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+			border:1px solid #80D1D7;
+			box-shadow:
+				0 0 10px 1px #0ff; /* outer cyan */
         }
 
         .subtract-resource {
             background-color: #e0e0e0; /* Button color */
-            color: #000;
-            border: none;
-            padding: 5px;
+            color: #fff;
+            border-radius: 3px;
+            padding: 0 5px 5px 5px;
             cursor: pointer;
             width: 45px;
             height: 45px;
-            font-size: 24px;
+            font-size: 35px;
 			font-weight:bold;
 			float: left;
+			background-image: url('backMars.gif');
+			background-position: -0px -50px;
+			box-shadow: inset 0 0 15px rgba(0, 0, 0,1);
+			text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);			
+			border:1px solid #80D1D7;
+			box-shadow:
+				0 0 10px 1px #0ff; /* outer cyan */
+
         }
 
         .modal {
@@ -372,7 +422,7 @@
 		#production-button {
 			background-color: #F85831; /* Production button color */
 			color: #fff;
-			border: 15px solid #fff;
+			border: 0px solid #fff;
 			border-radius: 30px;
 			padding: 10px;
 			cursor: pointer;
@@ -385,6 +435,9 @@
 			background-position: -0px -50px;
 			/* Add an inner shadow (adjust values as needed) */
 			box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+			font-family: 'Orbitron', sans-serif;
+			letter-spacing:2px;
+			text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
 		}
 
 	
