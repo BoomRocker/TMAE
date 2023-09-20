@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<link rel="apple-touch-icon" href="TMAEicon.png">
+    <title>TMAE: Counter - Terraforming Mars: Ares Expedition</title>
+	
+<!-- Add your favicon in the link tag -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Space Mono">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+
+<!-- Link to the Roboto font from Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet">
+	
+    <style>
+        /* CSS styles go here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+			font-size:1em;
+            padding: 1em;
+        }
+		
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: 800px;
+            margin: 10px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        }
+
+		/* Center-align the resource block */
+		.resource {
+			width: 30%;
+			margin: 0 auto 1em 0;
+			border: 1px solid #ccc;
+			padding: 0 0 1em 0;
+			box-sizing: border-box;
+			text-align: center;
+			position: relative;
+		}
+
+		/* Center-align the resource header */
+		.resource-header {
+			color: #fff;
+			text-align: center;
+			padding: .5em;
+			background-color: #333;
+		}
+
+		.resource-header h2 {
+			margin: 0;
+		}
+
+		.adjust-button {
+			width: auto;
+			text-align: center; 
+		}
+
+		.adjust-button {
+			margin: .5em 0 0 0;
+			display: inline-block; 
+		}
+
+        .total {
+            font-size: 5em;
+			font-weight:bold;
+            text-align: center;
+            margin: 0 0 0 0;
+			padding:0;
+            cursor: pointer; /* Add cursor pointer to indicate it's clickable */
+			display: block;
+        }
+
+        .increment-number {
+            font-size: 2em;
+            text-align: center;
+            margin: 5px 0 0 0;
+			float:left;
+			width: 45px;
+			height: auto;
+			
+        }
+
+        .adjust-resource {
+            background-color: #e0e0e0; /* Button color */
+            color: #000;
+            border: none;
+            padding: 5px;
+            cursor: pointer;
+            width: 45px;
+            height: 45px;
+            font-size: 24px;
+			font-weight:bold;
+			float: left;
+        }
+
+        .subtract-resource {
+            background-color: #e0e0e0; /* Button color */
+            color: #000;
+            border: none;
+            padding: 5px;
+            cursor: pointer;
+            width: 45px;
+            height: 45px;
+            font-size: 24px;
+			font-weight:bold;
+			float: left;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            padding: 20px;
+			width:50%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+		
+		.modal button{
+			width:auto;
+			height:45px;
+			font-size:30px;
+			background-color: blue;
+			color: #fff;
+			margin: 10px 0 0 0;
+		}
+		
+		.modal #resource-input{
+			height:45px;
+			font-size:30px;
+		}
+		
+        .modal.show {
+            display: flex;
+        }
+
+        .number-pad {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .number-pad button {
+            background-color: #0074D9; /* Button color */
+            color: #fff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .number-pad button.clear {
+            background-color: #FF4136; /* Clear button color */
+        }
+
+        #error-message {
+            color: red;
+            text-align: center;
+        }
+
+        #production-button {
+            background-color: #2ECC40; /* Production button color */
+            color: #fff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 18px;
+            margin-top: 10px;
+            width: 100%;
+        }
+	
+		
+    </style>
+</head>
+<body>
+    <header>
+        <h1>TMAE: Counter - Terraforming Mars: Ares Expedition</h1>
+    </header>
+    <main>
+        <!-- Resource: Terraforming Rating -->
+        <div class="resource" id="terraforming-rating">
+            <div class="resource-header" style="background-color: teal;">
+                <h2>Terra Rating</h2>
+            </div>
+            <div class="resource-content">
+                <p class="total">0</p>
+                <div class="adjust-button">
+                    <button class="subtract-resource" data-resource="terraforming-rating">-</button>
+					<p class="increment-number">0</p>
+                    <button class="adjust-resource" data-resource="terraforming-rating">+</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Resource: Megacredits -->
+        <div class="resource" id="megacredits">
+            <div class="resource-header" style="background-color: #FFD700;">
+                <h2>Megacredits</h2>
+            </div>
+            <div class="resource-content">
+                <p class="total">0</p>
+                <div class="adjust-button">
+                    <button class="subtract-resource" data-resource="megacredits">-</button>
+					<p class="increment-number">Increment: 0</p>
+                    <button class="adjust-resource" data-resource="megacredits">+</button>
+                </div>
+            </div>
+        </div>     
+
+        <!-- Resource: Titanium -->
+        <div class="resource" id="titanium">
+            <div class="resource-header" style="background-color: gray;">
+                <h2>Titanium</h2>
+            </div>
+            <div class="resource-content">
+                <p class="total">0</p>
+                <div class="adjust-button">
+                    <button class="subtract-resource" data-resource="titanium">-</button>
+					<p class="increment-number">Increment: 0</p>
+                    <button class="adjust-resource" data-resource="titanium">+</button>
+                </div>
+            </div>
+        </div>
+		<!-- Resource: Steel -->
+        <div class="resource" id="steel">
+            <div class="resource-header" style="background-color: brown;">
+                <h2>Steel</h2>
+            </div>
+            <div class="resource-content">
+                <p class="total">0</p>
+				<div class="adjust-button">
+                    <button class="subtract-resource" data-resource="steel">-</button>
+					<p class="increment-number">Increment: 0</p>
+                    <button class="adjust-resource" data-resource="steel">+</button>
+                </div>
+            </div>
+        </div>
+        <!-- Resource: Plants -->
+        <div class="resource" id="plants">
+            <div class="resource-header" style="background-color: #008000;">
+                <h2>Plants</h2>
+            </div>
+            <div class="resource-content">
+                <p class="total">0</p>
+                <div class="adjust-button">
+                    <button class="subtract-resource" data-resource="plants">-</button>
+					<p class="increment-number">Increment: 0</p>
+                    <button class="adjust-resource" data-resource="plants">+</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Resource: Cards -->
+        <div class="resource" id="cards">
+            <div class="resource-header" style="background-color: #4B0082;">
+                <h2>Cards</h2>
+            </div>
+            <div class="resource-content">
+                <p class="total">0</p>
+                <div class="adjust-button">
+                    <button class="subtract-resource" data-resource="cards">-</button>
+					<p class="increment-number">Increment: 0</p>
+                    <button class="adjust-resource" data-resource="cards">+</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Resource: Heat -->
+        <div class="resource" id="heat">
+            <div class="resource-header" style="background-color: #FF4500;">
+                <h2>Heat</h2>
+            </div>
+            <div class="resource-content">
+                <p class="total">0</p>
+                <div class="adjust-button">
+                    <button class="subtract-resource" data-resource="heat">-</button>
+					<p class="increment-number">Increment: 0</p>
+					<button class="adjust-resource" data-resource="heat">+</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Production Button -->
+        <button id="production-button">PRODUCTION</button>
+    </main>
+    <div id="resource-modal" class="modal">
+        <!-- Modal content goes here -->
+    </div>
+    <script>
+        // Resource tracking variables
+        const resources = {
+            "terraforming-rating": 0,
+            "megacredits": 0,
+            "steel": 0,
+            "titanium": 0,
+            "plants": 0,
+            "cards": 0,
+            "heat": 0,
+            // Add more resources here
+        };
+
+        // Increment tracking variables
+        const increments = {
+            "terraforming-rating": 0,
+            "megacredits": 0,
+            "steel": 0,
+            "titanium": 0,
+            "plants": 0,
+            "cards": 0,
+            "heat": 0,
+            // Add more increments here
+        };
+
+        // Function to update resource display
+        function updateResourceDisplay() {
+            for (const resourceName in resources) {
+                const resourceTotal = resources[resourceName];
+                const increment = increments[resourceName];
+                document.querySelector(`#${resourceName} .total`).textContent = resourceTotal;
+                document.querySelector(`#${resourceName} .increment-number`).textContent = `${increment}`;
+            }
+        }
+
+        // Event listener for adjusting resources (increment)
+        document.querySelectorAll(".adjust-resource").forEach(button => {
+            button.addEventListener("click", function() {
+                const resourceName = this.getAttribute("data-resource");
+                increments[resourceName]++;
+                updateResourceDisplay();
+            });
+        });
+
+        // Event listener for subtracting resources (decrement)
+        document.querySelectorAll(".subtract-resource").forEach(button => {
+            button.addEventListener("click", function() {
+                const resourceName = this.getAttribute("data-resource");
+                if (increments[resourceName] > 0) {
+                    increments[resourceName]--;
+                    updateResourceDisplay();
+                }
+            });
+        });
+
+        // Event listener for total numbers to open the modal
+        document.querySelectorAll(".total").forEach(totalElement => {
+            totalElement.addEventListener("click", function() {
+                const resourceName = this.parentElement.parentElement.id; // Get the resource ID
+                const resourceTotal = resources[resourceName];
+                const modalContent = `
+                    <div class="modal-content">
+                        <h2>${resourceName}</h2>
+                        <p>Total: ${resourceTotal}</p>
+                        <p>Increment: <span id="increment-display">${increments[resourceName]}</span></p>
+                        <input type="number" id="resource-input" value="">
+                        <div class="number-pad">
+                            <button class="number" data-value="1">1</button>
+                            <button class="number" data-value="2">2</button>
+                            <button class="number" data-value="3">3</button>
+                            <button class="number" data-value="4">4</button>
+                            <button class="number" data-value="5">5</button>
+                            <button class="number" data-value="6">6</button>
+                            <button class="number" data-value="7">7</button>
+                            <button class="number" data-value="8">8</button>
+                            <button class="number" data-value="9">9</button>
+                            <button class="number" data-value="0">0</button>
+                            <button class="number clear" data-value="clear">Clear</button>
+                        </div>
+                        <button id="spend-resource">Spend</button>
+                        <button id="gain-resource">Gain</button>
+                        <button id="close-modal">Close</button>
+                        <p id="error-message" style="color: red;"></p>
+                    </div>
+                `;
+                const modalElement = document.querySelector("#resource-modal");
+                modalElement.innerHTML = modalContent;
+
+                // Event listeners for number pad buttons
+                document.querySelectorAll(".number").forEach(numButton => {
+                    numButton.addEventListener("click", function() {
+                        const value = this.getAttribute("data-value");
+                        const inputElement = document.querySelector("#resource-input");
+                        if (value === "clear") {
+                            inputElement.value = "";
+                        } else {
+                            inputElement.value += value;
+                        }
+                    });
+                });
+
+                // Event listener for the "Spend" button
+                document.querySelector("#spend-resource").addEventListener("click", function() {
+                    const spendAmount = parseInt(document.querySelector("#resource-input").value) || 0;
+                    if (spendAmount <= resourceTotal) {
+                        resources[resourceName] -= spendAmount;
+                        updateResourceDisplay();
+                        modalElement.classList.remove("show");
+                    } else {
+                        document.querySelector("#error-message").textContent = "Not enough resources to spend.";
+                    }
+                });
+
+                // Event listener for the "Gain" button
+                document.querySelector("#gain-resource").addEventListener("click", function() {
+                    const gainAmount = parseInt(document.querySelector("#resource-input").value) || 0;
+                    resources[resourceName] += gainAmount;
+                    updateResourceDisplay();
+                    modalElement.classList.remove("show");
+                });
+
+                // Event listener for the "Close" button
+                document.querySelector("#close-modal").addEventListener("click", function() {
+                    modalElement.classList.remove("show");
+                });
+
+                // Show the modal
+                modalElement.classList.add("show");
+            });
+        });
+
+// Event listener for the "PRODUCTION" button
+document.querySelector("#production-button").addEventListener("click", function() {
+    // Add the increment values to their respective totals
+    resources["megacredits"] += increments["terraforming-rating"]; // Increment from Terraforming Rating to Megacredits
+    resources["heat"] += increments["heat"]; // Increment from Heat
+    resources["plants"] += increments["plants"]; // Increment from Plants
+
+    // Update the display
+    updateResourceDisplay();
+});
+
+// Handle generation button logic here
+// Add event listeners for adjusting reserve resources
+// Implement the generation button functionality
+
+// Initial update
+updateResourceDisplay();
+
+		
+		
+    </script>
+</body>
+</html>

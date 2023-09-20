@@ -1,0 +1,667 @@
+
+		body {
+			/*background-color: rgba(51, 51, 51, 0.7); /* Adjust the alpha value (0.7 in this case) for transparency */
+			background-color:#222;
+			text-align: center;
+			margin: 0;
+			padding: 0;
+			/*font-family: 'Space Mono', Arial, sans-serif;*/
+			font-family: 'Roboto', sans-serif;
+            font-weight: 300; /* Use the light variant */
+			overflow: hidden;
+			background-image: url('backPlanet.gif');
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			/*opacity: 0.65;*/
+			text-align:center;
+		}
+		
+		#header-text{
+			background-image: url('backMars.gif');
+			vertical-align: middle;
+			width:100%;
+			height:130px;
+			display:block;
+			padding: 80px 0 0px 0;
+			border-top: 4px solid #000;
+			border-bottom: 4px solid #000;
+		}
+		
+		#action-spend-mc-oxygen{
+			margin-top:10px;
+		}
+		
+		.instructions{
+			display:block;
+			margin: 0 0 0 150px;
+		}
+		
+		h1 {
+			text-shadow: 3px 3px 2px rgba(0, 0, 0, 1);
+			text-align: left;
+			font-size: 35px;
+			font-weight: bold;
+			line-height: 120%;
+			margin: 15px 0 0 0;
+			width: 100%;
+			text-align: left;
+			padding: 5px;
+			color: white;
+			font-family: 'Orbitron', sans-serif;
+			text-transform: uppercase;
+			vertical-align: middle;
+		}
+		
+		.h1-text{
+			padding-top:0;
+			display:flex; 
+			margin:-10px 0 0px 10px; 
+			padding: 0 0 0 10px;
+
+		}
+		
+		h1 .material-icons{
+			font-size:40px;
+			display:flex; 
+			margin:-10px 0 0px 0; 
+			padding:0px; 
+			float:left; 
+			width:auto;
+			vertical-align: middle;
+		}
+		
+		h1 strong{
+		    font-style: italic;            
+			font-weight: 100; /* Use the light variant */
+		}
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin: 0;
+            padding: 0;
+			/*width: 355px /* Adjust the width as needed */
+			width: 100% /* Adjust the width as needed */
+        }
+		
+		.section {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			width: 100%; /* Adjust the width as needed */
+			margin: 0px; 
+			padding:0;
+			/*background-image: url('https://photojournal.jpl.nasa.gov/jpegMod/PIA14004_modest.jpg');
+	*/	}
+
+		.resource-container {
+			display: flex;
+			align-items: center;
+			flex-wrap: wrap; /* Allow elements to wrap within the container */
+			width: 100%; /* Adjust the width as needed */
+			padding: 0;
+			border-radius: 5px;
+		}
+		
+		#middleHolder{
+			width:auto;
+			margin: 0 0 0 0;
+			padding: 0 0 0 0;
+		}
+		
+		.nobr{
+		font-size:2px;	
+		}
+
+        .button-container {
+           display: flex;
+		   width: auto;
+		   float: left;
+		   border:0px solid red;
+		   padding: 3px 0 6px 0px;
+        }
+		
+        button {
+            font-size: 36px;
+			font-weight:normal;
+            padding: 0;
+			width:85px;
+			height:60px;
+			background-color: #222;
+			color:#fff;
+			padding:0px 1px 0 1px;
+			border-radius:5px;
+        }
+		
+        .button-plus {
+			color: #8FCB95;
+			font-size:40px;
+			padding:0px 1px 0 1px;
+			margin:0;
+			text-align:center;
+			margin:15px 8px 0 8px;
+			width:100px;
+			height:60px;
+			border: 0px solid #333;
+			background-color: rgba(0, 0, 0, 0.85); /* #FF7276 with 25% opacity */
+        }
+		
+		.button-minus {
+			color: #CB8F8F;
+			font-size:40px;
+			padding:0px 1px 0 1px;
+			margin:0;
+			text-align:center;
+			margin:15px 8px 0 8px;
+			width:100px;
+			height:60px;
+			font-weight:normal;
+			background-color: rgba(0, 0, 0, 0.65); /* #FF7276 with 25% opacity */
+			border: 0px solid #333;
+        }
+		
+		.iconer1{
+			padding:0 2px 0 2px;
+			vertical-align: middle;
+			margin:0 3px 0 0;
+        }
+		
+		.iconer i{
+			margin:0;
+			padding: 0;
+        }
+		
+        .material-icons {
+			margin: 0 5px 0 5px;
+			padding: 0;
+        }
+		
+		.resource-name-container{
+			display:flex;
+			width: 100%;
+			float: left;
+			background:black;
+			margin:5px 0 0 0;
+			padding: 0;
+			font-weight:bold;
+			height:34px;
+			padding: 1px 1px;
+			font-family: 'Orbitron', sans-serif;
+		}	
+		
+		p.resource-name {
+			text-transform: uppercase;
+			text-align: left;
+			font-weight: bold;
+			width: auto; /* Set your desired width here */
+			padding: 0;
+			margin:0;
+			display: flex;
+			font-size:26px;
+		}
+		
+		.resource-name-container .material-icons{
+			font-size:35px;
+			margin: 0px 10px 0 0 ;
+		}
+		
+		.smaller{
+			width:10px;
+			height:10px;
+		}
+
+        .title-container {
+            border: 1px solid #fff;
+            display: block;
+            float: left;
+        }
+ 
+        .color-megacredits {
+            color: yellow;
+        }
+        .color-terraformingRating {
+            color: #6BC8CF;
+        }
+        .color-cards {
+            /*color: #6368ad;*/
+			color:#A6ADE6;
+		}
+			
+        .color-heat {
+            color: #FF7331;
+        }
+		
+		.color-fire {
+            color: #FF2C27;
+        }
+		
+        .color-plants {
+            color: rgba(0, 255, 0, .75);
+        }
+        .color-steel {
+            color: #c19a6b;
+        }
+        .color-titanium {
+            color: #B7B7BE;
+        }
+        .color-megacredits {
+            color: #F6EB61;
+        }
+		.color-sky {
+            color: #c9ffe5 ;
+        }
+		.color-ocean {
+            color: #66cdaa ;
+        }
+		
+		.bg-terra{
+			background:#6BC8CF;
+			color:black;
+		}
+		
+		.bg-megacredits{
+			background:#F6EB61;
+			color:black;
+		}
+		
+		.bg-plants{
+			background:green;
+			color:black;
+		}
+		
+		.bg-heat{
+			background:#E84B00;
+			color:black;
+		}
+		
+		.bg-cards{
+			background:#6368ad;
+			color:black;
+		}
+		
+		.bg-steel{
+			background:#c19a6b;
+			color:black;
+		}
+		
+		.bg-titanium{
+			background:gray;
+			color:black;
+		}
+		
+		.bg-actionShop{
+			background:rgba(0, 0, 0, .75);
+			color:#CC5500;
+			margin:0;
+			padding: 2px 0 0 0;
+			height:36px;
+		}
+		
+		.hide-me{
+			display:none;
+		}
+		
+		.bumper{
+			display:block;
+			background:none;
+			width:0px;
+			border:0px solid red;
+			display:none;
+		}
+		
+		.resource-value {
+            font-size: 64px;
+            font-weight: normal;
+            text-align: center;
+			display: block;
+			float:left;
+			letter-spacing:50%;
+			padding: 0 50px 0 50px;
+			border: 0px solid #fff;
+			margin: 5px 0 0 0;
+			vertical-align: top;
+			height: 70px;
+			width: auto;
+			text-shadow: 0px 2px 8px rgba(0, 0, 0, 1); /* Horizontal offset, vertical offset, blur radius, color */
+			/*border: 1px solid rgba(0, 0, 0, .25);*/
+        }
+		
+		.seperator{
+			margin: 5px 0;
+		}
+		
+		.total-resource-value{
+			display: block;
+			background: black;
+			margin: 3px 30px -1px 8px;
+			border-radius: 5px;
+			height: 50%;
+			font-weight:bold;
+		}
+		
+		.short-row{
+			margin: 0 0 0 0;
+			/* width: 50px; */
+		}
+		
+		.resource-arrow{
+			margin: 18px 0px 0 5px ;
+			font-size:48px;
+		}
+		
+		
+		#backer-terra .total-resource-value{
+			border: 2px solid #6BC8CF;
+			margin-right:285px;
+		}
+		
+		#backer-terra{
+			width:100%;
+			background-color: rgba(1, 124, 134, 0.25); /* Orange with 50% opacity */
+		}
+		
+		#backer-megacredits .total-resource-value{
+			border: 2px solid rgba(246, 235, 97, 1); /* #F6EB61 with 25% opacity */
+		}
+		
+		#backer-megacredits{
+			width:100%;
+			background-color: rgba(246, 235, 97, 0.25); /* #F6EB61 with 25% opacity */
+		}
+		
+		#backer-heat .total-resource-value{
+			border: 2px solid #FF7331; /* #F6EB61 with 25% opacity */
+		}
+		
+		#backer-heat{
+			width:100%;
+			background-color: rgba(232, 75, 0, 0.25); /* #FF7276 with 25% opacity */
+
+		}
+		
+		#backer-cards .total-resource-value{
+			border: 2px solid #8A90EF; /* #F6EB61 with 25% opacity */
+		}
+		
+		#backer-cards{
+			width:100%;
+			background-color: rgba(99, 104, 173, 0.5); /* #6368ad with 25% opacity */
+		}
+						
+		#backer-plants .total-resource-value{
+			border: 2px solid rgba(0, 175, 0, 1); /* #F6EB61 with 25% opacity */
+		}
+		
+		#backer-plants{
+			width:100%;
+			background-color: rgba(0, 255, 0, 0.125); /* #00FF00 (pure green) with 25% opacity */
+		}
+		
+								
+		#backer-steel .total-resource-value{
+			border: 2px solid rgba(193, 154, 107, 1); /* #F6EB61 with 25% opacity */
+		}
+		
+		#backer-steel{
+			width:100%;
+			background-color: rgba(193, 154, 107, 0.25); /* #c19a6b with 25% opacity */
+		}
+				
+								
+		#backer-titanium .total-resource-value{
+			border: 2px solid rgba(128, 128, 128, 1); /* #F6EB61 with 25% opacity */
+		}
+		
+		#backer-titanium{
+			width:100%;
+			background-color: rgba(128, 128, 128, 0.25); /* Orange with 50% opacity */
+		}
+		
+		/*#backer-titanium .button-plus{
+			border: 2px solid gray;
+		        #productionButton {
+            background-color: #222;
+            border: 1px solid orange;
+            border-radius: 5px;
+            padding: 0 5px 5px 5px;
+			margin: 5px 5px 0 10px ;
+            font-size: 12px;
+			line-height:5px;
+            cursor: pointer;
+			color:white;
+			float: right;
+			font-weight:bold;
+			width:110px;
+			vertical-align: middle;
+			height:38px;
+			text-transform:uppercase;
+			background-image: url('backPlanet.gif');
+			/* Add a text drop shadow 
+			text-shadow: 2px 2px 2px rgba(0, 0, 0, 1); Horizontal offset, vertical offset, blur radius, color with opacity 
+			}*/
+		
+		
+		
+        #productionButton {
+            background-color: #222;
+            border: 1px solid orange;
+            border-radius: 5px;
+            padding: 40px 0 20px 0;
+			margin: 30px 15% 0 17% ;
+            font-size: 2em;
+			line-height:5px;
+            cursor: pointer;
+			text-align:center
+			color:white;
+			float: left;
+			font-weight:bold;
+			font-family:'Orbitron', sans-serif;
+			width:65%;
+			vertical-align: middle;
+			height:auto;
+			text-transform:uppercase;
+			background-image: url('backMars.gif');
+			background-position: -50px -100px;
+			/* Add a text drop shadow */
+			text-shadow: 2px 2px 2px rgba(0, 0, 0, 1); /* Horizontal offset, vertical offset, blur radius, color with opacity */
+			}
+		
+        #productionButton .material-icons {
+			font-size:35px;
+			margin:0 7px 15px 5px;
+			padding:0px 0 0 0;
+			color:white;
+        }
+		
+		.productionText{
+			padding: 0 10px 0 10px;
+			font-style: italic;   
+			font-weight:bold;	
+			font-family: 'Anton', sans-serif;	
+			letter-spacing:10px;
+			font-size: 50px;
+		}
+	
+
+		#resetButton {
+			color: gray;
+			font-size:40px;
+			padding:12px 2px 0 12px;
+			margin:0 0 0 0 ;
+			text-align:center;
+			margin:10px 10px 0 0px;
+			width:200px;
+			height:60px;
+			font-weight:normal;
+			background-color: rgba(0, 0, 0, 0.5); /* #FF7276 with 25% opacity */
+			border: 0px solid #333;
+			display:block;
+			float:right;
+		}
+		
+		#resetButton  .material-icons {
+			font-size:36px;			
+			display: block;
+			float: left;
+			vertical-align: top;	
+			padding:2px 0 10px 18px;
+		}
+		
+        .resource-total {
+            font-size: 28px;
+            font-weight: bold;
+            color: white;
+            margin-left: 5px;
+        }
+		
+		.resetText{
+			font-size:22px;
+			font-weight: bold;
+			margin: 0 0 0 7px;
+			padding:8px 10px 10px 0px;
+			display: block;
+			float: left;
+			vertical-align: top;
+		}
+		
+		.text-me{
+			font-size: 60px;
+			color: #fff;
+			padding: 5px 5px 0 10px;
+			margin: 0;
+		}
+		
+		
+		#actionShop{
+			width:50%;
+			display:block;
+			float: right;
+			padding: 0;
+			margin: 0;
+
+		}
+		
+		#crdstltntShop{
+			width:50%;
+			display:block;
+			float: left;
+			padding: 0 0 0 0;
+			margin: 0 0px 0 0;
+		}
+		
+		#TR-spanne1r{
+			width:auto;
+			display:block;
+			float: left;
+			padding: 0;
+			margin: 0;
+		}
+		
+		#action-info-key{
+			width:auto;
+			height: auto;
+ 			margin: 5px 0 0 15px; 
+			text-align:left;
+			padding: 0px 0 20px 0;
+			/* border-top: 4px solid #000;
+			border-bottom: 4px solid #000; */
+			font-weight:bold;
+			align: left;
+			text-align:center;
+			background-image: url('backMars.gif');
+			background-position: -600px 0px ;
+			border-bottom: 10px solid #000;
+    	}
+		
+		#action-info-key .material-icons{
+			font-size:32px;
+			margin: 0 2px 1px 2px;
+		}
+		
+		.action-key{
+			font-weight: bold;
+			border-radius:5px;
+			width:65%;
+			height:54px;
+			background-color:#222;
+			padding: 0px;
+			margin: 5px 0 5px 0;
+			position: relative;
+			cursor: pointer;
+			background-color: rgba(0, 0, 0, 0.85); /* Black background with 50% opacity */
+			border: 1px solid #CC5500;
+		}
+
+		}
+		
+		.action-key span{
+			font-size:32px;
+			font-weight: bold;
+			margin:0;
+			vertical-align: middle;
+		}
+		
+		
+		.action-key i{
+			vertical-align: middle;
+			margin:0 -5px 0 -5px;
+			padding:0;
+		}
+		
+		.arrow-forward{
+		}
+		
+		p.text-me{
+			margin: 0 0 0 0;
+			padding: 0;
+		}
+		
+		button.hide {
+			display: none;
+		}
+		
+		.pushMeBoi{
+			display: flex;
+			width:20px;
+			height:20px;
+			margin-left:20px;
+			border: 0px solid red;
+		}
+		
+		
+				/* Style the modal */
+		.modal {
+		  display: none;
+		  position: fixed;
+		  top: 0;
+		  left: 0;
+		  width: 100%;
+		  height: 100%;
+		  background-color: rgba(0, 0, 0, 0.5);
+		  z-index: 1000;
+		  justify-content: center;
+		  align-items: center;
+		}
+
+		.modal-content {
+		  background-color: #fff;
+		  border: 1px solid #ccc;
+		  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		  padding: 10px;
+		  text-align: center;
+		  position: relative;
+		  width: 300px;
+		}
+
+		.close-button {
+		  position: absolute;
+		  top: 5px;
+		  right: 5px;
+		  font-size: 14px;
+		  cursor: pointer;
+		}
+
+		/* Rest of the CSS remains the same */
