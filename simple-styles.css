@@ -31,15 +31,15 @@
             flex-wrap: wrap;
             max-width: 100%;
 			border-radius:25px;
-            margin: 40px 0 0 0;
+            margin: 0px 0 0 0;
             padding: 0px 0px 0px 0px;
             background-color: #ccc;
 			background: rgba(0, 0, 0, 0.25); /* Use rgba to set background color with opacity */    
-			border: 1px solid #80D1D7;
+			/* border: 1px solid #80D1D7;
 			box-shadow:
-				0 0 10px 1px #0ff, /* Outer cyan shadow */
-				inset 0 0 15px rgba(0, 0, 0, 1), /* Inner black shadow */
-				inset 0 0 5px #0ff;
+				0 0 10px 1px #0ff, /* Outer cyan shadow 
+				inset 0 0 15px rgba(0, 0, 0, 1), /* Inner black shadow 
+				inset 0 0 5px #0ff; */
 			justify-content: center;
 			align-items: center;
 			
@@ -80,7 +80,6 @@
 				0 0 3px #E8FDFF, 0 0 5px #006169, 0 0 10px #00939E, 0 0 15px #A3F9FF;	 */
 		}
 
-		
 		#reload-button {
 			border-radius: 10px;
 			width: 100%;
@@ -264,7 +263,6 @@
 		#metals-holder{
 			width:auto;
 			display:flex;
-			margin:30px 0 10px 0;
 		}
 		
 		#action-holder{
@@ -301,6 +299,7 @@
 			width:auto;
 			height:40px;
 			text-align:left;
+			font-family: 'Orbitron', sans-serif;
 		}
 		
 				
