@@ -19,7 +19,9 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
-
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
 <!-- Link to the Roboto font from Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
@@ -64,21 +66,25 @@
                 </div>
             </div>
         </div>
-
-        <!-- Resource: Megacredits -->
-        <div class="resource" id="megacredits" style="tall">
-            <div class="resource-header bg-megacredits">
-                <h2>Megacredits</h2>
-            </div>
-            <div class="resource-content">
-                <p class="total">0</p>
-                <div class="adjust-button">
-                    <button class="subtract-resource" data-resource="megacredits">-</button>
-					<p class="increment-number">Increment: 0</p>
-                    <button class="adjust-resource" data-resource="megacredits">+</button>
-                </div>
-            </div>
-        </div>    
+  		<!-- Reload Page Button -->
+		<div id="topButtonBar" class="tall">
+			<button id="reload-button">
+				<i class="material-icons">sync</i>
+				<span class="resetText">&nbsp;Reload</span>
+			</button>
+		<!-- Production Button -->
+			<button id="production-button">
+				<i class="material-icons">factory</i><span class="nobr">&nbsp;</span><i class="material-icons">precision_manufacturing</i><span class="productionText">&nbsp;Production</span>
+			</button>
+		</div>
+		<div id="confirmation-modal" class="modal">
+			<div class="modal-content">
+				<h2>Confirm Reload</h2>
+				<p>Are you sure you want to reload the page?</p>
+				<button id="confirm-reload">Yes, Reload</button>
+				<button id="cancel-reload">Cancel</button>
+			</div>
+		</div>
 		<!-- Resource: Heat -->
         <div class="resource" id="heat" style="tall">
             <div class="resource-header bg-heat">
@@ -108,25 +114,20 @@
                 </div>
             </div>
         </div>
-		<!-- Reload Page Button -->
-		<div id="topButtonBar" class="tall">
-			<button id="reload-button">
-				<i class="material-icons">sync</i>
-				<span class="resetText">&nbsp;Reload</span>
-			</button>
-		<!-- Production Button -->
-			<button id="production-button">
-				<i class="material-icons">factory</i><span class="nobr">&nbsp;</span><i class="material-icons">precision_manufacturing</i><span class="nobr">&nbsp;</span><i class="material-icons">front_loader</i><br><span class="productionText">&nbsp;Production</span>
-			</button>
-		</div>
-		<div id="confirmation-modal" class="modal">
-			<div class="modal-content">
-				<h2>Confirm Reload</h2>
-				<p>Are you sure you want to reload the page?</p>
-				<button id="confirm-reload">Yes, Reload</button>
-				<button id="cancel-reload">Cancel</button>
-			</div>
-		</div>
+		<!-- Resource: Megacredits -->
+        <div class="resource" id="megacredits" style="tall">
+            <div class="resource-header bg-megacredits">
+                <h2>Megacredits</h2>
+            </div>
+            <div class="resource-content">
+                <p class="total">0</p>
+                <div class="adjust-button">
+                    <button class="subtract-resource" data-resource="megacredits">-</button>
+					<p class="increment-number">Increment: 0</p>
+                    <button class="adjust-resource" data-resource="megacredits">+</button>
+                </div>
+            </div>
+        </div>  
 		
 		<div id="metals-holder">
 			<!-- Resource: Titanium -->
@@ -143,7 +144,7 @@
 					</div>
 				</div>
 			</div>
-			<!-- Resource: Steel -->
+				<!-- Resource: Steel -->
 			<div class="resource" id="steel">
 				<div class="resource-header bg-steel">
 					<h2>Steel</h2>
@@ -166,7 +167,8 @@
             </div>-->
 			<div id="action-holder">
 				<button id="spend-megacredits-oxygen" class="action-key">
-						<span class="color-megacredits textAction">20</span>
+						<!--<span class="textAction">20 </span>-->
+						<i class="material-symbols-outlined color-megacredits" >looks_one</i>
 						<i class="material-icons color-megacredits" style="font-weight:bold; display:none;">toll</i>
 						<i class="material-icons arrow-forward">arrow_forward</i>
 						<span class="color-heat" style="display:none;">1</span>
@@ -178,14 +180,6 @@
 						<i class="material-icons arrow-forward">arrow_forward</i>
 						<span class="color-heat" style="display:none;">1</span>
 						<i class="material-icons color-heat" >thermostat</i>
-				</button>
-				<br>
-				<button id="spend-plants-oxygen" class="action-key">
-						<span class="color-plants textAction">8</span>
-						<i class="material-icons color-plants">eco</i>
-						<i class="material-icons arrow-forward">arrow_forward</i>
-						<span class="color-heat" style="display:none;">1</span>
-						<i class="material-icons color-sky" >cloud</i>
 				</button>
 				<button id="spend-heat-temperature" class="action-key">
 						<span class="color-heat textAction">8</span>
@@ -204,10 +198,17 @@
 				</button>
 				<button id="spend-card-megacredits" class="action-key">
 						<span class="color-cards">1</span>
-						<i class="material-icons color-cards">speaker</i>
+						<span class="material-symbols-outlined" style="font-size:40px; margin-bottom:-10px;">style</span>
 						<i class="material-icons arrow-forward">arrow_forward</i>
 						<span class="color-megacredits">3</span>
 						<i class="material-icons color-megacredits" style="font-weight:bold; display:none;">toll</i>
+				</button>
+				<button id="spend-plants-oxygen" class="action-key">
+						<span class="color-plants textAction">8</span>
+						<i class="material-icons color-plants">eco</i>
+						<i class="material-icons arrow-forward">arrow_forward</i>
+						<span class="color-heat" style="display:none;">1</span>
+						<i class="material-icons color-sky" >cloud</i>
 				</button>
 			</div>
         </div>
