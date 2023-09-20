@@ -1,9 +1,12 @@
   /* CSS styles go here */
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f0f0f0;
+			background-image: url('backPlanet.gif');
+			background-repeat: no-repeat;
+			background-size: cover;			
+			font-family: 'Roboto', sans-serif;
         }
 
         header {
@@ -12,7 +15,13 @@
             text-align: center;
 			font-size:70%;
             padding: 1%;
-			height:auto;
+			height:auto;			
+			background-image: url('backMars.gif');
+			vertical-align: middle;			
+			font-family: 'Orbitron', sans-serif;
+			text-transform: uppercase;
+			vertical-align: middle;
+			text-shadow: 2px 2px 4px rgba(0, 0, 0, 1); /* Horizontal offset, vertical offset, blur radius, color */
         }
 		
         main {
@@ -20,10 +29,10 @@
             flex-wrap: wrap;
             justify-content: space-between;
             max-width: 100%;
-            margin: 10px auto;
-            padding: 20px;
+            margin: 15% auto 0 auto;
+            padding: 5% 5% 5% 5%;
             background-color: #fff;
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
         }
 		
 		#reload-button {
