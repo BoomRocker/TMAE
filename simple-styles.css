@@ -356,16 +356,22 @@
             text-align: center;
         }
 
-        #production-button {
-            background-color: #EA4D02; /* Production button color */
-            color: #fff;
-            border: none;
-            padding: 10px;
-            cursor: pointer;
-            font-size: 1.5em;
-            margin-top: 10px;
-            width: 100%;
-			font-weight:bold;
-        }
+		#production-button {
+			background-color: #F85831; /* Production button color */
+			color: #fff;
+			border: 15px solid #fff;
+			border-radius: 30px;
+			padding: 10px;
+			cursor: pointer;
+			font-size: 1.5em;
+			margin-top: 0px;
+			width: 100%;
+			font-weight: bold;
+			height: 200px;
+			
+			/* Add an inner shadow (adjust values as needed) */
+			box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+		}
+
 	
 		
