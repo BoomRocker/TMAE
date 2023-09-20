@@ -81,7 +81,7 @@
 		<div id="confirmation-modal" class="modal">
 			<div class="modal-content">
 				<h2>Confirm Reload</h2>
-				<p>Are you sure you want to reload the page?</p>
+				<p style="color:#fff;">Are you sure you want to reload the page?</p>
 				<button id="confirm-reload">Yes, Reload</button>
 				<button id="cancel-reload">Cancel</button>
 			</div>
@@ -283,9 +283,10 @@
                 const modalContent = `
                     <div class="modal-content">
                         <!--<h2>${resourceName}</h2>-->
-                        <h2 class="totaler">Total: ${resourceTotal}</h2>
+                        <h2 class="totaler"><span class="smallerTot">total:</span> ${resourceTotal}</h2>
                         <!--<p>Increment: <span id="increment-display">${increments[resourceName]}</span></p>-->
                         <input type="number" id="resource-input" value="">
+						<p id="error-message" ></p>
                         <div class="number-pad">
                             <button class="number" data-value="1">1</button>
                             <button class="number" data-value="2">2</button>
@@ -299,13 +300,11 @@
                             <button class="number" data-value="0">0</button>
                             <button class="number clear" data-value="clear">Clear</button>
                         </div>
-						<span class="liner">
-							<button id="close-modal">Close</button>
+						<span class="liner1">
+							<button id="close-modal">X</button>
 							<button id="gain-resource">Gain</button>
 							<button id="spend-resource">Spend</button
 						</span>
-
-                        <p id="error-message" style="color: red;"></p>
                     </div>
                 `;
                 const modalElement = document.querySelector("#resource-modal");
