@@ -25,20 +25,46 @@
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
         }
 		
-		.action-key{
+		#reload-button{
 			font-weight: bold;
 			border-radius:0px;
-			width:100%;
-			height:45px;
+			width:96%;
+			height:47px;
 			float:left;
-			display: block;
-			padding: 0px;
-			margin:0;
+			display: flex;
+			padding: 15px 30% 10px 30%;
+			margin:10px 2px 0 5px;
 			cursor: pointer;
 			background:#fff;
-			/*background-color: rgba(255, 0, 0, 0.85); /* Black background with 50% opacity */
+			background-color:#e0e0e0;
 			border: 0px solid #CC5500;
-			font-
+			font-size:18px;
+			text-align:center;		
+		}
+		
+		.action-key{
+			font-weight: bold;
+			border-radius:5px;
+			width:46%;
+			height:auto;
+			float:left;
+			display: flex;
+			padding: 12px 10px 10px 10px;
+			margin:5px 2px 3px 5px;
+			cursor: pointer;
+			background:#fff;
+			background-color: rgba(0, 0, 0, 1); /* Black background with 50% opacity */
+			border: 0px solid #CC5500;
+			font-size:20px;
+			text-align:center;
+		}
+		
+		.material-icons{
+			font-size:20px;
+		}
+		
+		.arrow-forward{
+			color: #c19a6b;
 		}
 		
 		.color-megacredits {
@@ -61,11 +87,13 @@
         .color-steel {
             color: #c19a6b;
         }
+		
         .color-titanium {
-            color: #B7B7BE;
+            color: #e2e2e2;
         }
         .color-megacredits {
-            color: #F6EB61;
+			color:yellow;
+/*             color: #F6EB61; */
         }
 		.color-sky {
             color: #26F7FD;
@@ -80,9 +108,15 @@
 		}
 		
 		.bg-megacredits{
-			background:#F6EB61;
+			/* background:#F6EB61; */
+			background-color:#DCAB3D;
 			color:black;
 		}
+		
+		.bg-actions{
+			background:#adadad;
+		}
+		
 		
 		.bg-plants{
 			background:green;
@@ -105,7 +139,7 @@
 		}
 		
 		.bg-titanium{
-			background:gray;
+			background:#555;
 			color:black;
 		}
 		
@@ -260,14 +294,15 @@
         }
 
         #production-button {
-            background-color: #2ECC40; /* Production button color */
+            background-color: #EA4D02; /* Production button color */
             color: #fff;
             border: none;
             padding: 10px;
             cursor: pointer;
-            font-size: 18px;
+            font-size: 1.5em;
             margin-top: 10px;
             width: 100%;
+			font-weight:bold;
         }
 	
 		

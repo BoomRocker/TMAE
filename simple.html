@@ -30,9 +30,7 @@
         <h1>TMAE: Counter - Terraforming Mars: Ares Expedition</h1>
     </header>
     <main>
-	     <!-- Reload Page Button -->
-        <button id="reload-button">Reload Page</button>
-		
+
 		<div id="confirmation-modal" class="modal">
 			<div class="modal-content">
 				<h2>Confirm Reload</h2>
@@ -48,7 +46,10 @@
             </div>
             <div class="resource-content">
                 <p class="total">0</p>
-                <div class="adjust-button">
+				<!-- Reload Page Button -->
+				<button id="reload-button"><i class="material-icons">sync</i><span class="resetText">RESET</span></button>
+		
+                <div class="adjust-button" style="display:none;">
                     <button class="subtract-resource" data-resource="terraforming-rating">-</button>
 					<p class="increment-number">0</p>
                     <button class="adjust-resource" data-resource="terraforming-rating">+</button>
@@ -69,8 +70,54 @@
                     <button class="adjust-resource" data-resource="megacredits">+</button>
                 </div>
             </div>
-        </div>     
-
+        </div>    
+		
+		<!-- Resource: Heat -->
+        <div class="resource" id="heat">
+            <div class="resource-header bg-heat">
+                <h2>Heat</h2>
+            </div>
+            <div class="resource-content">
+                <p class="total">0</p>
+                <div class="adjust-button">
+                    <button class="subtract-resource" data-resource="heat">-</button>
+					<p class="increment-number">Increment: 0</p>
+					<button class="adjust-resource" data-resource="heat">+</button>
+                </div>
+            </div>
+        </div>
+	<!-- HOLD -->
+        <div class="resource" id="cards"> </div>
+		<!-- Resource: Plants -->
+        <div class="resource" id="plants">
+            <div class="resource-header bg-plants bg-plants">
+                <h2>Plants</h2>
+            </div>
+            <div class="resource-content">
+                <p class="total">0</p>
+                <div class="adjust-button">
+                    <button class="subtract-resource" data-resource="plants">-</button>
+					<p class="increment-number">Increment: 0</p>
+                    <button class="adjust-resource" data-resource="plants">+</button>
+                </div>
+            </div>
+        </div>
+		
+        <!-- Resource: Cards -->
+        <div class="resource" id="cards">
+            <div class="resource-header bg-cards" >
+                <h2>Cards</h2>
+            </div>
+            <div class="resource-content">
+                <p class="total">0</p>
+                <div class="adjust-button">
+                    <button class="subtract-resource" data-resource="cards">-</button>
+					<p class="increment-number">Increment: 0</p>
+                    <button class="adjust-resource" data-resource="cards">+</button>
+                </div>
+            </div>
+        </div>
+		
         <!-- Resource: Titanium -->
         <div class="resource" id="titanium">
             <div class="resource-header bg-titanium">
@@ -99,54 +146,10 @@
                 </div>
             </div>
         </div>
-        <!-- Resource: Plants -->
-        <div class="resource" id="plants">
-            <div class="resource-header bg-plants bg-plants">
-                <h2>Plants</h2>
-            </div>
-            <div class="resource-content">
-                <p class="total">0</p>
-                <div class="adjust-button">
-                    <button class="subtract-resource" data-resource="plants">-</button>
-					<p class="increment-number">Increment: 0</p>
-                    <button class="adjust-resource" data-resource="plants">+</button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Resource: Cards -->
-        <div class="resource" id="cards">
-            <div class="resource-header bg-cards" >
-                <h2>Cards</h2>
-            </div>
-            <div class="resource-content">
-                <p class="total">0</p>
-                <div class="adjust-button">
-                    <button class="subtract-resource" data-resource="cards">-</button>
-					<p class="increment-number">Increment: 0</p>
-                    <button class="adjust-resource" data-resource="cards">+</button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Resource: Heat -->
-        <div class="resource" id="heat">
-            <div class="resource-header bg-heat">
-                <h2>Heat</h2>
-            </div>
-            <div class="resource-content">
-                <p class="total">0</p>
-                <div class="adjust-button">
-                    <button class="subtract-resource" data-resource="heat">-</button>
-					<p class="increment-number">Increment: 0</p>
-					<button class="adjust-resource" data-resource="heat">+</button>
-                </div>
-            </div>
-        </div>
 		
 		<!-- Resource: Actions -->
         <div class="resource" id="actions">
-		    <div class="resource-header" style="background-color: black;">
+		    <div class="resource-header bg-actions">
                 <h2>Actions</h2>
             </div>
 			<button id="spend-megacredits-oxygen" class="action-key">
@@ -194,7 +197,7 @@
         </div>
 
         <!-- Production Button -->
-        <button id="production-button">PRODUCTION</button>
+        <button id="production-button">Production</button>
     </main>
     <div id="resource-modal" class="modal">
         <!-- Modal content goes here -->
