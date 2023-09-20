@@ -127,86 +127,89 @@
                 </div>
             </div>
         </div>
+		<div id="metals-holder">
+			<!-- Resource: Titanium -->
+			<div class="resource" id="titanium">
+				<div class="resource-header bg-titanium">
+					<h2>Titanium</h2>
+				</div>
+				<div class="resource-content">
+					<p class="total">0</p>
+					<div class="adjust-button" style="display:none">
+						<button class="subtract-resource" data-resource="titanium">-</button>
+						<p class="increment-number">Increment: 0</p>
+						<button class="adjust-resource" data-resource="titanium">+</button>
+					</div>
+				</div>
+			</div>
+			<!-- Resource: Steel -->
+			<div class="resource" id="steel">
+				<div class="resource-header bg-steel">
+					<h2>Steel</h2>
+				</div>
+				<div class="resource-content">
+					<p class="total">0</p>
+					<div class="adjust-button" style="display:none">
+						<button class="subtract-resource" data-resource="steel">-</button>
+						<p class="increment-number">Increment: 0</p>
+						<button class="adjust-resource" data-resource="steel">+</button>
+					</div>
+				</div>
+			</div>
+		</div>
 	
-        <!-- Resource: Titanium -->
-        <div class="resource" id="titanium">
-            <div class="resource-header bg-titanium">
-                <h2>Titanium</h2>
-            </div>
-            <div class="resource-content">
-                <p class="total">0</p>
-                <div class="adjust-button">
-                    <button class="subtract-resource" data-resource="titanium">-</button>
-					<p class="increment-number">Increment: 0</p>
-                    <button class="adjust-resource" data-resource="titanium">+</button>
-                </div>
-            </div>
-        </div>
-		<!-- Resource: Steel -->
-        <div class="resource" id="steel">
-            <div class="resource-header bg-steel">
-                <h2>Steel</h2>
-            </div>
-            <div class="resource-content">
-                <p class="total">0</p>
-				<div class="adjust-button">
-                    <button class="subtract-resource" data-resource="steel">-</button>
-					<p class="increment-number">Increment: 0</p>
-                    <button class="adjust-resource" data-resource="steel">+</button>
-                </div>
-            </div>
-        </div>
 		<!-- Resource: Actions -->
         <div class="resource" id="actions">
 		    <div class="resource-header bg-actions">
                 <h2>Actions</h2>
             </div>
-			<button id="spend-megacredits-oxygen" class="action-key">
-					<span class="color-megacredits">20</span>
-					<i class="material-icons color-megacredits" style="font-weight:bold;">toll</i>
-					<i class="material-icons arrow-forward">arrow_forward</i>
-					<span class="color-sky">1</span>
-					<i class="material-icons color-sky" >cloud</i>
-			</button>
-			<button id="spend-megacredits-temperature" class="action-key">
-					<span class="color-megacredits">14</span>
-					<i class="material-icons color-megacredits" style="font-weight:bold;">toll</i>
-					<i class="material-icons arrow-forward">arrow_forward</i>
-					<span class="color-heat">1</span>
-					<i class="material-icons color-heat" >thermostat</i>
-			</button>
-			<br>
-			<button id="spend-plants-oxygen" class="action-key">
-					<span class="color-plants">8</span>
-					<i class="material-icons color-plants">eco</i>
-					<i class="material-icons arrow-forward">arrow_forward</i>
-					<span class="color-sky">1</span>
-					<i class="material-icons color-sky" >cloud</i>
-			</button>
-			<button id="spend-heat-temperature" class="action-key">
-					<span class="color-heat">8</span>
-					<i class="material-icons color-heat">whatshot</i>
-					<i class="material-icons arrow-forward">arrow_forward</i>
-					<span class="color-heat">1</span>
-					<i class="material-icons color-heat">thermostat</i>
-			</button>
-			<br>
-			<button id="spend-megacredits-ocean" class="action-key">
-					<span class="color-megacredits">15</span>
-					<i class="material-icons color-megacredits" style="font-weight:bold;">toll</i>
-					<i class="material-icons arrow-forward">arrow_forward</i>
-					<span class="color-ocean">1</span>
-					<i class="material-icons color-ocean" style="font-weight:bold;" >public</i>
-			</button>
-			<button id="spend-card-megacredits" class="action-key">
-					<span class="color-cards">1</span>
-					<i class="material-icons color-cards">speaker</i>
-					<i class="material-icons arrow-forward">arrow_forward</i>
-					<span class="color-megacredits">3</span>
-					<i class="material-icons color-megacredits" style="font-weight:bold;" >toll</i>
-			</button>
+			<div id="action-holder">
+				<button id="spend-megacredits-oxygen" class="action-key">
+						<span class="color-megacredits">20</span>
+						<i class="material-icons color-megacredits" style="font-weight:bold; display:none;">toll</i>
+						<i class="material-icons arrow-forward">arrow_forward</i>
+						<span class="color-heat" style="display:none;">1</span>
+						<i class="material-icons color-sky" >cloud</i>
+				</button>
+				<button id="spend-megacredits-temperature" class="action-key">
+						<span class="color-megacredits">14</span>
+						<i class="material-icons color-megacredits" style="font-weight:bold; display:none;">toll</i>
+						<i class="material-icons arrow-forward">arrow_forward</i>
+						<span class="color-heat" style="display:none;">1</span>
+						<i class="material-icons color-heat" >thermostat</i>
+				</button>
+				<br>
+				<button id="spend-plants-oxygen" class="action-key">
+						<span class="color-plants">8</span>
+						<i class="material-icons color-plants">eco</i>
+						<i class="material-icons arrow-forward">arrow_forward</i>
+						<span class="color-heat" style="display:none;">1</span>
+						<i class="material-icons color-sky" >cloud</i>
+				</button>
+				<button id="spend-heat-temperature" class="action-key">
+						<span class="color-heat">8</span>
+						<i class="material-icons color-heat">whatshot</i>
+						<i class="material-icons arrow-forward">arrow_forward</i>
+						<span class="color-heat" style="display:none;">1</span>
+						<i class="material-icons color-heat">thermostat</i>
+				</button>
+				<br>
+				<button id="spend-megacredits-ocean" class="action-key">
+						<span class="color-megacredits">15</span>
+						<i class="material-icons color-megacredits" style="font-weight:bold; display:none;">toll</i>
+						<i class="material-icons arrow-forward">arrow_forward</i>
+						<span class="color-heat" style="display:none;">1</span>
+						<i class="material-icons color-ocean" style="font-weight:bold;" >public</i>
+				</button>
+				<button id="spend-card-megacredits" class="action-key">
+						<span class="color-cards">1</span>
+						<i class="material-icons color-cards">speaker</i>
+						<i class="material-icons arrow-forward">arrow_forward</i>
+						<span class="color-megacredits">3</span>
+						<i class="material-icons color-megacredits" style="font-weight:bold; display:none;">toll</i>
+				</button>
+			</div>
         </div>
-		
 
 					<!-- END instructions -->
 
