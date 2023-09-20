@@ -2,17 +2,15 @@
         body {
             margin: 0;
             padding: 0;
-            background-color: #f0f0f0;
+            background-color: #000;
 			background-image: url('backPlanet.gif');
 			background-repeat: no-repeat;
 			background-size: cover;			
 			font-family: 'Roboto', sans-serif;
-			justify-content: center;
-			align-items: center;
         }
 
         header {
-            background-color: #333;
+            background-color: orange;
             color: #fff;
             text-align: center;
 			font-size:70%;
@@ -35,7 +33,7 @@
             margin: 10px 0 0 0;
             padding: 20px 0px 20px 0px;
             background-color: #ccc;
-			background: rgba(0, 0, 0, 0.25); /* Use rgba to set background color with opacity */    
+			background: rgba(0, 0, 0, 0.5); /* Use rgba to set background color with opacity */    
 			/* border: 1px solid #80D1D7;
 			box-shadow:
 				0 0 10px 1px #0ff, /* Outer cyan shadow 
