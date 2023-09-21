@@ -28,9 +28,6 @@
     <link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet">
 <!-- CSS-->
 	<link rel="stylesheet" type="text/css" href="simple-styles.css">
-    <style>
-      
-    </style>
 </head>
 <body>
     <header>
@@ -78,14 +75,15 @@
 				<i class="material-icons">factory</i><span class="nobr">&nbsp;</span><span class="productionText">&nbsp;Production<span class="nobr">&nbsp;</span><i class="material-icons">precision_manufacturing</i></span>
 			</button>
 		</div>
-		<div id="confirmation-modal" class="modal">
-			<div class="modal-content">
-				<h2>Confirm Reload</h2>
-				<p style="color:#fff;">Are you sure you want to reload the page?</p>
-				<button id="confirm-reload">Yes, Reload</button>
-				<button id="cancel-reload">Cancel</button>
+		<!-- MODAL: RELOAD PAGE -->
+		<div id="custom-alert" class="custom-alert">
+			<div class="custom-alert-content">
+				<p id="custom-alert-text"></p>
+				<button id="confirm-button" onclick="confirmAction()">Confirm</button>
+				<button id="cancel-button" onclick="cancelAction()">Cancel</button>
 			</div>
 		</div>
+		<!-- MODAL: CONFIRM SELECTION PAGE -->
 		<!-- Resource: Heat -->
         <div class="resource" id="heat" style="tall">
             <div class="resource-header bg-heat">
@@ -151,10 +149,10 @@
 					<h2>Steel: <span style="font-size:.8em; font-weight:normal; padding-bottom:10px;">-3 MC / <span style="font-weight:normal; font-size:22px;">&#128736;</span></span></h2>
 				</div>
 				<div class="resource-content">
-					<p class="total">0</p> 
+					<p class="total">0</p>
 					<div class="adjust-button" style="display:none">
 						<button class="subtract-resource" data-resource="steel">-</button>
-						<p class="increment-number">Increment: 0</p>
+						<p class="increment-number">Increment: 0</p><p>&#128736;</P
 						<button class="adjust-resource" data-resource="steel">+</button>
 					</div>
 				</div>
@@ -167,21 +165,21 @@
                 <h2>Actions</h2>
             </div>-->
 			<div id="action-holder">
-				<button id="spend-megacredits-oxygen" class="action-key">
+				<button id="spend-megacredits-oxygen" class="action-key" onclick="showCustomAlert('Spend 20 Megacredits to gain 1 Oxygen')">
 						<span class="textAction color-megacredits textAction">20 </span>
 						<i class="material-icons color-megacredits" style="font-weight:bold; display:none;">toll</i>
 						<i class="material-icons arrow-forward">arrow_forward</i>
 						<span class="color-heat" style="display:none;">1</span>
 						<i class="material-icons color-sky" >cloud</i>
 				</button>
-				<button id="spend-megacredits-temperature" class="action-key">
+				<button id="spend-megacredits-temperature" class="action-key" onclick="showCustomAlert('Spend 14 Megacredits for 1 Temperature')">
 						<span class="color-megacredits textAction">14</span>
 						<i class="material-icons color-megacredits" style="font-weight:bold; display:none;">toll</i>
 						<i class="material-icons arrow-forward">arrow_forward</i>
 						<span class="color-heat" style="display:none;">1</span>
 						<i class="material-icons color-heat" >thermostat</i>
 				</button>
-				<button id="spend-heat-temperature" class="action-key">
+				<button id="spend-heat-temperature1" class="action-key" onclick="showCustomAlert('Spend 8 Heat for 1 Temperature')">
 						<span class="color-heat textAction">8</span>
 						<i class="material-icons color-heat">whatshot</i>
 						<i class="material-icons arrow-forward">arrow_forward</i>
@@ -189,27 +187,35 @@
 						<i class="material-icons color-heat">thermostat</i>
 				</button>
 				<br>
-				<button id="spend-megacredits-ocean" class="action-key">
+				<button id="spend-megacredits-ocean1" class="action-key" onclick="showCustomAlert('Spend 15 Megacredits to gain 1 Ocean Tile')">
 						<span class="color-megacredits textAction">15</span>
 						<i class="material-icons color-megacredits" style="font-weight:bold; display:none;">toll</i>
 						<i class="material-icons arrow-forward">arrow_forward</i>
 						<span class="color-heat" style="display:none;">1</span>
 						<i class="material-icons color-ocean" style="font-weight:bold;" >public</i>
 				</button>
-				<button id="spend-card-megacredits" class="action-key">
+				<button id="spend-card-megacredits1" class="action-key" onclick="showCustomAlert('Spend 1 Card to gain 3 Megacredits')">
 						<span class="color-cards">1</span>
 						<span class="material-symbols-outlined color-cards" style="font-size:40px;">style</span>
 						<i class="material-icons arrow-forward">arrow_forward</i>
 						<span class="color-megacredits textAction">3</span>
 						<i class="material-icons color-megacredits" style="font-weight:bold; display:none;">toll</i>
 				</button>
-				<button id="spend-plants-oxygen" class="action-key">
+				<button id="spend-plants-oxygen1" class="action-key" onclick="showCustomAlert('Spend 8 Plants for 1 Atmosphere')">
 						<span class="color-plants textAction">8</span>
 						<i class="material-icons color-plants">eco</i>
 						<i class="material-icons arrow-forward">arrow_forward</i>
 						<span class="color-heat" style="display:none;">1</span>
 						<i class="material-icons color-sky" >cloud</i>
 				</button>
+				
+	<!--<button onclick="showCustomAlert('Spend 20 Megacredits to gain 1 Atmosphere')">Spend 20 Megacredits for 1 Atmosphere</button>
+    <button onclick="showCustomAlert('Spend 14 Megacredits for 1 Temperature')">Spend 14 Megacredits for 1 Temperature</button>
+    <button onclick="showCustomAlert('Spend 8 Plants for 1 Atmosphere')">Spend 8 Plants for 1 Atmosphere</button>
+    <button onclick="showCustomAlert('Spend 8 Heat for 1 Temperature')">Spend 8 Heat for 1 Temperature</button>
+    <button onclick="showCustomAlert('Spend 1 Card to gain 3 Megacredits')">Spend 1 Card for 3 Megacredits</button>
+    <button onclick="showCustomAlert('Spend 20 Megacredits to gain 1 Oxygen')">Spend 20 Megacredits to gain 1 Oxygen</button>-->
+
 			</div>
         </div>
 
@@ -220,288 +226,22 @@
     <div id="resource-modal" class="modal">
         <!-- Modal content goes here -->
     </div>
-    <script>
-        // Resource tracking variables
-        const resources = {
-            "terraforming-rating": 0,
-            "megacredits": 0,
-            "steel": 0 ,
-            "titanium": 0,
-            "plants": 0,
-            "cards": 0,
-            "heat": 0,
-            // Add more resources here
-        };
-
-        // Increment tracking variables
-        const increments = {
-            "terraforming-rating": 0,
-            "megacredits": 0,
-            "steel": 0,
-            "titanium": 0,
-            "plants": 0,
-            "cards": 0,
-            "heat": 0,
-            // Add more increments here
-        };
-
-        // Function to update resource display
-        function updateResourceDisplay() {
-            for (const resourceName in resources) {
-                const resourceTotal = resources[resourceName];
-                const increment = increments[resourceName];
-                document.querySelector(`#${resourceName} .total`).textContent = resourceTotal;
-                document.querySelector(`#${resourceName} .increment-number`).textContent = `${increment}`;
-            }
-        }
-
-        // Event listener for adjusting resources (increment)
-        document.querySelectorAll(".adjust-resource").forEach(button => {
-            button.addEventListener("click", function() {
-                const resourceName = this.getAttribute("data-resource");
-                increments[resourceName]++;
-                updateResourceDisplay();
-            });
-        });
-
-        // Event listener for subtracting resources (decrement)
-        document.querySelectorAll(".subtract-resource").forEach(button => {
-            button.addEventListener("click", function() {
-                const resourceName = this.getAttribute("data-resource");
-                if (increments[resourceName] > 0) {
-                    increments[resourceName]--;
-                    updateResourceDisplay();
-                }
-            });
-        });
-
-        // Event listener for total numbers to open the modal
-        document.querySelectorAll(".total").forEach(totalElement => {
-            totalElement.addEventListener("click", function() {
-                const resourceName = this.parentElement.parentElement.id; // Get the resource ID
-                const resourceTotal = resources[resourceName];
-                const modalContent = `
-                    <div class="modal-content">
-                        <!--<h2>${resourceName}</h2>-->
-                        <h2 class="totaler"><span class="smallerTot">total:</span> ${resourceTotal}</h2>
-                        <!--<p>Increment: <span id="increment-display">${increments[resourceName]}</span></p>-->
-                        <input type="number" id="resource-input" value="">
-						<p id="error-message" ></p>
-                        <div class="number-pad">
-                            <button class="number" data-value="1">1</button>
-                            <button class="number" data-value="2">2</button>
-                            <button class="number" data-value="3">3</button>
-                            <button class="number" data-value="4">4</button>
-                            <button class="number" data-value="5">5</button>
-                            <button class="number" data-value="6">6</button>
-                            <button class="number" data-value="7">7</button>
-                            <button class="number" data-value="8">8</button>
-                            <button class="number" data-value="9">9</button>
-                            <button class="number" data-value="0">0</button>
-                            <button class="number clear" data-value="clear">Clear</button>
-                        </div>
-						<span class="liner1">
-							<button id="close-modal">X</button>
-							<button id="gain-resource">Gain</button>
-							<button id="spend-resource">Spend</button
-						</span>
-                    </div>
-                `;
-                const modalElement = document.querySelector("#resource-modal");
-                modalElement.innerHTML = modalContent;
-
-                // Event listeners for number pad buttons
-                document.querySelectorAll(".number").forEach(numButton => {
-                    numButton.addEventListener("click", function() {
-                        const value = this.getAttribute("data-value");
-                        const inputElement = document.querySelector("#resource-input");
-                        if (value === "clear") {
-                            inputElement.value = "";
-                        } else {
-                            inputElement.value += value;
-                        }
-                    });
-                });
-
-                // Event listener for the "Spend" button
-                document.querySelector("#spend-resource").addEventListener("click", function() {
-                    const spendAmount = parseInt(document.querySelector("#resource-input").value) || 0;
-                    if (spendAmount <= resourceTotal) {
-                        resources[resourceName] -= spendAmount;
-                        updateResourceDisplay();
-                        modalElement.classList.remove("show");
-                    } else {
-                        document.querySelector("#error-message").textContent = "Not enough resources to spend.";
-                    }
-                });
-
-                // Event listener for the "Gain" button
-                document.querySelector("#gain-resource").addEventListener("click", function() {
-                    const gainAmount = parseInt(document.querySelector("#resource-input").value) || 0;
-                    resources[resourceName] += gainAmount;
-                    updateResourceDisplay();
-                    modalElement.classList.remove("show");
-                });
-
-                // Event listener for the "Close" button
-                document.querySelector("#close-modal").addEventListener("click", function() {
-                    modalElement.classList.remove("show");
-                });
-
-                // Show the modal
-                modalElement.classList.add("show");
-            });
-        });
-		
-
-		// Event listener for the "PRODUCTION" button
-		document.querySelector("#production-button").addEventListener("click", function() {
-			// Add the increment values to their respective totals
-			resources["megacredits"] += resources["terraforming-rating"]; // Increment from Terraforming Rating to Megacredits
-			resources["heat"] += increments["heat"]; // Increment from Heat
-			resources["plants"] += increments["plants"]; // Increment from Plants
-			
-			
-			// Update the megacredits total
-			resources["megacredits"] += increments["megacredits"]; // Increment from Megacredits to Megacredits Total
-			updateResourceDisplay();
-		});
-
-		// Handle generation button logic here
-		// Add event listeners for adjusting reserve resources
-		// Implement the generation button functionality
-
-		// Initial update
-		updateResourceDisplay();
-		
-		// Event listener for the "Reload Page" button
-		document.querySelector("#reload-button").addEventListener("click", function() {
-			// Show the confirmation modal
-			document.querySelector("#confirmation-modal").classList.add("show");
-		});
-
-		// Event listener for the "Yes, Reload" button
-		document.querySelector("#confirm-reload").addEventListener("click", function() {
-			// Reload the page
-			location.reload();
-		});
-
-		// Event listener for the "Cancel" button
-		document.querySelector("#cancel-reload").addEventListener("click", function() {
-			// Hide the confirmation modal
-			document.querySelector("#confirmation-modal").classList.remove("show");
-		});
-		
-// RESOURCES ADD
-
-// Event listeners for spending Megacredits
-document.querySelector("#spend-megacredits-oxygen").addEventListener("click", function () {
-    const confirmMessage = "Are you sure you want to spend 20 Megacredits for 1 Oxygen?";
-    confirmAndSpendMegacredits(confirmMessage, 20, "oxygen", 1); // Added Terraforming Rating increment of 1
-});
-
-document.querySelector("#spend-megacredits-temperature").addEventListener("click", function () {
-    const confirmMessage = "Are you sure you want to spend 14 Megacredits for 1 Temperature?";
-    confirmAndSpendMegacredits(confirmMessage, 14, "temperature", 1); // Added Terraforming Rating increment of 1
-});
-
-document.querySelector("#spend-plants-oxygen").addEventListener("click", function () {
-    const confirmMessage = "Are you sure you want to spend 8 Plants for 1 Oxygen?";
-    confirmAndSpendPlants(confirmMessage, 8, "oxygen", 1); // Added Terraforming Rating increment of 1
-});
-
-document.querySelector("#spend-heat-temperature").addEventListener("click", function () {
-    const confirmMessage = "Are you sure you want to spend 8 Heat for 1 Temperature?";
-    confirmAndSpendHeat(confirmMessage, 8, "temperature", 1); // Added Terraforming Rating increment of 1
-});
-
-document.querySelector("#spend-megacredits-ocean").addEventListener("click", function () {
-    const confirmMessage = "Are you sure you want to spend 15 Megacredits for 1 Ocean Tile?";
-    confirmAndSpendMegacredits(confirmMessage, 15, "ocean tile", 1); // Added Terraforming Rating increment of 1
-});
-
-document.querySelector("#spend-card-megacredits").addEventListener("click", function () {
-    const confirmMessage = "Are you sure you want to discard 1 card to gain 3 Megacredits?";
-    discardCardToGainMegacredits(confirmMessage, 1, 3); // Updated to discard 1 card to gain 3 Megacredits
-});
+	
+	<!-- JS-->
+	<script src="simple-js.js"></script>
+ 
+ 
+ <div id="custom-modal" class="modal">
+  <div class="modal-content">
+    <span class="close" id="close">&times;</span>
+    <p id="modal-message"></p>
+    <div class="modal-buttons">
+      <button id="cancel-button" class="button">Cancel</button>
+      <button id="confirm-button" class="button">Confirm</button>
+    </div>
+  </div>
+</div>
 
 
-// Event listeners for gaining resources
-document.querySelector("#gain-temperature").addEventListener("click", function () {
-    const confirmMessage = "Are you sure you want to gain 1 Temperature?";
-    gainResource(confirmMessage, "temperature", 1); // Added Terraforming Rating increment of 1
-});
-
-document.querySelector("#gain-oxygen").addEventListener("click", function () {
-    const confirmMessage = "Are you sure you want to gain 1 Oxygen?";
-    gainResource(confirmMessage, "oxygen", 1); // Added Terraforming Rating increment of 1
-});
-
-document.querySelector("#gain-ocean-tile").addEventListener("click", function () {
-    const confirmMessage = "Are you sure you want to gain 1 Ocean Tile?";
-    gainResource(confirmMessage, "ocean tile", 1); // Added Terraforming Rating increment of 1
-});
-
-// Function to confirm and spend Megacredits
-		function confirmAndSpendMegacredits(confirmMessage, cost, resource, terraformingRatingIncrement) {
-			const confirmed = confirm(confirmMessage);
-			if (confirmed) {
-				if (resources["megacredits"] >= cost) {
-					resources["megacredits"] -= cost;
-					resources["terraforming-rating"] += terraformingRatingIncrement; // Increase Terraforming Rating
-					updateResourceDisplay();
-					alert(`You have spent ${cost} Megacredits for 1 ${resource}.`);
-				} else {
-					alert("Error: Not enough Megacredits to make this purchase.");
-				}
-			}
-		}
-
-		// Function to confirm and spend Plants
-		function confirmAndSpendPlants(confirmMessage, cost, resource, terraformingRatingIncrement) {
-			const confirmed = confirm(confirmMessage);
-			if (confirmed) {
-				if (resources["plants"] >= cost) {
-					resources["plants"] -= cost;
-					resources["terraforming-rating"] += terraformingRatingIncrement; // Increase Terraforming Rating
-					updateResourceDisplay();
-					alert(`You have spent ${cost} Plants for 1 ${resource}.`);
-				} else {
-					alert("Error: Not enough Plants to make this purchase.");
-				}
-			}
-		}
-
-		// Function to confirm and spend Heat
-		function confirmAndSpendHeat(confirmMessage, cost, resource, terraformingRatingIncrement) {
-			const confirmed = confirm(confirmMessage);
-			if (confirmed) {
-				if (resources["heat"] >= cost) {
-					resources["heat"] -= cost;
-					resources["terraforming-rating"] += terraformingRatingIncrement; // Increase Terraforming Rating
-					updateResourceDisplay();
-					alert(`You have spent ${cost} Heat for 1 ${resource}.`);
-				} else {
-					alert("Error: Not enough Heat to make this purchase.");
-				}
-			}
-		}
-
-		// Function to discard a card and gain Megacredits without checking the number of cards
-		function discardCardToGainMegacredits(confirmMessage, cardCost, megacreditsGain) {
-			const confirmed = confirm(confirmMessage);
-			if (confirmed) {
-				resources["megacredits"] += megacreditsGain; // Add megacreditsGain without checking cards
-				updateResourceDisplay();
-				alert(`You have gained ${megacreditsGain} Megacredits.`);
-			}
-		}
-
-
-
-
-		
-		
-    </script>
 </body>
 </html>
