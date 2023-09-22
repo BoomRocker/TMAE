@@ -214,10 +214,9 @@ function updateMessage(message) {
                 const resourceTotal = resources[resourceName];
                 const modalContent = `
                     <div class="modal-content">
-                        <!--<h2>${resourceName}</h2>-->
-                        <h2 class="totaler"><span class="smallerTot">total:</span> ${resourceTotal}</h2>
-                        <!--<p>Increment: <span id="increment-display">${increments[resourceName]}</span></p>-->
-                        <input type="number" id="resource-input" value="">
+                        <h2 class="modal-h2-styler">${resourceName}<br><span class="smallerTot"> total:</span> ${resourceTotal}</h2>
+                        <!--<p class="resource-input-text">Increment: <span id="increment-display">${increments[resourceName]}</span></p>-->
+                        <input type="number" id="resource-input" class="resource-input-text" value="">
 						<p id="error-message" ></p>
                         <div class="number-pad">
                             <button class="number" data-value="1">1</button>
