@@ -38,6 +38,7 @@
         <div class="resource" id="cards">
             <div class="resource-header bg-cards" >
                 <h2>Cards</h2>
+				<img src="cards.png" class="resource_icons_header">
             </div>
             <div class="resource-content">
                 <p class="total">0</p>
@@ -52,6 +53,7 @@
         <div class="resource" id="terraforming-rating">
             <div class="resource-header bg-terra">
                 <h2>Terra Rating</h2>
+				<img src="TerraRate.png" class="resource_icons_header">
             </div>
             <div class="resource-content">
                 <p class="total">0</p>
@@ -78,6 +80,7 @@
 		<!-- MODAL: RELOAD PAGE -->
 		<div id="custom-alert" class="custom-alert">
 			<div class="custom-alert-content">
+				<div id="custom-alert-image"><img id="image-element" src="megaC.png" style="float:right;"></div>
 				<p id="custom-alert-text"></p>
 				<button id="confirm-button" onclick="confirmAction()">Confirm</button>
 				<button id="cancel-button" onclick="cancelAction()">Cancel</button>
@@ -96,6 +99,7 @@
         <div class="resource" id="heat" style="tall">
             <div class="resource-header bg-heat">
                 <h2>Heat</h2>
+				<img src="heat.png" class="resource_icons_header">
             </div>
             <div class="resource-content">
                 <p class="total">0</p>
@@ -111,6 +115,7 @@
         <div class="resource" id="plants" style="tall">
             <div class="resource-header bg-plants bg-plants">
                 <h2>Plants</h2>
+				<img src="plants.png" class="resource_icons_header">
             </div>
             <div class="resource-content">
                 <p class="total">0</p>
@@ -125,6 +130,7 @@
         <div class="resource" id="megacredits" style="tall">
             <div class="resource-header bg-megacredits">
                 <h2>Megacredits</h2>
+				<img src="megaC.png" class="resource_icons_header">
             </div>
             <div class="resource-content">
                 <p class="total">0</p>
@@ -140,7 +146,7 @@
 			<!-- Resource: Titanium -->
 			<div class="resource" id="titanium">
 				<div class="resource-header bg-titanium">
-					<h2>Titanium: <span style="font-size:.8em; font-weight:normal; padding-bottom:10px;"">-2 MC / <span style="font-weight:normal; font-size:22px;">★</span></span></h2>
+					<h2>Titanium</h2> <span style="font-size:.8em; font-weight:normal; padding-bottom:10px;"><span style="float:right;  padding:px 5px 0 0;"><span style="float:left; font-size:22px; margin-left:20px; padding-top:4px;"><span style="float:left; padding: 1px 5px 0 0;">-3</span> <img src="megaC.png" style="height:25px; float: left; padding: 4px 5px 0 0;"> /</span> <img src="titanium.png" class="resource_icons_item"></span></span></span>
 				</div>
 				<div class="resource-content">
 					<p class="total">0</p>
@@ -154,7 +160,7 @@
 				<!-- Resource: Steel -->
 			<div class="resource" id="steel">
 				<div class="resource-header bg-steel">
-					<h2>Steel: <span style="font-size:.8em; font-weight:normal; padding-bottom:10px;">-3 MC / <span style="font-weight:normal; font-size:22px;">&#128736;</span></span></h2>
+					<h2>Steel</h2> <span style="font-size:.8em; font-weight:normal; padding-bottom:10px;"><span style="float:right;  padding:px 5px 0 0;"><span style="float:left; font-size:22px; margin-left:20px; padding-top:4px;"><span style="float:left; padding: 1px 5px 0 0;">-2</span> <img src="megaC.png" style="height:25px; float: left; padding: 4px 5px 0 0;"> /</span> <img src="steel.png" class="resource_icons_item"></span></span></span>
 				</div>
 				<div class="resource-content">
 					<p class="total">0</p>
@@ -172,49 +178,51 @@
 		   <!-- <div class="resource-header bg-actions">
                 <h2>Actions</h2>
             </div>-->
-			<div id="action-holder">
+			<div id="action-holder" class="button-container">
 				<button id="spend-megacredits-oxygen1" class="action-key" onclick="showCustomAlert('Spend 20 Megacredits to gain 1 Oxygen')">
-						<span class="textAction color-megacredits textAction">20 </span>
-						<i class="material-icons color-megacredits" style="font-weight:bold; display:none;">toll</i>
-						<i class="material-icons arrow-forward">arrow_forward</i>
-						<span class="color-heat" style="display:none;">1</span>
-						<i class="material-icons color-sky" >cloud</i>
+						<span class="textAction color-megacredits textAction">20</span>
+						<img src="megaC.png" class="resource_icons_sm">
+						<img src="arrow2.png" class="resource_icons_sm">
+						<span class="color-heat textAction"" style="display:none; " >1</span>
+						<img src="OxygenTree.png" class="resource_icons_sm">
 				</button>
 				<button id="spend-megacredits-temperature1" class="action-key" onclick="showCustomAlert('Spend 14 Megacredits for 1 Temperature')">
 						<span class="color-megacredits textAction">14</span>
-						<i class="material-icons color-megacredits" style="font-weight:bold; display:none;">toll</i>
-						<i class="material-icons arrow-forward">arrow_forward</i>
+						<img src="megaC.png" class="resource_icons_sm">
+						<img src="arrow2.png" class="resource_icons_sm">
 						<span class="color-heat" style="display:none;">1</span>
-						<i class="material-icons color-heat" >thermostat</i>
+						<img src="temp.png" class="resource_icons_sm">
 				</button>
 				<button id="spend-heat-temperature1" class="action-key" onclick="showCustomAlert('Spend 8 Heat for 1 Temperature')">
 						<span class="color-heat textAction">8</span>
-						<i class="material-icons color-heat">whatshot</i>
-						<i class="material-icons arrow-forward">arrow_forward</i>
+						<img src="heat.png" class="resource_icons_sm">
+						<img src="arrow2.png" class="resource_icons_sm">
 						<span class="color-heat" style="display:none;">1</span>
-						<i class="material-icons color-heat">thermostat</i>
+						<img src="temp.png" class="resource_icons_sm">
 				</button>
 				<br>
 				<button id="spend-megacredits-ocean1" class="action-key" onclick="showCustomAlert('Spend 15 Megacredits to gain 1 Ocean Tile')">
-						<span class="color-megacredits textAction">15</span>
-						<i class="material-icons color-megacredits" style="font-weight:bold; display:none;">toll</i>
-						<i class="material-icons arrow-forward">arrow_forward</i>
-						<span class="color-heat" style="display:none;">1</span>
-						<i class="material-icons color-ocean" style="font-weight:bold;" >public</i>
+						<div class="action_button_center">
+							<span class="color-megacredits textAction" >15</span>
+							<img src="megaC.png" class="resource_icons_sm">
+							<img src="arrow2.png" class="resource_icons_sm">
+							<span class="color-heat textAction"" style="display:none;">1</span>
+							<img src="waterTile.png" class="resource_icons_sm">
+						</div>
 				</button>
 				<button id="spend-card-megacredits1" class="action-key" onclick="showCustomAlert('Spend 1 Card to gain 3 Megacredits')">
-						<span class="color-cards">1</span>
-						<span class="material-symbols-outlined color-cards" style="font-size:40px;">style</span>
-						<i class="material-icons arrow-forward">arrow_forward</i>
+						<span class="color-cards textAction"">1</span>
+						<img src="cards.png" class="resource_icons_sm">
+						<img src="arrow2.png" class="resource_icons_sm">
 						<span class="color-megacredits textAction">3</span>
-						<i class="material-icons color-megacredits" style="font-weight:bold; display:none;">toll</i>
+						<img src="megaC.png" class="resource_icons_sm">
 				</button>
 				<button id="spend-plants-oxygen1" class="action-key" onclick="showCustomAlert('Spend 8 Plants for 1 Atmosphere')">
 						<span class="color-plants textAction">8</span>
-						<i class="material-icons color-plants">eco</i>
-						<i class="material-icons arrow-forward">arrow_forward</i>
-						<span class="color-heat" style="display:none;">1</span>
-						<i class="material-icons color-sky" >cloud</i>
+						<img src="plants.png" class="resource_icons_sm">
+						<img src="arrow2.png" class="resource_icons_sm">
+						<span class="color-heat textAction"" style="display:none;">1</span>
+						<img src="OxygenTree.png" class="resource_icons_sm">
 				</button>
 
 			</div>

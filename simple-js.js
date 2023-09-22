@@ -35,6 +35,15 @@ function showCustomAlert(alertText) {
     customAlert.style.display = "flex";
 }
 
+// Function to replace the image source
+function updateImageSource(newImageName) {
+    // Get the image element by its ID
+    const imageElement = document.getElementById("image-element");
+
+    // Update the src attribute with the new image name
+    imageElement.src = newImageName;
+}
+
 function confirmAction() {
     if (isConfirmation) {
         // Handle confirmation
@@ -46,9 +55,11 @@ function confirmAction() {
 					resources["terraforming-rating"] += 1; // Increase Terraforming Rating
 					updateResourceDisplay();
 					updateMessage("Confirmed! You spent 14 Megacredits for 1 Temperature.");
+					updateImageSource("heat.png");
 					//alert(`You have spent ${cost} Plants for 1 ${resource}.`);
 				} else {
 					updateMessage("SORRY! You don't have enough resources !!");
+					updateImageSource("error.png");
 					//alert("Error: Not enough Plants to make this purchase.");
 				}            
         } else if (currentAlertText.includes("Spend 8 Plants")) {
@@ -57,9 +68,11 @@ function confirmAction() {
 					resources["terraforming-rating"] += 1; // Increase Terraforming Rating
 					updateResourceDisplay();
 					updateMessage("Confirmed! You spent 8 Plants for 1 Oxygen!");
+					updateImageSource("OxygenTree.png");
 					//alert(`You have spent ${cost} Plants for 1 ${resource}.`);
 				} else {
 					updateMessage("SORRY! You don't have enough resources !!");
+					updateImageSource("error.png");
 					//alert("Error: Not enough Plants to make this purchase.");
 				}
         } else if (currentAlertText.includes("Spend 8 Heat")) {
@@ -68,24 +81,29 @@ function confirmAction() {
 					resources["terraforming-rating"] += 1; // Increase Terraforming Rating
 					updateResourceDisplay();
 					updateMessage("Confirmed! You spent 8 heat for 1 Temperature!");
+					updateImageSource("temp.png");
 					//alert(`You have spent ${cost} Plants for 1 ${resource}.`);
 				} else {
 					updateMessage("SORRY! You don't have enough resources !!");
+					updateImageSource("error.png");
 					//alert("Error: Not enough Plants to make this purchase.");
 				}
         } else if (currentAlertText.includes("Spend 1 Card")) {
             updateMessage("Confirmed! You spent 1 Card and gained 3 Megacredits.");
 				resources["megacredits"] += 3; // Add megacreditsGain without checking cards
 				updateResourceDisplay();
+				updateImageSource("3megaC.png");
         } else if (currentAlertText.includes("Spend 15 Megacredits")) {
 				if (resources["megacredits"] >= 15) {
 					resources["megacredits"] -= 15;
 					resources["terraforming-rating"] += 1; // Increase Terraforming Rating
 					updateResourceDisplay();
 					updateMessage("Confirmed! You spent 15 Megacredits for 1 Ocean Tile.");
+					updateImageSource("waterTile.png");
 					//alert(`You have spent ${cost} Plants for 1 ${resource}.`);
 				} else {
 					updateMessage("SORRY! You don't have enough resources !!");
+					updateImageSource("error.png");
 					//alert("Error: Not enough Plants to make this purchase.");
 				}
 		} else if (currentAlertText.includes("Spend 20 Megacredits")) {
@@ -94,9 +112,12 @@ function confirmAction() {
 					resources["terraforming-rating"] += 1; // Increase Terraforming Rating
 					updateResourceDisplay();
 					updateMessage("Confirmed! You spent 20 Megacredits for 1 Oxygen!");
+					updateImageSource("OxygenTree.png");
 					//alert(`You have spent ${cost} Plants for 1 ${resource}.`);
 				} else {
 					updateMessage("SORRY! You don't have enough resources !!");
+					updateImageSource("error.png");
+
 					//alert("Error: Not enough Plants to make this purchase.");
 				}
         }
@@ -114,6 +135,7 @@ function confirmAction() {
 		const cancelButton = document.getElementById("cancel-button");
 		cancelButton.style.display = "";
         confirmButton.textContent = "Confirm";
+		updateImageSource("megaC.png");
     }
 }
 
