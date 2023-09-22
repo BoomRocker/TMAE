@@ -57,11 +57,11 @@
 		}
 		
 		#topButtonBar{
-			width:460px;
+			width:350px;
 			margin: 10px 0px 0px 0px;
 /* 			border: 1px solid #80D1D7; */
 /* 			box-shadow: inset 0px 0px 40px 40px #80D1D7; */
-			padding: 35px 0px 15px 40px;
+			padding: 35px 27px 15px 15px;
 			box-sizing: border-box;
 			text-align: center;
 			position: relative;
@@ -81,7 +81,7 @@
 
 		#reload-button, #production-button {
 			border-radius: 10px;
-			width: 80%;
+			width: 100%;
 			height: 55px;
 			padding:10px 15px 15px 15px;
 			margin: 0px 0px 10px 0px;
@@ -242,7 +242,7 @@
 		}
 
 		.bg-cards {
-			background: rgba(99, 104, 173, 1); /* #6368AD */
+			background: rgba(99, 104, 173, .65); /* #6368AD */
 			color: rgba(0, 0, 0, 1); /* black */
 		}
 
@@ -315,7 +315,7 @@
 			border-radius: 5px;
 			width: 30%;
 			height:60px;
-			padding: 5px 0 7px 6%;
+			padding: 5px 0 7px 10px;
 			margin: 7px 10px 20px 10px; /* Add margin for gaps between elements */
 			cursor: pointer;
 			background-color: rgba(0, 0, 0, 0);
@@ -365,8 +365,8 @@
 
 		/* Center-align the resource block */
 		.resource {
-			width:420px;
-			margin: 10px 30px 10px 10px;
+			width:330px;
+			margin: 10px 10px 10px 10px;
 			border: 1px solid #80D1D7;
 			box-shadow: inset 0px 0px 40px 40px #80D1D7;
 			padding: 0 0 0 0;
@@ -384,6 +384,10 @@
 			letter-spacing:2px;
 			box-shadow:
 				0 0 3px #E8FDFF, /* Use #80D1D7 as the shadow color */ 0 0 5px #006169, 0 0 10px #00939E, 0 0 15px #A3F9FF;	
+		}
+		
+		.resource .margin-right{
+			margin: 10px 30px 10px 10px;
 		}
 		
 		.tall{
