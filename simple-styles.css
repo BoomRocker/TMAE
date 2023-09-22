@@ -31,10 +31,10 @@
         main {
             display: flex;
             flex-wrap: wrap;
-            width: 90%;
+            width: 100%;
 			border-radius:10px;
-            margin: 0px 0 0 40px;
-            padding: 0px 0px 10px 0px;
+            margin: 0px 0 0 0px;
+            padding: 0px 0px 0px 0px;
             background-color: #ccc;
 			background: rgba(0, 0, 0, 0); /* Use rgba to set background color with opacity */    
 			/* border: 1px solid #80D1D7;
@@ -51,11 +51,12 @@
 			-moz-transform: scale(1.1);
             display: flex;
             flex-wrap: wrap;
+			background-image: url('backMars.gif');
             width: 100%;
 			border-radius:0px;
-			margin: 10px 0 5px 0px;
+			margin: 0px 0 5px 0px;
 			padding:0 ;
-			background: rgba(0, 0, 0, 0); /* Use rgba to set background color with opacity */    
+			/*background: rgba(0, 0, 0, 0); /* Use rgba to set background color with opacity 
 			/* border: 1px solid #80D1D7;
 			box-shadow:
 				0 0 10px 1px #0ff, /* Outer cyan shadow 
@@ -78,7 +79,7 @@
 		}
 		
 		#topButtonBar{
-			width:320px;
+			width:355px;
 			margin: -10px 0px 0px 0px;
 /* 			border: 1px solid #80D1D7; */
 /* 			box-shadow: inset 0px 0px 40px 40px #80D1D7; */
@@ -354,8 +355,6 @@
 				
 		.action-key {
 			font-weight: normal;
-			zoom: 0.8;
-			-moz-transform: scale(0.8);
 			border-radius: 5px;
 			width: 228px;
 			height:55px;
@@ -409,7 +408,7 @@
 
 		/* Center-align the resource block */
 		.resource {
-			width:330px;
+			width:370px;
 			margin: 10px 10px 5px 10px;
 			border: 1px solid #80D1D7;
 			box-shadow: inset 0px 0px 40px 40px #80D1D7;
