@@ -111,16 +111,18 @@
 			margin: 20px 0px 0px 0px;
 		}
 
-		#gain-resource {
+		#gain-resource, #confirm-button {
 			background-color: rgba(0, 128, 0, .5); /* Button color */
 			color: #fff;
 			border: 2px solid green;
 			border-radius: 5px;
 			padding: 0px 10px 0px 15px;
 			cursor: pointer;
-			font-size: 24px;			
+			font-size: 24px;
+			font-family: 'Orbitron', sans-serif;
+			height:50px;			
 			text-transform:uppercase;
-			letter-spacing:8px;
+			letter-spacing:2px;
 			width: auto;
 			margin: 30px 10px 0 0px;
 			text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
@@ -128,16 +130,18 @@
 				inset 0 0 15px rgba(0, 0, 0, 1); 
 		}
 		
-		#spend-resource {
+		#spend-resource, #cancel-button {
 			background-color: rgba(128, 0, 0, .5); /* Button color */
 			color: #fff;
 			border: 2px solid rgba(128, 0, 0, .75); /* Button color */
 			border-radius: 5px;
 			padding: 0px 10px 0px 15px;
 			cursor: pointer;
-			font-size: 24px;			
+			font-size: 24px;
+			font-family: 'Orbitron', sans-serif;
+			height:50px;			
 			text-transform:uppercase;
-			letter-spacing:8px;
+			letter-spacing:4px;
 			width: auto;
 			margin: 30px 10px 0 0px;
 			text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
@@ -164,7 +168,7 @@
 				inset 0 0 15px rgba(0, 0, 0, 1); 
 		}	
 
-		#confirm-reload, #cancel-reload, #cancel-button, #confirm-button{
+		#confirm-reload, #cancel-reload{
 			background-color: rgba(0, 0, 0, .5); /* Button color */
 			font-size: 24px;
 			font-weight:bold;	
@@ -566,7 +570,7 @@
             background-color: #fff;
 			font-family: 'Orbitron', sans-serif;
             padding: 50px;
-			width:50%;
+			width:65%;
 			min-height:225px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 			color:#80D1D7;
@@ -628,10 +632,16 @@
         }
 
         #custom-alert-text {
-		
+			font-weight:bold;
+			font-size:30px;
+			letter-spacing: 2px;
         }		
 		
-		.modal button, #confirm-button, #cancel-button{
+		hr{
+			border:1px solid #80D1D7;			
+		}
+		
+		.modal button {
 			width:auto;
 			height:50px;
 			font-size:24px;
