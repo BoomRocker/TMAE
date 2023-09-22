@@ -33,7 +33,7 @@
             flex-wrap: wrap;
             width: 100%;
 			border-radius:10px;
-            margin: 0px 0 0 0px;
+            margin: 0px 0 3px 0px;
             padding: 0px 0px 0px 0px;
             background-color: #ccc;
 			background: rgba(0, 0, 0, 0); /* Use rgba to set background color with opacity */    
@@ -80,10 +80,10 @@
 		
 		#topButtonBar{
 			width:355px;
-			margin: -10px 0px 0px 0px;
+			margin: -26px 0px 0px 0px;
 /* 			border: 1px solid #80D1D7; */
 /* 			box-shadow: inset 0px 0px 40px 40px #80D1D7; */
-			padding: 47px 27px 0px 15px;
+			padding: 55px 27px 0px 15px;
 			box-sizing: border-box;
 			text-align: center;
 			align-items: center;
@@ -409,7 +409,7 @@
 		/* Center-align the resource block */
 		.resource {
 			width:370px;
-			margin: 10px 10px 5px 10px;
+			margin: 10px 10px 0px 10px;
 			border: 1px solid #80D1D7;
 			box-shadow: inset 0px 0px 40px 40px #80D1D7;
 			padding: 0 0 0 0;
