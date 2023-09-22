@@ -190,7 +190,7 @@
 				inset 0 0 15px rgba(0, 0, 0, 1); 
 		}	
 
-		#confirm-reload, #cancel-reload{
+		#confirm-reload, #cancel-reload, #cancel-button, #confirm-button{
 			background-color: rgba(0, 0, 0, .5); /* Button color */
 			font-size: 24px;
 			font-weight:bold;	
@@ -557,6 +557,11 @@
 				0 0 20px #00939E,
 				0 0 30px #006169;
         }
+		
+		.custom-alert-content p{
+			font-size:1.5em;
+			font-weught:bold;
+		}
 
 		.close {
 		  color: #aaa;
@@ -593,28 +598,23 @@
         }
 
         .custom-alert-content1 {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            text-align: center;
+
         }
 
-        .custom-alert-content {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            text-align: center;
+        #custom-alert-text {
+		
         }		
 		
-		.modal button{
+		.modal button, #confirm-button, #cancel-button{
 			width:auto;
+			min-width: 150px;
 			height:50px;
-			font-size:30px;
+			font-size:24px;
 			color: #fff;
 			font-family: 'Orbitron', sans-serif;
 			margin: 10px 0 0 0;
 			text-shadow:
-				0 0 5px #A3F9FF, /* Use #80D1D7 as the shadow color */
+				0 0 5px #000, /* Use #80D1D7 as the shadow color */
 				0 0 10px #006169,
 				0 0 20px #00939E,
 				0 0 30px #006169;
