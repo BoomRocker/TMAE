@@ -22,6 +22,39 @@
             // Add more increments here
         };
 		
+		/* Tags Counter */
+        const tagAmounts = {
+            AEBuilding: 0,
+            AESpace: 0,
+            AEPower: 0,
+            AEScience: 0,
+            AEJovian: 0,
+            AEEarth: 0,
+			AEPlant: 0,
+            AEMicrobe: 0,
+            AEAnimal: 0,
+            AEEvent: 0
+            // Add other tag IDs and initial values here
+        };
+
+        function increaseTag(category) {
+            tagAmounts[category]++;
+            updateTagDisplay(category);
+        }
+
+        function decreaseTag(category) {
+            if (tagAmounts[category] > 0) {
+                tagAmounts[category]--;
+                updateTagDisplay(category);
+            }
+        }
+
+        function updateTagDisplay(category) {
+            const tagElement = document.getElementById(`${category}-tag`);
+            tagElement.textContent = tagAmounts[category];
+        }
+	
+		
 	// START:: SPEND alert
 	let currentAlertText = "";
 let isConfirmation = false; // Variable to track whether confirmation is pending
@@ -434,4 +467,6 @@ document.querySelector("#gain-ocean-tile").addEventListener("click", function ()
 				alert(`You have gained ${megacreditsGain} Megacredits.`);
 			}
 		}
+		
+	
 		

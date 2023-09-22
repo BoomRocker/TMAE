@@ -33,8 +33,123 @@
     <header>
         <h1>Terraforming Mars: Ares Expedition Counter</h1>
     </header>
+	<div id="tags-topper">
+		<!-- START TAGS COUNTER -->
+		<div id="tag-holder">
+		<!-- Building -->
+		<div class="TM-tag-container">
+			<div class="TM-tags" id="AEBuilding">
+				<img src="Tags/tag building.png" alt="Building">
+				<span id="AEBuilding-tag" class="tag-count">0</span>
+				<br>
+				<button onclick="decreaseTag('AEBuilding')"><span class="TM-button-text">-</span></button>
+				<button onclick="increaseTag('AEBuilding')"><span class="TM-button-text">+</span></button>
+			</div>
+		</div>
+		
+		<!-- Space -->
+		<div class="TM-tag-container">
+			<div class="TM-tags" id="AESpace">
+				<img src="Tags/tag space.png" alt="Space">
+				<span id="AESpace-tag" class="tag-count">0</span>
+				<br>
+				<button onclick="decreaseTag('AESpace')"><span class="TM-button-text">-</span></button>
+				<button onclick="increaseTag('AESpace')"><span class="TM-button-text">+</span></button>
+			</div>
+		</div>
+
+		<!-- Power -->
+		<div class="TM-tag-container">
+			<div class="TM-tags" id="AEPower">
+				<img src="Tags/tag energy.png" alt="Power">
+				<span id="AEPower-tag" class="tag-count">0</span>
+				<br>
+				<button onclick="decreaseTag('AEPower')"><span class="TM-button-text">-</span></button>
+				<button onclick="increaseTag('AEPower')"><span class="TM-button-text">+</span></button>
+			</div>
+		</div>
+
+		<!-- Science -->
+		<div class="TM-tag-container">
+			<div class="TM-tags" id="AEScience">
+				<img src="Tags/tag science.png" alt="Science">
+				<span id="AEScience-tag" class="tag-count">0</span>
+				<br>
+				<button onclick="decreaseTag('AEScience')"><span class="TM-button-text">-</span></button>
+				<button onclick="increaseTag('AEScience')"><span class="TM-button-text">+</span></button>
+			</div>
+		</div>
+
+		<!-- Jovian -->
+		<div class="TM-tag-container">
+			<div class="TM-tags" id="AEJovian">
+				<img src="Tags/tag jovian.png" alt="Jovian">
+				<span id="AEJovian-tag" class="tag-count">0</span>
+				<br>
+				<button onclick="decreaseTag('AEJovian')"><span class="TM-button-text">-</span></button>
+				<button onclick="increaseTag('AEJovian')"><span class="TM-button-text">+</span></button>
+			</div>
+		</div>
+		<br>
+		<!-- Earth -->
+		<div class="TM-tag-container">
+			<div class="TM-tags" id="AEEarth">
+				<img src="Tags/tag earth.png" alt="Earth">
+				<span id="AEEarth-tag" class="tag-count">0</span>
+				<br>
+				<button onclick="decreaseTag('AEEarth')"><span class="TM-button-text">-</span></button>
+				<button onclick="increaseTag('AEEarth')"><span class="TM-button-text">+</span></button>
+			</div>
+		</div>
+
+		<!-- Plant -->
+		<div class="TM-tag-container">
+			<div class="TM-tags" id="AEPlant">
+				<img src="Tags/tag plant.png" alt="Plant">
+				<span id="AEPlant-tag" class="tag-count">0</span>
+				<br>
+				<button onclick="decreaseTag('AEPlant')"><span class="TM-button-text">-</span></button>
+				<button onclick="increaseTag('AEPlant')"><span class="TM-button-text">+</span></button>
+			</div>
+		</div>
+
+		<!-- Microbe -->
+		<div class="TM-tag-container">
+			<div class="TM-tags" id="AEMicrobe">
+				<img src="Tags/tag microbe.png" alt="Microbe">
+				<span id="AEMicrobe-tag" class="tag-count">0</span>
+				<br>
+				<button onclick="decreaseTag('AEMicrobe')"><span class="TM-button-text">-</span></button>
+				<button onclick="increaseTag('AEMicrobe')"><span class="TM-button-text">+</span></button>
+			</div>
+		</div>
+
+		<!-- Animal -->
+		<div class="TM-tag-container">
+			<div class="TM-tags" id="AEAnimal">
+				<img src="Tags/tag animal.png" alt="Animal">
+				<span id="AEAnimal-tag" class="tag-count">0</span>
+				<br>
+				<button onclick="decreaseTag('AEAnimal')"><span class="TM-button-text">-</span></button>
+				<button onclick="increaseTag('AEAnimal')"><span class="TM-button-text">+</span></button>
+			</div>
+		</div>
+
+		<!-- Event 
+		<div class="TM-tag-container">
+			<div class="TM-tags" id="AEEvent">
+				<img src="Tags/tag event.png" alt="Event">
+				<span id="AEEvent-tag" class="tag-count">0</span>
+				<br>
+				<button onclick="decreaseTag('AEEvent')">-</button>
+				<button onclick="increaseTag('AEEvent')">+</button>
+			</div>
+		</div>-->
+		<!-- END TAGS COUNTER -->
+	</div></div>
     <main>
-				<!-- Resource: Cards -->
+
+	<!-- Resource: Cards -->
         <div class="resource" id="cards">
             <div class="resource-header bg-cards" >
                 <h2>Cards</h2>
@@ -147,7 +262,21 @@
 			<!-- Resource: Titanium -->
 			<div class="resource" id="titanium">
 				<div class="resource-header bg-titanium">
-					<h2>Titanium</h2> <span style="font-size:.8em; font-weight:normal; padding-bottom:10px;"><span style="float:right;  padding:px 5px 0 0;"><span style="float:left; font-size:22px; margin-left:20px; padding-top:4px;"><span style="float:left; padding: 1px 5px 0 0;">-3</span> <img src="megaC.png" style="height:25px; float: left; padding: 4px 5px 0 0;"> /</span> <img src="titanium.png" class="resource_icons_item"></span></span></span>
+					<h2>Titanium</h2> 
+					<span style="font-size:.8em; font-weight:normal; padding-bottom:10px;">
+						<span style="float:right;  padding:0;">
+							<span style="float:left; font-size:22px; margin-left:20px; padding-top:4px;">
+								<img src="Tags/tag space.png" style="height:35px; float: left; padding: 0px 5px 0 0;">
+								<span style="float:left; padding: 1px 0px 0 0; font-weight:bold;">:</span>
+								<!--<span style="float:left; padding: 1px 0px 0 0;">-3</span>-->
+								<span style="float:left; padding: 1px 0 0 0;">
+								</span>
+								<img src="megaC-3.png" style="height:35px; float: left; padding: 0px 2px 0 2px; font-weight:bold;"> /
+							</span>
+								<img src="titanium.png" class="resource_icons_item" style="margin:0; padding:0;">
+						</span>
+							</span>
+						</span>
 				</div>
 				<div class="resource-content">
 					<p class="total">0</p>
@@ -161,7 +290,21 @@
 				<!-- Resource: Steel -->
 			<div class="resource margin-right" id="steel">
 				<div class="resource-header bg-steel">
-					<h2>Steel</h2> <span style="font-size:.8em; font-weight:normal; padding-bottom:10px;"><span style="float:right;  padding:px 5px 0 0;"><span style="float:left; font-size:22px; margin-left:20px; padding-top:4px;"><span style="float:left; padding: 1px 5px 0 0;">-2</span> <img src="megaC.png" style="height:25px; float: left; padding: 4px 5px 0 0;"> /</span> <img src="steel.png" class="resource_icons_item"></span></span></span>
+					<h2>Steel</h2> 
+					<span style="font-size:.8em; font-weight:normal; padding-bottom:10px;">
+						<span style="float:right;  padding:0;">
+							<span style="float:left; font-size:22px; margin-left:20px; padding-top:4px;">
+								<img src="Tags/tag building.png" style="height:35px; float: left; padding: 0px 5px 0 0;">
+								<span style="float:left; padding: 1px 0px 0 0; font-weight:bold;">:</span>
+								<!--<span style="float:left; padding: 1px 0px 0 0;">-3</span>-->
+								<span style="float:left; padding: 1px 0 0 0;">
+								</span>
+								<img src="megaC-2.png" style="height:35px; float: left; padding: 0px 2px 0 2px; font-weight:bold;"> /
+							</span>
+								<img src="steel.png" class="resource_icons_item" style="margin:0; padding:0;">
+						</span>
+							</span>
+						</span>
 				</div>
 				<div class="resource-content">
 					<p class="total">0</p>
