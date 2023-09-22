@@ -34,9 +34,9 @@
             width: 90%;
 			border-radius:10px;
             margin: 0px 0 0 40px;
-            padding: 10px 0px 10px 0px;
+            padding: 0px 0px 10px 0px;
             background-color: #ccc;
-			background: rgba(0, 0, 0, 0.5); /* Use rgba to set background color with opacity */    
+			background: rgba(0, 0, 0, 0); /* Use rgba to set background color with opacity */    
 			/* border: 1px solid #80D1D7;
 			box-shadow:
 				0 0 10px 1px #0ff, /* Outer cyan shadow 
@@ -47,12 +47,14 @@
         }
 		
 		#tags-topper {
+			zoom: 1.1;
+			-moz-transform: scale(1.1);
             display: flex;
             flex-wrap: wrap;
-            width: 90%;
+            width: 100%;
 			border-radius:0px;
-			margin: 10px 0 5px 20px;
-			padding:0 5% 0 5%;
+			margin: 10px 0 5px 0px;
+			padding:0 ;
 			background: rgba(0, 0, 0, 0); /* Use rgba to set background color with opacity */    
 			/* border: 1px solid #80D1D7;
 			box-shadow:
@@ -352,8 +354,8 @@
 				
 		.action-key {
 			font-weight: normal;
-			zoom: 0.85;
-			-moz-transform: scale(0.5);
+			zoom: 0.8;
+			-moz-transform: scale(0.8);
 			border-radius: 5px;
 			width: 228px;
 			height:55px;
@@ -542,7 +544,7 @@
 		
 		.TM-tags {
             font-size: 30px; /* Adjust the font size as needed */
-            margin: 0 15px 15px 18px; /* Add some space between the image and count */
+            margin: 0 15px 20px 18px; /* Add some space between the image and count */
 			color: rgba(255, 255, 255, .75);
 			width:auto;
 			border: 0px solid red;
