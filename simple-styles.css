@@ -54,8 +54,10 @@
 			background-image: url('backMars.gif');
             width: 100%;
 			border-radius:0px;
-			margin: 0px 0 5px 0px;
+			margin: 0px 0 1px 0px;
 			padding:0 ;
+			border-top: 2px solid #000;
+			border-bottom: 2px solid #000;
 			/*background: rgba(0, 0, 0, 0); /* Use rgba to set background color with opacity 
 			/* border: 1px solid #80D1D7;
 			box-shadow:
@@ -359,7 +361,7 @@
 			width: 228px;
 			height:55px;
 			padding: 5px 0 7px 10px;
-			margin: 5px 10px 10px 10px; /* Add margin for gaps between elements */
+			margin: 3px 10px 0px 10px; /* Add margin for gaps between elements */
 			cursor: pointer;
 			background-color: rgba(0, 0, 0, 0);
 			border: 1px solid #fff;
