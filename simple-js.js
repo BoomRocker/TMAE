@@ -33,13 +33,33 @@ function showCustomAlert(alertText) {
     customAlertText.textContent = alertText;
     isConfirmation = true; // Set confirmation state to true
     customAlert.style.display = "flex";
+
+    // Add
+    const imageElement = document.getElementById("image-element"); // Assuming you have an image element with this ID
+
+    if (currentAlertText.includes("Card")) {
+        updateImageSource("cards.png", imageElement);
+    } else if (currentAlertText.includes("Plants")) {
+        updateImageSource("plants.png", imageElement);
+    } else if (currentAlertText.includes("Heat")) {
+        updateImageSource("heat.png", imageElement);
+    }
+    // END Add
 }
+
+// Function to replace the image source
+function updateImageSource(newImageName, imageElement) {
+    // Update the src attribute of the provided image element with the new image name
+    if (imageElement) {
+        imageElement.src = newImageName;
+    }
+}
+
 
 // Function to replace the image source
 function updateImageSource(newImageName) {
     // Get the image element by its ID
     const imageElement = document.getElementById("image-element");
-
     // Update the src attribute with the new image name
     imageElement.src = newImageName;
 }
