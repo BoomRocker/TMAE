@@ -11,6 +11,7 @@
         }
 
         header {
+			display:none;
             background-color: orange;
             color: #fff;
             text-align: center;
@@ -269,7 +270,7 @@
 			padding: 0;
 			width:100%;
 			min-width:300px;
-			margin: 20px 0 0 0;
+			margin: 15px 0 0 0;
 			padding: 0 0 0 0;
 			text-align: center;
 			position: relative;
@@ -301,22 +302,23 @@
 		.textAction{
 			height:auto;
 			float:left;
-			font-size:35px;
+			font-size:34px;
 			font-weight:bold;
 			font-family: 'Orbitron', sans-serif;
 		}
 		
 		.action_button_center{
+
 		}
 		
 				
 		.action-key {
 			font-weight: normal;
 			border-radius: 5px;
-			width: 30%;
-			height:60px;
+			width: 228px;
+			height:55px;
 			padding: 5px 0 7px 10px;
-			margin: 7px 10px 20px 10px; /* Add margin for gaps between elements */
+			margin: 5px 10px 10px 10px; /* Add margin for gaps between elements */
 			cursor: pointer;
 			background-color: rgba(0, 0, 0, 0);
 			border: 1px solid #fff;
@@ -346,13 +348,13 @@
 			display: inline-block;
 			width: 30px;
 			height: 30px;
-			font-size: 35px;
+			font-size: 25px;
 			text-align: left;
 		}
 
 
 		.action-key b{
-			font-size: 25px;
+			font-size: 20px;
 		}
 		
 		.material-symbols-outlined {
